@@ -145,12 +145,23 @@ function HeroRocket() {
       gsap.to(float, { y: -14, duration: 2.4, ease: 'sine.inOut', yoyo: true, repeat: -1 })
       startFlicker(gsap, flame)
 
-      // trigger launch when user scrolls hero out
+      let hasLaunchedInSession = false
       ScrollTrigger.create({
         trigger: '#hero',
-        start: 'bottom 80%',
-        onEnter: doLaunch,
-        once: false,
+        start: 'top top',
+        end: '+=800', 
+        pin: true,
+        pinSpacing: true,
+        onUpdate: (self) => {
+          if (self.progress > 0.02 && !busy.current && !hasLaunchedInSession) {
+            hasLaunchedInSession = true
+            doLaunch()
+          }
+          // Reset when back at very top
+          if (self.progress < 0.01) {
+            hasLaunchedInSession = false
+          }
+        }
       })
     })()
     return () => { flickerTls.current.forEach(t => t.kill()) }
@@ -693,7 +704,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {s.items.map((item, i) => {
-              const details = SERVICE_DETAILS[item.title] || { icon: ArrowRight, color: '#7346a1', capabilities: [] }
+              // Map by index to ensure correct icon/color regardless of language string
+              const serviceKeys = ['Content', 'Paid Media', 'Web & Visibility', 'Automation', 'Video & Creative', 'Strategy & Consulting']
+              const details = SERVICE_DETAILS[serviceKeys[i]] || { icon: ArrowRight, color: '#7346a1' }
               const Icon    = details.icon
               
               return (
@@ -715,7 +728,7 @@ export default function Home() {
                       style={{ background: `${details.color}10`, color: details.color }}>
                       <Icon className="w-7 h-7" />
                     </div>
-
+ 
                     <div className="mt-7">
                       <h3 className="font-headline font-black text-xl md:text-2xl text-on-surface mb-2.5 group-hover:text-primary transition-colors duration-300">
                         {item.title}
@@ -723,22 +736,22 @@ export default function Home() {
                       <p className="text-on-surface/80 text-sm md:text-base leading-relaxed mb-6 font-medium">
                         {item.description}
                       </p>
-
+ 
                       <div className="space-y-2.5 pt-6 border-t border-outline-variant/5">
-                        {details.capabilities.map((cap) => (
-                          <div key={cap} className="flex items-center gap-2.5 text-xs md:text-sm font-medium text-on-surface/70 group-hover:text-on-surface transition-colors">
+                        {item.subitems.map((subitem) => (
+                          <div key={subitem} className="flex items-center gap-2.5 text-xs md:text-sm font-medium text-on-surface/70 group-hover:text-on-surface transition-colors">
                             <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: details.color }} />
-                            {cap}
+                            {subitem}
                           </div>
                         ))}
                       </div>
                     </div>
-
+ 
                     <div className="mt-8 flex items-center justify-between">
                       <div className="w-9 h-9 rounded-full bg-white border border-outline-variant/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 shadow-sm">
                         <ArrowUpRight className="w-4 h-4 text-primary" />
                       </div>
-                      <span className="text-[9px] font-black text-outline/20 group-hover:text-primary/40 transition-colors uppercase tracking-[0.2em]">{item.title === 'Automation' ? 'High Impact' : `Area 0${i + 1}`}</span>
+                      <span className="text-[9px] font-black text-outline/20 group-hover:text-primary/40 transition-colors uppercase tracking-[0.2em]">{serviceKeys[i] === 'Automation' ? 'High Impact' : `Area 0${i + 1}`}</span>
                     </div>
                   </div>
                 </motion.div>

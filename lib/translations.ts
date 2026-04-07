@@ -91,37 +91,37 @@ const en: Translations = {
         title: 'Content',
         description:
           'Social media, blog, and newsletter — content that resonates with your audience and builds your brand over time.',
-        subitems: [],
+        subitems: ['Social Strategy', 'High-Converting Copy', 'Brand Storytelling', 'Content Calendars'],
       },
       {
         title: 'Paid Media',
         description:
           'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — and yes, ChatGPT Ads. Every platform your customers are on.',
-        subitems: [],
+        subitems: ['Meta & Google Ads', 'LinkedIn & TikTok', 'Retargeting Funnels', 'Budget Optimization'],
       },
       {
         title: 'Web & Visibility',
         description:
           'Websites, SEO, GEO (AI search presence), landing pages, CRO, analytics, and Google My Business. Being found is step one.',
-        subitems: [],
+        subitems: ['High-Performance Landing Pages', 'AI-Powered SEO (GEO)', 'Conversion UX', 'Advanced Analytics'],
       },
       {
         title: 'Automation',
         description:
           'Chatbots, CRM flows, lead nurturing, AI content repurposing. Systems that generate results while you sleep.',
-        subitems: [],
+        subitems: ['Lead-Gen Chatbots', 'CRM Automations', 'AI Outbound Systems', 'Workflow Optimization'],
       },
       {
         title: 'Video & Creative',
         description:
           'Video production, Reels, TikTok, brand identity, UGC coordination, and AI-generated video. Creativity with a purpose.',
-        subitems: [],
+        subitems: ['Short-form Reels/TikTok', 'UGC Direction', 'AI-Generated Promos', 'Visual Brand Identity'],
       },
       {
         title: 'Strategy & Consulting',
         description:
           'Brand positioning, funnel mapping, competitor analysis, ICP definition, and growth roadmaps. The thinking before the doing.',
-        subitems: [],
+        subitems: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Identification'],
       },
     ],
   },
@@ -296,37 +296,37 @@ const es: Translations = {
         title: 'Contenido',
         description:
           'Redes sociales, blog y newsletter — contenido que conecta con tu audiencia y construye tu marca con el tiempo.',
-        subitems: [],
+        subitems: ['Estrategia Social', 'Copywriting de Conversión', 'Storytelling de Marca', 'Calendarios de Contenido'],
       },
       {
         title: 'Paid Media',
         description:
           'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — y ChatGPT Ads. Cada plataforma donde están tus clientes.',
-        subitems: [],
+        subitems: ['Meta & Google Ads', 'LinkedIn & TikTok', 'Embudos de Retargeting', 'Optimización de Presupuesto'],
       },
       {
         title: 'Web & Visibilidad',
         description:
           'Sitios web, SEO, GEO (presencia en IA), landing pages, CRO, analítica y Google My Business. Que te encuentren es el primer paso.',
-        subitems: [],
+        subitems: ['Landing Pages de Alto Rendimiento', 'SEO Potenciado por IA (GEO)', 'UX de Conversión', 'Analítica Avanzada'],
       },
       {
         title: 'Automatización',
         description:
           'Chatbots, flujos de CRM, lead nurturing, repurposing con IA. Sistemas que generan resultados mientras dormís.',
-        subitems: [],
+        subitems: ['Chatbots de Lead-Gen', 'Automatizaciones de CRM', 'Sistemas de Outbound con IA', 'Optimización de Workflows'],
       },
       {
         title: 'Video & Creatividad',
         description:
           'Producción de video, Reels, TikTok, identidad de marca, UGC y video con IA. Creatividad con propósito.',
-        subitems: [],
+        subitems: ['Reels/TikTok de Formato Corto', 'Dirección de UGC', 'Promos Generadas con IA', 'Identidad Visual de Marca'],
       },
       {
         title: 'Estrategia & Consultoría',
         description:
           'Posicionamiento, mapeo de funnel, análisis de competencia, definición de ICP y roadmaps. El pensamiento antes de la ejecución.',
-        subitems: [],
+        subitems: ['Posicionamiento de Mercado', 'Auditorías Competitivas', 'Roadmaps de Crecimiento', 'Identificación de ICP'],
       },
     ],
   },
