@@ -3,13 +3,13 @@ import './globals.css'
 import { LanguageProvider } from '@/context/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Simpla — We learn your business. Then we grow it.',
+  title: 'Simpla - Growth made simple',
   description:
     'Simpla is a full-service marketing agency for SMBs and growing businesses. We combine strategic understanding with AI-powered execution — so your marketing compounds over time, not just during office hours.',
   keywords:
     'marketing agency, SMB marketing, paid media, automation, SEO, GEO, AI marketing, LATAM marketing, content marketing, digital agency',
   openGraph: {
-    title: 'Simpla — We learn your business. Then we grow it.',
+    title: 'Simpla - Growth made simple',
     description: 'Marketing that works while you sleep.',
     type: 'website',
   },
