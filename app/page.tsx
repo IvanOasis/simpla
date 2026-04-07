@@ -162,6 +162,179 @@ function HeroRocket() {
       <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full blur-[90px] opacity-25 pointer-events-none"
         style={{ background: 'radial-gradient(circle, #9E70CE 0%, #5491ff 70%, transparent 100%)' }} />
 
+      {/* ── TWINKLING STARS ── */}
+      {[
+        { l:'8%',  t:'12%', d:2.1, delay:0    },
+        { l:'22%', t:'6%',  d:1.7, delay:0.4  },
+        { l:'38%', t:'15%', d:2.8, delay:1.2  },
+        { l:'55%', t:'5%',  d:1.9, delay:0.8  },
+        { l:'70%', t:'20%', d:2.4, delay:0.2  },
+        { l:'82%', t:'8%',  d:1.6, delay:1.6  },
+        { l:'92%', t:'16%', d:2.2, delay:0.6  },
+        { l:'15%', t:'30%', d:3.1, delay:1.0  },
+        { l:'48%', t:'28%', d:1.8, delay:1.8  },
+        { l:'78%', t:'32%', d:2.6, delay:0.3  },
+        { l:'5%',  t:'45%', d:2.0, delay:2.0  },
+        { l:'65%', t:'42%', d:1.5, delay:0.9  },
+      ].map(({ l, t, d, delay }, i) => (
+        <motion.div
+          key={`star-${i}`}
+          animate={{ opacity:[0.15, 0.7, 0.15], scale:[0.8, 1.3, 0.8] }}
+          transition={{ duration: d, repeat: Infinity, delay, ease: 'easeInOut' }}
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            left: l, top: t,
+            width: i % 3 === 0 ? 3 : 2,
+            height: i % 3 === 0 ? 3 : 2,
+            background: i % 2 === 0 ? '#9E70CE' : '#5491ff',
+            boxShadow: i % 3 === 0 ? '0 0 4px 1px #9E70CE88' : '0 0 3px 1px #5491ff66',
+          }}
+        />
+      ))}
+
+      {/* ── CLOUD BANK (bottom) — rocket launches from here ── */}
+      <motion.div
+        animate={{ x: [0, 18, 0], y: [0, -6, 0] }}
+        transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute bottom-[-2%] left-[-18%] z-0 pointer-events-none"
+        style={{ opacity: 0.72 }}
+      >
+        <svg width="380" height="170" viewBox="0 0 380 170" fill="none">
+          <defs>
+            <linearGradient id="ck-g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f3eeff" />
+              <stop offset="55%" stopColor="#ddd0f8" />
+              <stop offset="100%" stopColor="#c4aef0" />
+            </linearGradient>
+            <filter id="ck-drop1" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#9E70CE" floodOpacity="0.18"/>
+            </filter>
+          </defs>
+          <g filter="url(#ck-drop1)">
+            <ellipse cx="190" cy="148" rx="175" ry="30" fill="url(#ck-g1)" />
+            <circle cx="68"  cy="120" r="44" fill="url(#ck-g1)" />
+            <circle cx="128" cy="98"  r="58" fill="url(#ck-g1)" />
+            <circle cx="200" cy="88"  r="65" fill="url(#ck-g1)" />
+            <circle cx="272" cy="100" r="52" fill="url(#ck-g1)" />
+            <circle cx="330" cy="120" r="38" fill="url(#ck-g1)" />
+          </g>
+          {/* highlight rim */}
+          <ellipse cx="165" cy="84" rx="55" ry="18" fill="white" opacity="0.28" />
+        </svg>
+      </motion.div>
+
+      {/* ── CLOUD BANK (bottom-right) ── */}
+      <motion.div
+        animate={{ x: [0, -22, 0], y: [0, -4, 0] }}
+        transition={{ duration: 32, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+        className="absolute bottom-[-4%] right-[-20%] z-0 pointer-events-none"
+        style={{ opacity: 0.58 }}
+      >
+        <svg width="340" height="155" viewBox="0 0 340 155" fill="none">
+          <defs>
+            <linearGradient id="ck-g2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#eaf0ff" />
+              <stop offset="55%" stopColor="#cdd8f8" />
+              <stop offset="100%" stopColor="#b0c2f0" />
+            </linearGradient>
+            <filter id="ck-drop2" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="6" stdDeviation="10" floodColor="#5491ff" floodOpacity="0.15"/>
+            </filter>
+          </defs>
+          <g filter="url(#ck-drop2)">
+            <ellipse cx="170" cy="134" rx="155" ry="26" fill="url(#ck-g2)" />
+            <circle cx="58"  cy="110" r="38" fill="url(#ck-g2)" />
+            <circle cx="112" cy="90"  r="52" fill="url(#ck-g2)" />
+            <circle cx="178" cy="80"  r="58" fill="url(#ck-g2)" />
+            <circle cx="244" cy="92"  r="46" fill="url(#ck-g2)" />
+            <circle cx="298" cy="112" r="34" fill="url(#ck-g2)" />
+          </g>
+          <ellipse cx="155" cy="78" rx="48" ry="16" fill="white" opacity="0.24" />
+        </svg>
+      </motion.div>
+
+      {/* ── MID CLOUD left — drifting ── */}
+      <motion.div
+        animate={{ x: [0, 28, 0], y: [0, -10, 0] }}
+        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
+        className="absolute top-[38%] left-[-8%] z-0 pointer-events-none"
+        style={{ opacity: 0.48 }}
+      >
+        <svg width="220" height="110" viewBox="0 0 220 110" fill="none">
+          <defs>
+            <linearGradient id="ck-g3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f7f2ff" />
+              <stop offset="100%" stopColor="#ddd0f8" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="110" cy="92" rx="100" ry="22" fill="url(#ck-g3)" />
+          <circle cx="50"  cy="72" r="32" fill="url(#ck-g3)" />
+          <circle cx="95"  cy="56" r="44" fill="url(#ck-g3)" />
+          <circle cx="152" cy="62" r="38" fill="url(#ck-g3)" />
+          <circle cx="195" cy="76" r="26" fill="url(#ck-g3)" />
+          <ellipse cx="100" cy="53" rx="32" ry="12" fill="white" opacity="0.30" />
+        </svg>
+      </motion.div>
+
+      {/* ── SMALL CLOUD top-right ── */}
+      <motion.div
+        animate={{ x: [0, -16, 0], y: [0, 12, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        className="absolute top-[10%] right-[12%] z-0 pointer-events-none"
+        style={{ opacity: 0.40 }}
+      >
+        <svg width="150" height="76" viewBox="0 0 150 76" fill="none">
+          <defs>
+            <linearGradient id="ck-g4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#faf5ff" />
+              <stop offset="100%" stopColor="#e8d8ff" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="75" cy="62" rx="65" ry="17" fill="url(#ck-g4)" />
+          <circle cx="34"  cy="48" r="22" fill="url(#ck-g4)" />
+          <circle cx="66"  cy="35" r="30" fill="url(#ck-g4)" />
+          <circle cx="106" cy="42" r="26" fill="url(#ck-g4)" />
+          <circle cx="130" cy="54" r="18" fill="url(#ck-g4)" />
+          <ellipse cx="70" cy="33" rx="22" ry="9" fill="white" opacity="0.28" />
+        </svg>
+      </motion.div>
+
+      {/* ── WISPY CLOUD top-left ── */}
+      <motion.div
+        animate={{ x: [0, 14, 0], y: [0, -8, 0] }}
+        transition={{ duration: 28, repeat: Infinity, ease: 'easeInOut', delay: 11 }}
+        className="absolute top-[20%] left-[4%] z-0 pointer-events-none"
+        style={{ opacity: 0.30 }}
+      >
+        <svg width="100" height="52" viewBox="0 0 100 52" fill="none">
+          <defs>
+            <linearGradient id="ck-g5" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f8f4ff" />
+              <stop offset="100%" stopColor="#e0ccff" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="50" cy="42" rx="42" ry="13" fill="url(#ck-g5)" />
+          <circle cx="24"  cy="33" r="16" fill="url(#ck-g5)" />
+          <circle cx="47"  cy="23" r="21" fill="url(#ck-g5)" />
+          <circle cx="74"  cy="29" r="17" fill="url(#ck-g5)" />
+        </svg>
+      </motion.div>
+
+      {/* ── SPEED LINES rising from rocket ── */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        {[
+          { left:'44%', height:'35%', top:'30%', opacity:0.08, color:'#9E70CE', width:'1px', rotate:'-2deg' },
+          { left:'52%', height:'28%', top:'38%', opacity:0.06, color:'#5491ff', width:'2px', rotate:'1deg' },
+          { left:'40%', height:'20%', top:'42%', opacity:0.05, color:'#9E70CE', width:'1px', rotate:'-4deg' },
+        ].map((s, i) => (
+          <div key={i} className="absolute" style={{
+            left: s.left, top: s.top, width: s.width, height: s.height,
+            background: `linear-gradient(180deg, ${s.color} 0%, transparent 100%)`,
+            opacity: s.opacity, transform: `rotate(${s.rotate})`, borderRadius: 4,
+          }} />
+        ))}
+      </div>
+
       {/* launch wrapper — y animates here */}
       <div ref={launchRef} className="relative flex flex-col items-center" style={{ willChange:'transform' }}>
 
