@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Marketing that works while you sleep.',
     type: 'website',
   },
+  icons: {
+    icon: '/assets/simpla-favicon.svg',
+    shortcut: '/assets/simpla-favicon.svg',
+    apple: '/assets/simpla-favicon.svg',
+  },
 }
 
 export default function RootLayout({
