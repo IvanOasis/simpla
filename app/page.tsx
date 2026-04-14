@@ -814,7 +814,7 @@ export default function Home() {
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
               { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
-              { src: '/assets/Logos/realmint.png',         alt: 'Realmint', invert: true },
+              { src: '/assets/Logos/realmint.png',         alt: 'Realmint' },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -984,54 +984,58 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-3xl border border-white/10 bg-white/5 overflow-hidden backdrop-blur-md">
+          <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-3xl border border-white/10 bg-white/5 overflow-hidden backdrop-blur-md flex items-center justify-center">
              {/* Map Grid Background */}
-             <div className="absolute inset-0 opacity-15" style={{ 
-               backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)', 
+             <div className="absolute inset-0 opacity-[0.03]" style={{ 
+               backgroundImage: 'linear-gradient(to right, rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,1) 1px, transparent 1px)', 
                backgroundSize: '4% 4%' 
              }}></div>
              
-             {/* Connection Arcs (SVG) */}
-             <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 overflow-visible">
-                <path d="M 28% 75% Q 30% 50% 20% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-[spin_40s_linear_infinite]" />
-                <path d="M 28% 75% Q 40% 60% 48% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
-                <path d="M 28% 75% Q 55% 70% 65% 45%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
-                <defs>
-                  <linearGradient id="arc-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#dcb8ff" />
-                    <stop offset="100%" stopColor="#5491ff" />
-                  </linearGradient>
-                </defs>
-             </svg>
+             <div className="relative w-full h-full max-w-[90%] max-h-[90%] mx-auto mt-[4%]">
+               <img src="/assets/world-map.svg" alt="World Map" className="absolute inset-0 w-full h-full object-fill opacity-20 invert" aria-hidden="true" />
+               
+               {/* Connection Arcs (SVG) */}
+               <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 overflow-visible">
+                  <path d="M 28% 75% Q 30% 50% 20% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-[spin_40s_linear_infinite]" />
+                  <path d="M 28% 75% Q 40% 60% 48% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
+                  <path d="M 28% 75% Q 55% 70% 65% 45%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
+                  <defs>
+                    <linearGradient id="arc-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#dcb8ff" />
+                      <stop offset="100%" stopColor="#5491ff" />
+                    </linearGradient>
+                  </defs>
+               </svg>
 
-             {/* Animated Map Locators */}
-             {[
-               { name: 'Canada', top: '15%', left: '18%', delay: 0 },
-               { name: 'USA', top: '30%', left: '20%', delay: 0.2 },
-               { name: 'Mexico', top: '45%', left: '17%', delay: 0.4 },
-               { name: 'Argentina', top: '75%', left: '28%', delay: 0, primary: true },
-               { name: 'Uruguay', top: '72%', left: '32%', delay: 0.6 },
-               { name: 'UK', top: '22%', left: '46%', delay: 0.3 },
-               { name: 'Spain', top: '34%', left: '45%', delay: 0.8 },
-               { name: 'France', top: '28%', left: '48%', delay: 0.5 },
-               { name: 'Dubai', top: '45%', left: '65%', delay: 0.7 },
-             ].map((loc) => (
-                <div key={loc.name} className="absolute flex flex-col items-center gap-2 group cursor-default z-10" style={{ top: loc.top, left: loc.left }}>
-                  <motion.div 
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: loc.delay }}
-                    className="relative"
-                  >
-                    <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${loc.primary ? 'bg-secondary-fixed shadow-[0_0_20px_rgba(84,145,255,0.9)]' : 'bg-primary-fixed shadow-[0_0_15px_rgba(220,184,255,0.8)]'}`} />
-                    <div className={`absolute inset-0 rounded-full animate-ping opacity-60 ${loc.primary ? 'bg-secondary-fixed' : 'bg-primary-fixed'}`} />
-                  </motion.div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-5 md:top-6 bg-white/10 backdrop-blur-xl px-3 py-1.5 rounded-lg border border-white/20 whitespace-nowrap shadow-xl">
-                    <span className="text-[10px] md:text-xs font-bold font-headline">{loc.name}</span>
+               {/* Animated Map Locators */}
+               {[
+                 { name: 'Canada', top: '15%', left: '18%', delay: 0 },
+                 { name: 'USA', top: '30%', left: '20%', delay: 0.2 },
+                 { name: 'Mexico', top: '45%', left: '17%', delay: 0.4 },
+                 { name: 'Argentina', top: '75%', left: '28%', delay: 0, primary: true },
+                 { name: 'Uruguay', top: '72%', left: '32%', delay: 0.6 },
+                 { name: 'UK', top: '22%', left: '46%', delay: 0.3 },
+                 { name: 'Spain', top: '34%', left: '45%', delay: 0.8 },
+                 { name: 'France', top: '28%', left: '48%', delay: 0.5 },
+                 { name: 'Dubai', top: '45%', left: '65%', delay: 0.7 },
+               ].map((loc) => (
+                  <div key={loc.name} className="absolute flex flex-col items-center gap-2 group cursor-default z-10 -translate-x-1/2 -translate-y-1/2" style={{ top: loc.top, left: loc.left }}>
+                    <motion.div 
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: loc.delay }}
+                      className="relative"
+                    >
+                      <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${loc.primary ? 'bg-secondary-fixed shadow-[0_0_20px_rgba(84,145,255,0.9)]' : 'bg-primary-fixed shadow-[0_0_15px_rgba(220,184,255,0.8)]'}`} />
+                      <div className={`absolute inset-0 rounded-full animate-ping opacity-60 ${loc.primary ? 'bg-secondary-fixed' : 'bg-primary-fixed'}`} />
+                    </motion.div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-5 md:top-6 bg-white/10 backdrop-blur-xl px-3 py-1.5 rounded-lg border border-white/20 whitespace-nowrap shadow-xl z-20">
+                      <span className="text-[10px] md:text-xs font-bold font-headline">{loc.name}</span>
+                    </div>
                   </div>
-                </div>
-             ))}
+               ))}
+             </div>
           </div>
         </div>
       </section>
