@@ -630,9 +630,18 @@ export default function Home() {
     e.preventDefault()
     if (!formData.email || !formData.name) return
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1200))
-    setLoading(false)
-    setSubmitted(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) setSubmitted(true)
+    } catch {
+      // silently fail — user sees the form still open
+    } finally {
+      setLoading(false)
+    }
   }
 
   const h = t.hero
