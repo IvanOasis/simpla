@@ -17,8 +17,8 @@ const IMG = {
   portfolio2: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAS0pQANBBBDaxUZRiXhdQA-B2XsFW5YQuamuX9olD-oF9yRKuAIoT1PLvFWkBOZ4kpF5vq659Mzjs1Qy_vUUtqRVgw_1OWN6_JVLMNs66iFQYTnTTcurCujxPgxYaTSY9JFdZl3uwu-tZf8bKVArwDcGaxfHVGCya5RpjXlgr_TxyJ-yJvgCy4TH5CrWrfuQSjOHH9blUMCCBHKMF0KYOjjRLEf8m5CL02D3qc9UN-ZSwWVwSI5tWljC_JBJX96U9IUe9ul-llq5Ie',
   portfolio3: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCaRxlttEqRf4YJZKx2ik7zm7njd_JahuqOxw4PDlnnMeKVUWxMYyMqxzb_LgdA6bTJTD1xatLHwUBP8ebH8MgE7zdkPA_UZe2AjjPW9cqvWeKZd7KvE8mOxTdcYiQQbWsx2svtbhso9TRQSsroIwFHKVEua2xKfXeYDJ1qs9lIxvFIYNa3m87Lk24pNgtt6y0mfWZ49iCbbfbcFfyxMZVm_Obu8erdyD_fSSrU9OEQlbHP5erVRIFZ5FYXdezmSsS4VK7wYVm8_0Lh',
   portfolio4: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHeTMrYREFjQ0Vlv19ytNxwYvftc-71OF7NDSKyjMyGEzhcxOBYnIJc__p3z_47P2aKYxWcoVonfkrbffk-nbmHTNeMzTYa327jMbboO-9egFmCaXiV_6uUfMmEtuxWEPRm9frIpJ_GBGXLZS-DulhGKA_p9Lq4OHIBrJNPrR3knHSTZrhIMAsVEcW1I2SAdw4xoUUIMFsE0SOmOL0i23z2B4p5E7zraM1ATffbyZQLsXgqfcNA8rn7hV7sA3h0oSxvdGeo9DGt7QV',
-  testimonial1: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCRbA3Ut27y0FUZjK90GytDNawlj-INkwC7MAvb43turCDivH2mZbs3A2PM7vD2KC8Q4qdUswGxfW9NjcjrHcErlVluY93HuIriZ2h8pcsPkWLhP7NzUPkaj9y8d5RX-egtVd9o1BRxCNK20giLgy644rUAfmXgrIWsQ3-m3i_Fc3T1uehQSuq9Ys4QNAwCydfhONe_mBQTgiUZO18kLi3QqBt8qSBnEqHVjGXiUvxBCTZz6faMh_8WqiE_-crW2Hw1mzvwtjSvb5R7',
-  testimonial2: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCb-BrDHQlXeM5qjnlJwUeRLHfUo8yOYAz-jEg8qGRsp3G9OL_dqCeG9Aou8QgR0NRAlCY2dU1nypnl-6_Tpwk8y1osqh6BNuFlpMVsx8IdsuKJapawSYvNAzs7rq6S0F6uWEUuQ1QC9djCX0O3Wsg8uHt6XW14VNqSya1UbudoscRcmSUe09j0NLYYQIi4l8fRD5LRig99aOOJLBRA_B8kD677Wq1G2fbzRDpxuFh0wl1PEBhY0Js-5ZStnGc-KCtsNHlFTgiNyM16',
+  testimonial1: 'https://api.dicebear.com/9.x/avataaars/svg?seed=IvanMulticover&backgroundColor=b6e3f4&top=shortHair01&accessories=prescription01&facialHair=beardMedium&facialHairColor=2c1b18&clothesColor=3c4f5c',
+  testimonial2: 'https://api.dicebear.com/9.x/avataaars/svg?seed=LeoMixturev&backgroundColor=c0aafa&top=shortHair02&accessories=sunglasses&facialHair=moustacheFancy&facialHairColor=4a312c&clothesColor=5c3317',
   teamPhoto:   'https://lh3.googleusercontent.com/aida-public/AB6AXuA1zimSg9D-HHeCm62cnWa9_lF_PxWVZK4i2bb8Y6M0-kb37x-GFfzktk2iP90UvivJVdQ4rvyKTMfvitVWeEHN6RQCYH4lLQdHE-EJcvdlqT12MSvX2M_WFMlLzRSS6lPFZ3tkzt2cFfiFi2I2I3VrqeDTkiVjPUfVNMb37BWVjoUr5Jm28pQAUFnlJYg2_gqvA5oM_V2doalDz0miA54HssAfhNROQjwCvxOV80jhUFvrHQLWPKphXESC9ue-AFtczmNn1_x7mMyi',
 }
 
@@ -1046,26 +1046,22 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════ FOOTER */}
-      <footer className="w-full rounded-t-[3rem] bg-gradient-to-br from-[#1b1b1e] to-[#2c0051] text-white relative overflow-hidden">
-        {/* Ambient glow in footer */}
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#5491ff]/5 rounded-full blur-[80px] pointer-events-none" />
-
-        <div className="container mx-auto max-w-7xl px-6 lg:px-16 pt-24 pb-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+      <footer className="w-full rounded-t-[2.5rem] bg-gradient-to-br from-[#7346a1] to-[#5491ff] text-white overflow-hidden relative">
+        <div className="container mx-auto max-w-7xl px-6 lg:px-16 pt-20 pb-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
             {/* Brand Section */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="flex items-center gap-3">
-                <SimplaLogo className="w-10 h-10" />
-                <span className="font-headline font-black text-3xl tracking-tighter text-white">Simpla</span>
+            <div className="lg:col-span-5 space-y-7">
+              <div className="flex items-center gap-2.5">
+                <SimplaLogo className="w-9 h-9" />
+                <span className="font-headline font-black text-2xl text-white">Simpla</span>
               </div>
-              <p className="text-white/60 text-lg leading-relaxed max-w-sm font-medium italic">
-                "{f.description}"
+              <p className="text-white/80 text-base leading-relaxed max-w-sm">
+                {f.description}
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a href="https://www.linkedin.com/company/simpla-agency" target="_blank" rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/30 transition-all group" aria-label="LinkedIn">
-                  <svg className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" aria-label="LinkedIn">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </a>
@@ -1073,13 +1069,13 @@ export default function Home() {
             </div>
 
             {/* Links Sections */}
-            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
-              <div className="space-y-7">
-                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">{f.servicesTitle}</h4>
-                <ul className="space-y-4">
+            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
+              <div className="space-y-6">
+                <h4 className="font-headline font-bold text-base text-white">{f.servicesTitle}</h4>
+                <ul className="space-y-3">
                   {f.services.map(s => (
                     <li key={s}>
-                      <a href="#services" className="text-white/60 hover:text-white transition-all text-base font-medium hover:translate-x-1 block">
+                      <a href="#services" className="text-white/80 hover:text-white hover:underline transition-all text-sm">
                         {s}
                       </a>
                     </li>
@@ -1087,12 +1083,12 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="space-y-7">
-                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">{f.companyTitle}</h4>
-                <ul className="space-y-4">
+              <div className="space-y-6">
+                <h4 className="font-headline font-bold text-base text-white">{f.companyTitle}</h4>
+                <ul className="space-y-3">
                   {f.companyLinks.map(l => (
                     <li key={l.label}>
-                      <a href={l.href} className="text-white/60 hover:text-white transition-all text-base font-medium hover:translate-x-1 block">
+                      <a href={l.href} className="text-white/80 hover:text-white hover:underline transition-all text-sm">
                         {l.label}
                       </a>
                     </li>
@@ -1100,28 +1096,22 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="hidden md:block space-y-7">
-                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">Newsletter</h4>
-                <div className="space-y-4">
-                  <p className="text-white/50 text-sm leading-relaxed">Join 500+ leaders getting our weekly growth insights.</p>
+              <div className="space-y-6">
+                <h4 className="font-headline font-bold text-base text-white">Newsletter</h4>
+                <div className="space-y-3">
+                  <p className="text-white/80 text-sm">Growth insights weekly.</p>
                   <div className="flex gap-2">
-                    <input type="email" placeholder="Email" className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-primary/40 w-full" />
-                    <button className="bg-primary hover:bg-primary-fixed-dim hover:text-primary transition-all px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider">→</button>
+                    <input type="email" placeholder="Email" className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white placeholder-white/40 focus:outline-none focus:bg-white/20 w-full" />
+                    <button className="bg-white text-[#7346a1] font-bold px-3 py-1.5 rounded-lg text-xs hover:bg-white/90 transition-all">→</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-              <p className="text-white/30 text-[11px] font-bold uppercase tracking-widest">{f.copyright}</p>
-              <div className="flex gap-6">
-                <a href="#" className="text-white/30 hover:text-white/60 text-[10px] uppercase font-bold tracking-widest transition-colors">Privacy Policy</a>
-                <a href="#" className="text-white/30 hover:text-white/60 text-[10px] uppercase font-bold tracking-widest transition-colors">Terms of Service</a>
-              </div>
-            </div>
-            <p className="font-headline italic text-white/20 text-xs font-bold tracking-wide">{f.tagline}</p>
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-white/70 text-xs font-bold">{f.copyright}</p>
+            <p className="font-headline italic text-white/50 text-xs font-bold">{f.tagline}</p>
           </div>
         </div>
       </footer>
