@@ -9,6 +9,7 @@ import {
   MessageCircle, PlayCircle, MousePointer2, Smartphone, Cpu, ShieldCheck
 } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import { posts } from '@/lib/posts'
 
 // ─── Stitch image URLs ──────────────────────────────────────────────────────
 const IMG = {
@@ -831,7 +832,7 @@ export default function Home() {
             {b.posts.map((post, i) => {
               const accent = i % 2 === 0 ? '#7346a1' : '#5491ff'
               return (
-                <a key={post.title} href="#" className="group glass-card rounded-2xl overflow-hidden border border-outline-variant/15 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+                <a key={post.title} href={`/blog/${posts[i]?.slug ?? '#'}`} className="group glass-card rounded-2xl overflow-hidden border border-outline-variant/15 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
                   <div className="h-44 relative overflow-hidden" style={{ background: `${accent}08` }}>
                     <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${accent}18 0%, rgba(83,144,255,0.08) 100%)` }} />
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(circle, ${accent} 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
