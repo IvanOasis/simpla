@@ -277,7 +277,7 @@ const en: Translations = {
   },
   presence: {
     title: "From <span class=\"text-primary-fixed-dim\">LATAM</span> to the <span class=\"text-secondary-fixed\">world.</span>",
-    subtitle: "We operate globally, building cross-border partnerships and delivering world-class results for ambitious brands everywhere.",
+    subtitle: "We work with ambitious brands across every timezone — driving real results, wherever growth happens.",
   },
   footer: {
     description:
@@ -504,7 +504,7 @@ const es: Translations = {
   },
   presence: {
     title: "De <span class=\"text-primary-fixed-dim\">LATAM</span> para el <span class=\"text-secondary-fixed\">mundo.</span>",
-    subtitle: "Operamos globalmente, construyendo alianzas estratégicas y entregando resultados de clase mundial para marcas ambiciosas en todo el mundo.",
+    subtitle: "Trabajamos con marcas que piensan en grande, en cualquier mercado y zona horaria.",
   },
   footer: {
     description:
