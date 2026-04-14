@@ -601,6 +601,24 @@ export default function Home() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
+
+  const handleNewsletter = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!newsletterEmail) return
+    setNewsletterStatus('loading')
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: newsletterEmail }),
+      })
+      setNewsletterStatus(res.ok ? 'done' : 'error')
+    } catch {
+      setNewsletterStatus('error')
+    }
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -1179,10 +1197,31 @@ export default function Home() {
                 <h4 className="font-headline font-bold text-base text-white">Newsletter</h4>
                 <div className="space-y-3">
                   <p className="text-white/80 text-sm">Growth insights weekly.</p>
-                  <div className="flex gap-2">
-                    <input type="email" placeholder="Email" className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white placeholder-white/40 focus:outline-none focus:bg-white/20 w-full" />
-                    <button className="bg-white text-[#7346a1] font-bold px-3 py-1.5 rounded-lg text-xs hover:bg-white/90 transition-all">→</button>
-                  </div>
+                  {newsletterStatus === 'done' ? (
+                    <p className="text-white font-bold text-sm">¡Suscripto!</p>
+                  ) : (
+                    <form onSubmit={handleNewsletter} className="flex gap-2">
+                      <input
+                        type="email"
+                        required
+                        placeholder="Email"
+                        value={newsletterEmail}
+                        onChange={e => setNewsletterEmail(e.target.value)}
+                        className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white placeholder-white/40 focus:outline-none focus:bg-white/20 w-full"
+                        aria-label="Email newsletter"
+                      />
+                      <button
+                        type="submit"
+                        disabled={newsletterStatus === 'loading'}
+                        className="bg-white text-[#7346a1] font-bold px-3 py-1.5 rounded-lg text-xs hover:bg-white/90 transition-all disabled:opacity-60"
+                      >
+                        {newsletterStatus === 'loading' ? '...' : '→'}
+                      </button>
+                    </form>
+                  )}
+                  {newsletterStatus === 'error' && (
+                    <p className="text-red-300 text-xs">Error, intentá de nuevo.</p>
+                  )}
                 </div>
               </div>
             </div>
