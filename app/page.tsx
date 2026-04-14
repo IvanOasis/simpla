@@ -832,7 +832,7 @@ export default function Home() {
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
               { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
-              { src: '/assets/Logos/realmint.png',         alt: 'Realmint' },
+              { src: '/assets/Logos/realmint.png',         alt: 'Realmint', scale: 1.8 },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -1027,17 +1027,17 @@ export default function Home() {
 
                {/* Animated Map Locators */}
                {[
-                 { name: 'Canada', top: '15%', left: '18%', delay: 0 },
-                 { name: 'USA', top: '30%', left: '20%', delay: 0.2 },
-                 { name: 'Mexico', top: '45%', left: '17%', delay: 0.4 },
+                 { name: 'Canada', top: '12%', left: '20%', delay: 0 },
+                 { name: 'USA', top: '25%', left: '20%', delay: 0.2 },
+                 { name: 'Mexico', top: '38%', left: '18%', delay: 0.4 },
                  { name: 'Argentina', top: '75%', left: '28%', delay: 0, primary: true },
                  { name: 'Uruguay', top: '72%', left: '32%', delay: 0.6 },
                  { name: 'UK', top: '22%', left: '46%', delay: 0.3 },
-                 { name: 'Spain', top: '34%', left: '45%', delay: 0.8 },
-                 { name: 'France', top: '28%', left: '48%', delay: 0.5 },
-                 { name: 'Dubai', top: '45%', left: '65%', delay: 0.7 },
+                 { name: 'Spain', top: '31%', left: '47%', delay: 0.8 },
+                 { name: 'France', top: '28%', left: '49%', delay: 0.5 },
+                 { name: 'Dubai', top: '42%', left: '60%', delay: 0.7 },
                ].map((loc) => (
-                  <div key={loc.name} className="absolute flex flex-col items-center gap-2 group cursor-default z-10 -translate-x-1/2 -translate-y-1/2" style={{ top: loc.top, left: loc.left }}>
+                  <div key={loc.name} className="absolute flex items-center justify-center -translate-x-1/2 -translate-y-1/2" style={{ top: loc.top, left: loc.left }}>
                     <motion.div 
                       initial={{ scale: 0.5, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
@@ -1048,9 +1048,6 @@ export default function Home() {
                       <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${loc.primary ? 'bg-secondary-fixed shadow-[0_0_20px_rgba(84,145,255,0.9)]' : 'bg-primary-fixed shadow-[0_0_15px_rgba(220,184,255,0.8)]'}`} />
                       <div className={`absolute inset-0 rounded-full animate-ping opacity-60 ${loc.primary ? 'bg-secondary-fixed' : 'bg-primary-fixed'}`} />
                     </motion.div>
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-5 md:top-6 bg-white/10 backdrop-blur-xl px-3 py-1.5 rounded-lg border border-white/20 whitespace-nowrap shadow-xl z-20">
-                      <span className="text-[10px] md:text-xs font-bold font-headline">{loc.name}</span>
-                    </div>
                   </div>
                ))}
              </div>
