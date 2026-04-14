@@ -503,6 +503,90 @@ function HeroRocket() {
 
 
 
+// ─── Testimonial Graphic ──────────────────────────────────────────────────
+function TestimonialGraphic() {
+  return (
+    <div className="relative flex items-center justify-center w-full h-[400px] md:h-[500px] select-none" aria-hidden="true">
+      {/* ambient glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary-container/10 rounded-full blur-[80px]" />
+      
+      <motion.div 
+        animate={{ y: [-12, 12, -12] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        className="relative z-10 w-full h-full flex items-center justify-center"
+      >
+        <svg viewBox="0 0 400 400" className="w-[85%] max-w-[340px] h-auto drop-shadow-2xl overflow-visible">
+          <defs>
+            <linearGradient id="tg-main" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#dcc8f8" />
+              <stop offset="100%" stopColor="#9e60cc" />
+            </linearGradient>
+            <linearGradient id="tg-sec" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#c8e8ff" />
+              <stop offset="100%" stopColor="#5491ff" />
+            </linearGradient>
+            <linearGradient id="tg-star" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#fef08a" />
+              <stop offset="100%" stopColor="#f59e0b" />
+            </linearGradient>
+            <filter id="tg-drop" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="-4" dy="8" stdDeviation="12" floodColor="#5020a0" floodOpacity="0.35"/>
+            </filter>
+            <filter id="tg-drop-sec" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="4" dy="8" stdDeviation="10" floodColor="#3060d0" floodOpacity="0.25"/>
+            </filter>
+            <filter id="tg-glow-star" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#f59e0b" floodOpacity="0.5"/>
+            </filter>
+          </defs>
+
+          {/* BACK BUBBLE (Blue) */}
+          <path d="M 280,100 C 280,60 320,30 360,30 C 400,30 440,60 440,100 C 440,140 400,170 360,170 C 340,170 320,180 300,190 C 300,190 310,170 310,170 C 290,150 280,120 280,100 Z" 
+                fill="url(#tg-sec)" filter="url(#tg-drop-sec)" transform="matrix(-0.8 0 0 0.8 450 60)" />
+
+          {/* MAIN BUBBLE (Purple) */}
+          <path d="M 40,180 C 40,90 130,40 220,40 C 310,40 370,90 370,180 C 370,270 310,320 220,320 C 180,320 130,330 90,350 C 90,350 110,310 110,310 C 60,270 40,230 40,180 Z" 
+                fill="url(#tg-main)" filter="url(#tg-drop)" />
+          
+          {/* HEAD/AVATAR inside bubble */}
+          <circle cx="110" cy="220" r="28" fill="white" opacity="0.8" />
+          <path d="M 85,270 C 85,250 95,240 110,240 C 125,240 135,250 135,270" stroke="white" strokeWidth="8" strokeLinecap="round" opacity="0.8" fill="none" />
+          
+          {/* INNER WHITE HIGHLIGHT streaks */}
+          <path d="M 80,100 C 120,60 180,50 220,50" stroke="white" strokeWidth="6" strokeLinecap="round" opacity="0.25" fill="none" />
+          
+          {/* RATING STARS 5x */}
+          <g transform="translate(160, 110) scale(1.1)">
+            {[0, 30, 60, 90, 120].map((dx, i) => (
+              <path key={i} transform={`translate(${dx}, 0)`}
+                d="M10,0 l3,6.5 l7,1 l-5,5 l1,7.5 l-6,-3.5 l-6,3.5 l1,-7.5 l-5,-5 l7,-1 z" 
+                fill="url(#tg-star)" filter="url(#tg-glow-star)" />
+            ))}
+          </g>
+
+          {/* CHAT LINES (Placeholder for text) */}
+          <rect x="160" y="195" width="160" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
+          <rect x="160" y="225" width="130" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
+          <rect x="160" y="255" width="100" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
+
+          {/* DECORATIVE SPARKLES */}
+          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 2, repeat: Infinity, delay: 0 }}>
+            <path d="M 20,40 Q 30,40 30,30 Q 30,40 40,40 Q 30,40 30,50 Q 30,40 20,40 Z" fill="#fef08a" />
+          </motion.g>
+          
+          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}>
+            <path d="M 370,280 Q 385,280 385,265 Q 385,280 400,280 Q 385,280 385,295 Q 385,280 370,280 Z" fill="#fef08a" />
+          </motion.g>
+
+          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.5 }}>
+            <path d="M 340,70 Q 350,70 350,60 Q 350,70 360,70 Q 350,70 350,80 Q 350,70 340,70 Z" fill="white" opacity="0.8" />
+          </motion.g>
+        </svg>
+      </motion.div>
+    </div>
+  )
+}
+
 // ─── Page ──────────────────────────────────────────────────────────────────
 export default function Home() {
   const { lang, t, setLang } = useLanguage()
@@ -611,7 +695,7 @@ export default function Home() {
             <motion.h1 initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.9, ease: [0.16,1,0.3,1] }}
               className="font-headline font-black tracking-tighter leading-[1.04] text-on-surface"
               style={{ fontSize: 'clamp(3.5rem,6vw,6rem)', letterSpacing: '-0.04em' }}>
-              Marketing done <span className="gradient-text">Simple</span>
+              {h.tagline.split(' ').slice(0, -1).join(' ')} <span className="gradient-text">{h.tagline.split(' ').slice(-1)}</span>
             </motion.h1>
 
             <motion.div 
@@ -716,11 +800,11 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="max-w-3xl mb-14 space-y-4">
             <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter gradient-text leading-[1.1]">
-              {lang === 'en' ? 'Happy clients.' : 'Clientes felices.'}
+              {t.clients.title}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary-container rounded-full" />
             <p className="text-lg md:text-xl text-on-surface font-medium opacity-70 leading-relaxed">
-              {lang === 'en' ? 'Brands and businesses that trusted us to grow.' : 'Marcas y negocios que confiaron en nosotros para crecer.'}
+              {t.clients.subtitle}
             </p>
           </div>
 
@@ -731,7 +815,7 @@ export default function Home() {
               { src: '/assets/Logos/images (1).png',       alt: 'Client' },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', imgClass: 'h-10 max-w-[150px]' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', imgClass: 'h-14 max-w-[180px]' },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', dark: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -745,7 +829,7 @@ export default function Home() {
                 className={`h-24 rounded-2xl border flex items-center justify-center px-6 group hover:shadow-sm transition-all duration-200 ${
                   (logo as any).dark
                     ? 'bg-gray-900 border-gray-800 hover:border-gray-700'
-                    : 'bg-white border-outline-variant/10 hover:border-primary/20'
+                    : 'bg-gray-50 border-outline-variant/10 hover:border-primary/20'
                 }`}
               >
                 <img
@@ -754,9 +838,8 @@ export default function Home() {
                   className={`w-auto object-contain transition-all duration-300 ${
                     (logo as any).dark
                       ? 'h-9 max-w-[120px] opacity-70 group-hover:opacity-100'
-                      : `${(logo as any).imgClass ?? 'h-9 max-w-[120px]'} grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100`
+                      : `${(logo as any).imgClass ?? 'h-9 max-w-[120px]'} grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100`
                   }`}
-                  style={(logo as any).dark ? undefined : { mixBlendMode: 'multiply' }}
                 />
               </motion.div>
             ))}
@@ -802,14 +885,14 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="text-center mb-20 space-y-6">
             <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter gradient-text leading-[1.1]">
-              {lang === 'en' ? 'What clients say.' : 'Lo que dicen los clientes.'}
+              {t.testimonials.title}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary-container mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-8">
-              {t.testimonials.map((item, i) => (
+              {t.testimonials.items.map((item, i) => (
                 <div key={item.name} className={`glass-card p-10 rounded-2xl shadow-xl shadow-on-surface/5 border border-white relative ${i === 1 ? 'md:ml-12' : ''}`}>
                   <span className="font-headline font-black text-6xl absolute -top-5 -left-3 opacity-15 leading-none select-none gradient-text" aria-hidden="true">"</span>
                   <p className="text-lg italic text-on-surface leading-relaxed mb-8">"{item.quote}"</p>
@@ -825,8 +908,7 @@ export default function Home() {
             </div>
 
             <div className="hidden md:block relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary-container/10 rounded-full blur-[100px]" aria-hidden="true" />
-              <img src={IMG.teamPhoto} alt="Simpla team" className="relative z-10 rounded-3xl shadow-2xl w-full object-cover" />
+              <TestimonialGraphic />
             </div>
           </div>
         </div>
@@ -896,37 +978,37 @@ export default function Home() {
               <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-4" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">Full Name</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.name}</label>
                     <input
                       type="text" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Jane Doe" required
+                      placeholder={c.placeholders.name} required
                       className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
                       aria-label="Name"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">Email Address</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.email}</label>
                     <input
                       type="email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="jane@company.com" required
+                      placeholder={c.placeholders.email} required
                       className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
                       aria-label="Email"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">Company</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.company}</label>
                     <input
                       type="text" value={formData.company} onChange={e => setFormData({ ...formData, company: e.target.value })}
-                      placeholder="Company Name"
+                      placeholder={c.placeholders.company}
                       className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
                       aria-label="Company"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">Country</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.country}</label>
                     <input
                       type="text" value={formData.country} onChange={e => setFormData({ ...formData, country: e.target.value })}
-                      placeholder="e.g. USA, UK, Spain"
+                      placeholder={c.placeholders.country}
                       className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
                       aria-label="Country"
                     />
@@ -934,10 +1016,10 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-1.5 text-left">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">How can we help?</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.message}</label>
                   <textarea
                     value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })}
-                    rows={4} placeholder="Tell us more about your business..."
+                    rows={4} placeholder={c.placeholders.message}
                     className="w-full px-6 py-5 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl resize-none"
                     aria-label="Message"
                   />
@@ -954,7 +1036,7 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center gap-3 py-4">
                 <CheckCircle className="w-12 h-12 text-primary" aria-hidden="true" />
                 <p className="font-headline font-bold text-on-surface text-lg">
-                  {lang === 'en' ? "Perfect — we'll be in touch soon." : 'Perfecto — te contactaremos pronto.'}
+                  {c.success}
                 </p>
               </motion.div>
             )}

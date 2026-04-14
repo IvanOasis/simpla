@@ -6,12 +6,15 @@ export interface Translations {
     cta: string
   }
   hero: {
-    headline1: string
-    headline2: string
+    tagline: string
     description: string
     cta1: string
     cta2: string
     stats: { value: string; label: string }[]
+  }
+  clients: {
+    title: string
+    subtitle: string
   }
   services: {
     title: string
@@ -29,7 +32,10 @@ export interface Translations {
     subtitle: string
     steps: { number: string; title: string; description: string }[]
   }
-  testimonials: { name: string; role: string; quote: string }[]
+  testimonials: {
+    title: string
+    items: { name: string; role: string; quote: string }[]
+  }
   blog: {
     title: string
     subtitle: string
@@ -39,9 +45,22 @@ export interface Translations {
   contact: {
     title: string
     subtitle: string
-    placeholder: string
     cta: string
-    disclaimer: string
+    success: string
+    labels: {
+      name: string
+      email: string
+      company: string
+      country: string
+      message: string
+    }
+    placeholders: {
+      name: string
+      email: string
+      company: string
+      country: string
+      message: string
+    }
   }
   footer: {
     description: string
@@ -63,15 +82,14 @@ const en: Translations = {
   nav: {
     links: [
       { href: '#services', label: 'Services' },
-      { href: '#work', label: 'Work' },
+      { href: '#work', label: 'Clients' },
       { href: '#method', label: 'How we work' },
       { href: '#blog', label: 'Blog' },
     ],
     cta: "Let's talk",
   },
   hero: {
-    headline1: 'We learn your business.',
-    headline2: 'Then we grow it.',
+    tagline: 'Marketing done Simple',
     description:
       "We're a full-service marketing agency that treats your business like our own. Strategy, content, paid media, automation — everything under one roof, built around what you actually need.",
     cta1: "Let's talk",
@@ -81,6 +99,10 @@ const en: Translations = {
       { value: 'AI', label: 'Powered' },
       { value: '24/7', label: 'Working' },
     ],
+  },
+  clients: {
+    title: 'Happy clients.',
+    subtitle: 'Brands and businesses that trusted us to grow.',
   },
   services: {
     title: 'What we do.',
@@ -102,26 +124,26 @@ const en: Translations = {
       {
         title: 'Web & Visibility',
         description:
-          'If they can\'t find you, nothing else matters. We build fast, conversion-focused websites and make sure you show up — on Google, on AI search, and everywhere in between.',
+          "If they can't find you, nothing else matters. We build fast, conversion-focused websites and make sure you show up — on Google, on AI search, and everywhere in between.",
         subitems: ['High-Performance Landing Pages', 'AI-Powered SEO (GEO)', 'Conversion UX', 'Advanced Analytics'],
       },
       {
         title: 'Automation',
         description:
-          'The best marketing doesn\'t stop when you do. We build automations that nurture leads, follow up, and convert — without you lifting a finger.',
+          "The best marketing doesn't stop when you do. We build automations that nurture leads, follow up, and convert — without you lifting a finger.",
         subitems: ['Lead-Gen Chatbots', 'CRM Automations', 'AI Outbound Systems', 'Workflow Optimization'],
       },
       {
         title: 'Video & Creative',
         description:
-          'Scroll-stopping content that\'s actually on-brand. From Reels to full productions, we handle the creative so you don\'t have to.',
+          "Scroll-stopping content that's actually on-brand. From Reels to full productions, we handle the creative so you don't have to.",
         subitems: ['Short-form Reels/TikTok', 'UGC Direction', 'AI-Generated Promos', 'Visual Brand Identity'],
       },
       {
         title: 'Strategy & Consulting',
         description:
           'Before we do anything, we think. We map your market, define your ideal customer, and build a clear path to growth — so every move has a reason behind it.',
-        subitems: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Identification'],
+        subitems: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Definition'],
       },
     ],
   },
@@ -164,7 +186,7 @@ const en: Translations = {
         number: '02',
         title: 'We build the strategy',
         description:
-          'No templates, no copy-paste playbooks. We design a strategy specific to your business — the right channels, the right message, the right timing — and align on what we\'re measuring.',
+          "No templates, no copy-paste playbooks. We design a strategy specific to your business — the right channels, the right message, the right timing — and align on what we're measuring.",
       },
       {
         number: '03',
@@ -180,20 +202,23 @@ const en: Translations = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: 'Valentina Ríos',
-      role: 'Founder, Fridge & Flow',
-      quote:
-        'Simpla actually took the time to understand how our business works before running a single ad. That changed everything — we tripled revenue in six months and the team felt like true partners.',
-    },
-    {
-      name: 'Matias Carranza',
-      role: 'CEO, Nómada Studio',
-      quote:
-        'Every agency we worked with before handed us a package and ran the same playbook. Simpla was different. They built systems that keep generating results on their own.',
-    },
-  ],
+  testimonials: {
+    title: 'What clients say.',
+    items: [
+      {
+        name: 'Valentina Ríos',
+        role: 'Founder, Fridge & Flow',
+        quote:
+          'Simpla actually took the time to understand how our business works before running a single ad. That changed everything — we tripled revenue in six months and the team felt like true partners.',
+      },
+      {
+        name: 'Matias Carranza',
+        role: 'CEO, Nómada Studio',
+        quote:
+          'Every agency we worked with before handed us a package and ran the same playbook. Simpla was different. They built systems that keep generating results on their own.',
+      },
+    ],
+  },
   blog: {
     title: 'How we think.',
     subtitle: 'Straight talk on marketing, automation, and growing a business in 2025.',
@@ -202,7 +227,7 @@ const en: Translations = {
       {
         title: 'GEO: Why your SEO strategy is missing the most important channel of 2025',
         excerpt:
-          'ChatGPT, Perplexity, and Google AI Overviews are now answering your customers\' questions. If your business isn\'t showing up there, someone else is.',
+          "ChatGPT, Perplexity, and Google AI Overviews are now answering your customers' questions. If your business isn't showing up there, someone else is.",
         category: 'Web & Visibility',
         date: 'Apr 2025',
         readTime: '6 min',
@@ -210,7 +235,7 @@ const en: Translations = {
       {
         title: 'The agency trap: why packages are killing your marketing ROI',
         excerpt:
-          'Most agencies sell you a bundle and run the same playbook they ran last month. Here\'s what to ask for instead.',
+          "Most agencies sell you a bundle and run the same playbook they ran last month. Here's what to ask for instead.",
         category: 'Strategy',
         date: 'Mar 2025',
         readTime: '5 min',
@@ -218,7 +243,7 @@ const en: Translations = {
       {
         title: 'Marketing that works while you sleep: a guide to automation for SMBs',
         excerpt:
-          'You don\'t need a big team to have a 24/7 marketing operation. You need the right systems. Here\'s where to start.',
+          "You don't need a big team to have a 24/7 marketing operation. You need the right systems. Here's where to start.",
         category: 'Automation',
         date: 'Feb 2025',
         readTime: '7 min',
@@ -229,9 +254,22 @@ const en: Translations = {
     title: 'Ready to grow?',
     subtitle:
       "Tell us about your business. No packages, no templates — just a real conversation about what would actually move the needle for you.",
-    placeholder: 'your@email.com',
     cta: "Let's talk",
-    disclaimer: 'No spam, ever. Just a conversation.',
+    success: "Perfect — we'll be in touch soon.",
+    labels: {
+      name: 'Full Name',
+      email: 'Email Address',
+      company: 'Company',
+      country: 'Country',
+      message: 'How can we help?',
+    },
+    placeholders: {
+      name: 'Jane Doe',
+      email: 'jane@company.com',
+      company: 'Company Name',
+      country: 'e.g. USA, UK, Spain',
+      message: 'Tell us more about your business...',
+    },
   },
   footer: {
     description:
@@ -248,7 +286,7 @@ const en: Translations = {
     companyTitle: 'Company',
     companyLinks: [
       { label: 'About', href: '#' },
-      { label: 'Work', href: '#work' },
+      { label: 'Clients', href: '#work' },
       { label: 'Blog', href: '#blog' },
       { label: 'Contact', href: '#contact' },
     ],
@@ -259,7 +297,7 @@ const en: Translations = {
     line1: 'Most agencies sell packages.',
     line2: 'We learn your business first.',
     body:
-      'Before any campaign goes live, we invest time understanding your business model, your customers, and your bottlenecks. Because marketing without that understanding is just noise — and you\'ve probably paid for enough of that already.',
+      "Before any campaign goes live, we invest time understanding your business model, your customers, and your bottlenecks. Because marketing without that understanding is just noise — and you've probably paid for enough of that already.",
   },
 }
 
@@ -267,15 +305,14 @@ const es: Translations = {
   nav: {
     links: [
       { href: '#services', label: 'Servicios' },
-      { href: '#work', label: 'Casos' },
+      { href: '#work', label: 'Clientes' },
       { href: '#method', label: 'Cómo trabajamos' },
       { href: '#blog', label: 'Blog' },
     ],
     cta: 'Hablemos',
   },
   hero: {
-    headline1: 'Aprendemos tu negocio.',
-    headline2: 'Después lo hacemos crecer.',
+    tagline: 'Marketing hecho Simple',
     description:
       'Somos una agencia de marketing integral que trata tu negocio como si fuera el nuestro. Estrategia, contenido, pauta, automatización — todo bajo un mismo techo, construido alrededor de lo que realmente necesitás.',
     cta1: 'Hablemos',
@@ -286,6 +323,10 @@ const es: Translations = {
       { value: '24/7', label: 'Trabajando' },
     ],
   },
+  clients: {
+    title: 'Clientes felices.',
+    subtitle: 'Marcas y negocios que confiaron en nosotros para crecer.',
+  },
   services: {
     title: 'Lo que hacemos.',
     subtitle:
@@ -295,7 +336,7 @@ const es: Translations = {
         title: 'Contenido',
         description:
           'Las palabras correctas, en el lugar correcto, en el momento correcto. Creamos contenido que suena como vos — y que hace que la gente quiera seguir leyendo.',
-        subitems: ['Estrategia Social', 'Copywriting de Conversión', 'Storytelling de Marca', 'Calendarios de Contenido'],
+        subitems: ['Estrategia en Redes', 'Copywriting de Conversión', 'Storytelling de Marca', 'Calendarios de Contenido'],
       },
       {
         title: 'Paid Media',
@@ -313,19 +354,19 @@ const es: Translations = {
         title: 'Automatización',
         description:
           'El mejor marketing no para cuando vos parás. Construimos automatizaciones que nutren leads, hacen seguimiento y convierten — sin que tengas que mover un dedo.',
-        subitems: ['Chatbots de Lead-Gen', 'Automatizaciones de CRM', 'Sistemas de Outbound con IA', 'Optimización de Workflows'],
+        subitems: ['Chatbots de Captación', 'Automatizaciones de CRM', 'Sistemas de Outreach con IA', 'Optimización de Flujos'],
       },
       {
         title: 'Video & Creatividad',
         description:
           'Contenido que para el scroll y que es genuinamente tuyo. Desde Reels hasta producciones completas, nos encargamos de la creatividad para que vos no tengas que hacerlo.',
-        subitems: ['Reels/TikTok de Formato Corto', 'Dirección de UGC', 'Promos Generadas con IA', 'Identidad Visual de Marca'],
+        subitems: ['Reels y TikTok de Formato Corto', 'Dirección de UGC', 'Promos Generadas con IA', 'Identidad Visual de Marca'],
       },
       {
         title: 'Estrategia & Consultoría',
         description:
           'Antes de hacer cualquier cosa, pensamos. Mapeamos tu mercado, definimos tu cliente ideal y construimos un camino claro hacia el crecimiento — para que cada movimiento tenga una razón detrás.',
-        subitems: ['Posicionamiento de Mercado', 'Auditorías Competitivas', 'Roadmaps de Crecimiento', 'Identificación de ICP'],
+        subitems: ['Posicionamiento de Mercado', 'Auditorías Competitivas', 'Hoja de Ruta de Crecimiento', 'Definición de ICP'],
       },
     ],
   },
@@ -337,7 +378,7 @@ const es: Translations = {
       {
         headline: '3× de facturación en 6 meses',
         client: 'Fridge & Flow',
-        industry: 'E-commerce / Food',
+        industry: 'E-commerce / Alimentos',
         services: 'Paid Media, Contenido',
       },
       {
@@ -368,13 +409,13 @@ const es: Translations = {
         number: '02',
         title: 'Construimos la estrategia',
         description:
-          'Sin templates ni playbooks copiados. Diseñamos una estrategia específica para tu negocio — los canales correctos, el mensaje correcto, el momento correcto — y acordamos qué vamos a medir.',
+          'Sin plantillas ni fórmulas copiadas. Diseñamos una estrategia específica para tu negocio — los canales correctos, el mensaje correcto, el momento correcto — y acordamos qué vamos a medir.',
       },
       {
         number: '03',
         title: 'Ejecutamos con IA + automatización',
         description:
-          'Combinamos ejecución directa con infraestructura moderna: flujos automatizados, pipelines de contenido y sistemas que funcionan 24/7 sin sumar personal.',
+          'Combinamos ejecución directa con infraestructura moderna: flujos automatizados, pipelines de contenido y sistemas que funcionan las 24 horas sin sumar personal.',
       },
       {
         number: '04',
@@ -384,20 +425,23 @@ const es: Translations = {
       },
     ],
   },
-  testimonials: [
-    {
-      name: 'Valentina Ríos',
-      role: 'Fundadora, Fridge & Flow',
-      quote:
-        'Simpla se tomó el tiempo de entender cómo funciona nuestro negocio antes de correr un solo anuncio. Eso cambió todo — triplicamos la facturación en seis meses y el equipo se sintió como un verdadero socio.',
-    },
-    {
-      name: 'Matias Carranza',
-      role: 'CEO, Nómada Studio',
-      quote:
-        'Todas las agencias con las que trabajamos antes nos daban un paquete y corrían el mismo playbook. Simpla fue distinto. Construyeron sistemas que siguen generando resultados solos.',
-    },
-  ],
+  testimonials: {
+    title: 'Lo que dicen nuestros clientes.',
+    items: [
+      {
+        name: 'Valentina Ríos',
+        role: 'Fundadora, Fridge & Flow',
+        quote:
+          'Simpla se tomó el tiempo de entender cómo funciona nuestro negocio antes de correr un solo anuncio. Eso cambió todo — triplicamos la facturación en seis meses y el equipo se sintió como un verdadero socio.',
+      },
+      {
+        name: 'Matias Carranza',
+        role: 'CEO, Nómada Studio',
+        quote:
+          'Todas las agencias con las que trabajamos antes nos daban un paquete y corrían la misma fórmula de siempre. Simpla fue distinto. Construyeron sistemas que siguen generando resultados solos.',
+      },
+    ],
+  },
   blog: {
     title: 'Cómo pensamos.',
     subtitle: 'Ideas directas sobre marketing, automatización y cómo hacer crecer un negocio en 2025.',
@@ -414,7 +458,7 @@ const es: Translations = {
       {
         title: 'La trampa de los paquetes: por qué destruyen tu ROI de marketing',
         excerpt:
-          'La mayoría de las agencias te venden un bundle y corren el mismo playbook que corrieron el mes pasado. Acá está lo que tenés que pedir en cambio.',
+          'La mayoría de las agencias te venden un paquete y corren la misma fórmula que corrieron el mes pasado. Acá está lo que tenés que pedir en cambio.',
         category: 'Estrategia',
         date: 'Mar 2025',
         readTime: '5 min',
@@ -422,7 +466,7 @@ const es: Translations = {
       {
         title: 'Marketing que trabaja mientras dormís: guía de automatización para pymes',
         excerpt:
-          'No necesitás un equipo grande para tener una operación de marketing 24/7. Necesitás los sistemas correctos. Por acá se empieza.',
+          'No necesitás un equipo grande para tener una operación de marketing las 24 horas. Necesitás los sistemas correctos. Por acá se empieza.',
         category: 'Automatización',
         date: 'Feb 2025',
         readTime: '7 min',
@@ -432,10 +476,23 @@ const es: Translations = {
   contact: {
     title: '¿Arrancamos?',
     subtitle:
-      'Contanos de tu negocio. Sin paquetes, sin templates — solo una conversación real sobre qué te movería la aguja.',
-    placeholder: 'tu@email.com',
+      'Contanos de tu negocio. Sin paquetes, sin plantillas — solo una conversación real sobre qué te movería la aguja.',
     cta: 'Hablemos',
-    disclaimer: 'Sin spam. Solo una conversación.',
+    success: 'Perfecto — te contactaremos pronto.',
+    labels: {
+      name: 'Nombre completo',
+      email: 'Correo electrónico',
+      company: 'Empresa',
+      country: 'País',
+      message: '¿En qué podemos ayudarte?',
+    },
+    placeholders: {
+      name: 'Juan García',
+      email: 'juan@empresa.com',
+      company: 'Nombre de la empresa',
+      country: 'ej. Argentina, España, México',
+      message: 'Contanos más sobre tu negocio...',
+    },
   },
   footer: {
     description:
@@ -452,7 +509,7 @@ const es: Translations = {
     companyTitle: 'Empresa',
     companyLinks: [
       { label: 'Nosotros', href: '#' },
-      { label: 'Casos', href: '#work' },
+      { label: 'Clientes', href: '#work' },
       { label: 'Blog', href: '#blog' },
       { label: 'Contacto', href: '#contact' },
     ],
@@ -463,7 +520,7 @@ const es: Translations = {
     line1: 'La mayoría de las agencias venden paquetes.',
     line2: 'Nosotros primero aprendemos tu negocio.',
     body:
-      'Antes de lanzar cualquier campaña, invertimos tiempo entendiendo tu modelo de negocio, tus clientes y tus cuellos de botella. Porque el marketing sin ese entendimiento es solo ruido — y probablemente ya pagaste suficiente por eso.',
+      'Antes de lanzar cualquier campaña, invertimos tiempo entendiendo tu modelo de negocio, tus clientes y tus puntos de mejora. Porque el marketing sin ese entendimiento es solo ruido — y probablemente ya pagaste suficiente por eso.',
   },
 }
 
