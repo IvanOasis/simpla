@@ -85,42 +85,42 @@ const en: Translations = {
   services: {
     title: 'What we do.',
     subtitle:
-      'Six practice areas. One agency that actually understands your business before touching a single channel.',
+      'Six practice areas. One agency that learns your business before opening a single tool.',
     items: [
       {
         title: 'Content',
         description:
-          'Social media, blog, and newsletter — content that resonates with your audience and builds your brand over time.',
+          'The right words, in the right place, at the right time. We create content that actually sounds like you — and makes people want to keep reading.',
         subitems: ['Social Strategy', 'High-Converting Copy', 'Brand Storytelling', 'Content Calendars'],
       },
       {
         title: 'Paid Media',
         description:
-          'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — and yes, ChatGPT Ads. Every platform your customers are on.',
+          'Your budget deserves more than boosted posts. We run paid media across every platform where your customers actually spend time — and we optimize every dollar.',
         subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Retargeting Funnels', 'Budget Optimization'],
       },
       {
         title: 'Web & Visibility',
         description:
-          'Websites, SEO, GEO (AI search presence), landing pages, CRO, analytics, and Google My Business. Being found is step one.',
+          'If they can\'t find you, nothing else matters. We build fast, conversion-focused websites and make sure you show up — on Google, on AI search, and everywhere in between.',
         subitems: ['High-Performance Landing Pages', 'AI-Powered SEO (GEO)', 'Conversion UX', 'Advanced Analytics'],
       },
       {
         title: 'Automation',
         description:
-          'Chatbots, CRM flows, lead nurturing, AI content repurposing. Systems that generate results while you sleep.',
+          'The best marketing doesn\'t stop when you do. We build automations that nurture leads, follow up, and convert — without you lifting a finger.',
         subitems: ['Lead-Gen Chatbots', 'CRM Automations', 'AI Outbound Systems', 'Workflow Optimization'],
       },
       {
         title: 'Video & Creative',
         description:
-          'Video production, Reels, TikTok, brand identity, UGC coordination, and AI-generated video. Creativity with a purpose.',
+          'Scroll-stopping content that\'s actually on-brand. From Reels to full productions, we handle the creative so you don\'t have to.',
         subitems: ['Short-form Reels/TikTok', 'UGC Direction', 'AI-Generated Promos', 'Visual Brand Identity'],
       },
       {
         title: 'Strategy & Consulting',
         description:
-          'Brand positioning, funnel mapping, competitor analysis, ICP definition, and growth roadmaps. The thinking before the doing.',
+          'Before we do anything, we think. We map your market, define your ideal customer, and build a clear path to growth — so every move has a reason behind it.',
         subitems: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Identification'],
       },
     ],
@@ -289,42 +289,42 @@ const es: Translations = {
   services: {
     title: 'Lo que hacemos.',
     subtitle:
-      'Seis áreas de servicio. Una sola agencia que entiende tu negocio antes de tocar un solo canal.',
+      'Seis áreas de servicio. Una sola agencia que aprende tu negocio antes de abrir una sola herramienta.',
     items: [
       {
         title: 'Contenido',
         description:
-          'Redes sociales, blog y newsletter — contenido que conecta con tu audiencia y construye tu marca con el tiempo.',
+          'Las palabras correctas, en el lugar correcto, en el momento correcto. Creamos contenido que suena como vos — y que hace que la gente quiera seguir leyendo.',
         subitems: ['Estrategia Social', 'Copywriting de Conversión', 'Storytelling de Marca', 'Calendarios de Contenido'],
       },
       {
         title: 'Paid Media',
         description:
-          'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — y ChatGPT Ads. Cada plataforma donde están tus clientes.',
+          'Tu presupuesto merece más que posteos impulsados. Manejamos pauta en cada plataforma donde tus clientes realmente pasan el tiempo — y optimizamos cada peso.',
         subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Embudos de Retargeting', 'Optimización de Presupuesto'],
       },
       {
         title: 'Web & Visibilidad',
         description:
-          'Sitios web, SEO, GEO (presencia en IA), landing pages, CRO, analítica y Google My Business. Que te encuentren es el primer paso.',
+          'Si no te encuentran, nada más importa. Construimos sitios rápidos y orientados a la conversión, y nos aseguramos de que aparezcas — en Google, en búsquedas con IA, y en todo lo que hay en el medio.',
         subitems: ['Landing Pages de Alto Rendimiento', 'SEO Potenciado por IA (GEO)', 'UX de Conversión', 'Analítica Avanzada'],
       },
       {
         title: 'Automatización',
         description:
-          'Chatbots, flujos de CRM, lead nurturing, repurposing con IA. Sistemas que generan resultados mientras dormís.',
+          'El mejor marketing no para cuando vos parás. Construimos automatizaciones que nutren leads, hacen seguimiento y convierten — sin que tengas que mover un dedo.',
         subitems: ['Chatbots de Lead-Gen', 'Automatizaciones de CRM', 'Sistemas de Outbound con IA', 'Optimización de Workflows'],
       },
       {
         title: 'Video & Creatividad',
         description:
-          'Producción de video, Reels, TikTok, identidad de marca, UGC y video con IA. Creatividad con propósito.',
+          'Contenido que para el scroll y que es genuinamente tuyo. Desde Reels hasta producciones completas, nos encargamos de la creatividad para que vos no tengas que hacerlo.',
         subitems: ['Reels/TikTok de Formato Corto', 'Dirección de UGC', 'Promos Generadas con IA', 'Identidad Visual de Marca'],
       },
       {
         title: 'Estrategia & Consultoría',
         description:
-          'Posicionamiento, mapeo de funnel, análisis de competencia, definición de ICP y roadmaps. El pensamiento antes de la ejecución.',
+          'Antes de hacer cualquier cosa, pensamos. Mapeamos tu mercado, definimos tu cliente ideal y construimos un camino claro hacia el crecimiento — para que cada movimiento tenga una razón detrás.',
         subitems: ['Posicionamiento de Mercado', 'Auditorías Competitivas', 'Roadmaps de Crecimiento', 'Identificación de ICP'],
       },
     ],
