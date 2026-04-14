@@ -97,7 +97,7 @@ const en: Translations = {
         title: 'Paid Media',
         description:
           'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — and yes, ChatGPT Ads. Every platform your customers are on.',
-        subitems: ['Meta & Google Ads', 'LinkedIn & TikTok', 'Retargeting Funnels', 'Budget Optimization'],
+        subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Retargeting Funnels', 'Budget Optimization'],
       },
       {
         title: 'Web & Visibility',
@@ -302,7 +302,7 @@ const es: Translations = {
         title: 'Paid Media',
         description:
           'Google, Meta, LinkedIn, TikTok, YouTube, Reddit — y ChatGPT Ads. Cada plataforma donde están tus clientes.',
-        subitems: ['Meta & Google Ads', 'LinkedIn & TikTok', 'Embudos de Retargeting', 'Optimización de Presupuesto'],
+        subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Embudos de Retargeting', 'Optimización de Presupuesto'],
       },
       {
         title: 'Web & Visibilidad',

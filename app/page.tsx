@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
-  Menu, X, ArrowRight, ArrowUpRight,
+  Menu, X, ArrowRight,
   PenLine, BarChart3, Globe, Zap, Clapperboard, Compass,
   Search, Map, Rocket, TrendingUp, CheckCircle, Target,
   MessageCircle, PlayCircle, MousePointer2, Smartphone, Cpu, ShieldCheck
@@ -534,7 +534,6 @@ export default function Home() {
 
   const h = t.hero
   const s = t.services
-  const w = t.work
   const m = t.method
   const b = t.blog
   const c = t.contact
@@ -646,34 +645,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════ HAPPY CLIENTS CAROUSEL */}
-      <section className="py-24 bg-surface border-y border-outline-variant/5 overflow-hidden">
-        <div className="container mx-auto px-6 mb-14 text-center">
-          <h2 className="text-sm font-headline font-black text-primary uppercase tracking-[0.4em] mb-4">Happy Clients</h2>
-          <p className="text-3xl md:text-4xl font-headline font-bold text-on-surface tracking-tighter">Trusted by 150+ growth leaders</p>
-        </div>
-
-        <div className="relative flex overflow-hidden">
-          {/* Gradient Fades */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none bg-gradient-to-r from-surface to-transparent" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none bg-gradient-to-l from-surface to-transparent" />
-          
-          <motion.div 
-            className="flex gap-24 items-center whitespace-nowrap px-12"
-            animate={{ x: [0, -1500] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          >
-            {[
-              "FORBES", "TECHCRUNCH", "NIKE", "STRIPE", "SHOPIFY", "COCA COLA", "GOOGLE", "META",
-              "FORBES", "TECHCRUNCH", "NIKE", "STRIPE", "SHOPIFY", "COCA COLA", "GOOGLE", "META"
-            ].map((brand, i) => (
-              <span key={i} className="text-4xl md:text-6xl font-black tracking-tighter opacity-[0.08] grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-default select-none hover:text-primary">
-                {brand}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════ SERVICES */}
       <section id="services" className="py-32 bg-surface">
@@ -739,66 +710,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════ WORK */}
-      <section id="work" className="py-32 bg-surface-container-low">
+      {/* ═══════════════════════════════════════════ HAPPY CLIENTS */}
+      <section id="work" className="py-24 bg-surface-container-low">
         <div className="container mx-auto px-6 lg:px-16">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-            <div className="max-w-3xl space-y-6">
-              <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter gradient-text leading-[1.1]">{w.title}</h2>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary-container rounded-full" />
-              <p className="text-lg md:text-xl text-on-surface font-medium opacity-80 leading-relaxed">{w.subtitle}</p>
-            </div>
-            <button className="group flex items-center gap-3 font-headline font-bold text-lg text-on-surface hover:text-primary transition-colors whitespace-nowrap">
-              {w.cta}
-              <span className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
-                <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-              </span>
-            </button>
+          <div className="max-w-3xl mb-14 space-y-4">
+            <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter gradient-text leading-[1.1]">
+              {lang === 'en' ? 'Happy clients.' : 'Clientes felices.'}
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary-container rounded-full" />
+            <p className="text-lg md:text-xl text-on-surface font-medium opacity-70 leading-relaxed">
+              {lang === 'en' ? 'Brands and businesses that trusted us to grow.' : 'Marcas y negocios que confiaron en nosotros para crecer.'}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {/* Case 1 — wide */}
-            <div className="md:col-span-8 group relative overflow-hidden rounded-2xl h-[480px]">
-              <img src={IMG.portfolio1} alt={w.cases[0].client} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-8 flex flex-col justify-end">
-                <span className="text-white font-headline font-black text-[10px] tracking-widest uppercase mb-2 opacity-80">{w.cases[0].industry}</span>
-                <h4 className="text-2xl font-headline font-black text-white leading-tight tracking-tight">{w.cases[0].headline}</h4>
-                <p className="text-white font-medium text-sm mt-1.5 opacity-90">{w.cases[0].client} — {w.cases[0].services}</p>
-              </div>
-            </div>
-            {/* Case 2 — narrow */}
-            <div className="md:col-span-4 group relative overflow-hidden rounded-2xl h-[480px]">
-              <img src={IMG.portfolio2} alt={w.cases[1].client} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-8 flex flex-col justify-end">
-                <span className="text-white font-headline font-black text-xs tracking-widest uppercase mb-2">{w.cases[1].industry}</span>
-                <h4 className="text-xl font-headline font-bold text-white leading-tight">{w.cases[1].headline}</h4>
-                <p className="text-white font-bold text-sm mt-1">{w.cases[1].client} — {w.cases[1].services}</p>
-              </div>
-            </div>
-            {/* Case 3 — narrow */}
-            <div className="md:col-span-4 group relative overflow-hidden rounded-2xl h-[400px]">
-              <img src={IMG.portfolio3} alt={w.cases[2].client} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-8 flex flex-col justify-end">
-                <span className="text-white font-headline font-black text-xs tracking-widest uppercase mb-2">{w.cases[2].industry}</span>
-                <h4 className="text-xl font-headline font-bold text-white leading-tight">{w.cases[2].headline}</h4>
-                <p className="text-white font-bold text-sm mt-1">{w.cases[2].client} — {w.cases[2].services}</p>
-              </div>
-            </div>
-            {/* Manifesto card — wide */}
-            <div className="md:col-span-8 group relative overflow-hidden rounded-2xl h-[400px] overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, #7346a1 0%, #5491ff 100%)' }}>
-              <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 60%)' }} aria-hidden="true" />
-              <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                <p className="font-headline font-extrabold text-white/30 leading-tight" style={{ fontSize: 'clamp(1.4rem,3vw,2.2rem)', letterSpacing: '-0.03em' }}>
-                  {t.manifesto.line1}
-                </p>
-                <p className="font-headline font-extrabold text-white leading-tight" style={{ fontSize: 'clamp(1.4rem,3vw,2.2rem)', letterSpacing: '-0.03em' }}>
-                  {t.manifesto.line2}
-                </p>
-                <div className="mt-6 h-px w-20 bg-white/30 rounded-full" />
-                <p className="text-white text-base mt-2 max-w-md font-bold leading-relaxed">{t.manifesto.body}</p>
-              </div>
-            </div>
+          {/* Logo grid — swap placeholders for real <img> tags when logos arrive */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="h-24 rounded-2xl border border-outline-variant/10 bg-white/60 flex items-center justify-center group hover:border-primary/20 hover:bg-white transition-all duration-200"
+              >
+                {/* replace this div with: <img src="/logos/client-X.svg" alt="Client name" className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity" /> */}
+                <div className="w-24 h-6 rounded-full bg-outline-variant/10" />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
