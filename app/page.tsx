@@ -1060,7 +1060,7 @@ export default function Home() {
         <div className="absolute inset-0 hero-gradient opacity-50" aria-hidden="true" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="font-headline font-black tracking-tighter leading-tight"
+            <h2 className="font-headline font-black tracking-tighter leading-tight text-center"
               style={{ fontSize: 'clamp(3.5rem,8vw,7rem)', letterSpacing: '-0.05em' }}>
               {c.title.split(' ').slice(0, -1).join(' ')}{' '}
               <span className="gradient-text">{c.title.split(' ').slice(-1)}</span>

@@ -474,7 +474,7 @@ const es: Translations = {
     ],
   },
   contact: {
-    title: '¿Arrancamos?',
+    title: '¿Listo para crecer?',
     subtitle:
       'Contanos de tu negocio. Sin paquetes, sin plantillas — solo una conversación real sobre qué te movería la aguja.',
     cta: 'Hablemos',
