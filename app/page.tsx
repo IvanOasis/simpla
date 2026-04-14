@@ -753,8 +753,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
-                  whileHover={{ y: -4 }}
-                  className="group relative flex flex-col p-5 rounded-2xl border border-outline-variant/10 bg-white/50 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+                  className="group relative flex flex-col p-5 rounded-2xl border border-outline-variant/10 bg-white/50 shadow-sm hover:shadow-md hover:-translate-y-1 transition-transform duration-300 overflow-hidden"
                 >
                   {/* hover background tint */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
@@ -825,20 +824,19 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className={`h-28 w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300 ${
+                className={`h-28 w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white hover:-translate-y-1 transition-transform duration-300 ${
                   (logo as any).invert ? 'bg-gray-100/50' : 'bg-white/50'
                 }`}
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  style={{ 
+                  style={{
                     transform: `scale(${(logo as any).scale || 1})`
                   }}
-                  className={`w-full h-full max-h-12 object-contain transition-all duration-500 mix-blend-multiply ${
-                    (logo as any).invert 
-                      ? 'invert opacity-50 group-hover:opacity-100' 
+                  className={`w-full h-full max-h-12 object-contain transition-opacity duration-300 ${
+                    (logo as any).invert
+                      ? 'invert opacity-50 group-hover:opacity-100'
                       : 'grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100'
                   }`}
                 />
