@@ -1,11 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { promises as fs } from 'fs'
-import path from 'path'
+import { google } from 'googleapis'
 
 export const runtime = 'nodejs'
 
-// On Vercel the project root is read-only; /tmp is the only writable directory.
-const FILE_PATH = path.join('/tmp', 'newsletter.txt')
+async function getSheet() {
+  const auth = new google.auth.GoogleAuth({
+    credentials: {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    },
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  })
+
+  const sheets = google.sheets({ version: 'v4', auth })
+  return sheets
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,21 +25,31 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
     }
 
-    // Read existing list to avoid duplicates
-    let existing = ''
-    try {
-      existing = await fs.readFile(FILE_PATH, 'utf-8')
-    } catch {
-      // File doesn't exist yet — that's fine
-    }
+    const sheets = await getSheet()
+    const spreadsheetId = process.env.GOOGLE_SHEET_ID
 
-    const emails = existing.split('\n').map(l => l.split('|')[0].trim())
+    // Read existing emails to avoid duplicates
+    const existing = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: 'Sheet1!A:A',
+    })
+
+    const rows = existing.data.values ?? []
+    const emails = rows.map(r => r[0]?.trim())
+
     if (emails.includes(email)) {
       return NextResponse.json({ message: 'Already subscribed' }, { status: 200 })
     }
 
-    const entry = `${email} | ${new Date().toISOString()}\n`
-    await fs.appendFile(FILE_PATH, entry, 'utf-8')
+    // Append new row: email | date
+    await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: 'Sheet1!A:B',
+      valueInputOption: 'RAW',
+      requestBody: {
+        values: [[email, new Date().toISOString()]],
+      },
+    })
 
     return NextResponse.json({ message: 'Subscribed' }, { status: 200 })
   } catch (err) {
