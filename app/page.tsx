@@ -832,7 +832,7 @@ export default function Home() {
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
               { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
-              { src: '/assets/Logos/realmint.png',         alt: 'Realmint', scale: 1.8 },
+              { src: '/assets/Logos/realmint.png',         alt: 'Realmint', scale: 3.5 },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
