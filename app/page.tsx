@@ -843,9 +843,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className={`h-28 w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white hover:-translate-y-1 transition-transform duration-300 ${
-                  (logo as any).invert ? 'bg-gray-100/50' : 'bg-white/50'
-                }`}
+                className="h-28 w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] rounded-3xl border border-white bg-white/50 flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white hover:-translate-y-1 transition-all duration-300"
               >
                 <img
                   src={logo.src}
