@@ -820,12 +820,12 @@ export default function Home() {
               <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary-container rounded-full" />
               <p className="text-lg md:text-xl text-on-surface font-medium leading-relaxed opacity-80">{b.subtitle}</p>
             </div>
-            <button className="group flex items-center gap-3 font-headline font-bold text-on-surface hover:text-primary transition-colors whitespace-nowrap self-start sm:self-end">
+            <a href="/blog" className="group flex items-center gap-3 font-headline font-bold text-on-surface hover:text-primary transition-colors whitespace-nowrap self-start sm:self-end">
               {b.cta}
               <span className="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </span>
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
