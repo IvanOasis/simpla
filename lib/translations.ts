@@ -206,16 +206,16 @@ const en: Translations = {
     title: 'What clients say.',
     items: [
       {
-        name: 'Valentina Ríos',
-        role: 'Founder, Fridge & Flow',
+        name: 'Ivan',
+        role: 'COO – Multicover',
         quote:
-          'Simpla actually took the time to understand how our business works before running a single ad. That changed everything — we tripled revenue in six months and the team felt like true partners.',
+          'Simpla did a spectacular job building our self-managed website. Super attentive, incredibly fast, and the end result exceeded every expectation.',
       },
       {
-        name: 'Matias Carranza',
-        role: 'CEO, Nómada Studio',
+        name: 'Leo',
+        role: 'CEO – Mixturev',
         quote:
-          'Every agency we worked with before handed us a package and ran the same playbook. Simpla was different. They built systems that keep generating results on their own.',
+          'They ran our Google and Meta Ads campaigns and drove a real, measurable increase in e-commerce sales. Highly recommended — no hesitation.',
       },
     ],
   },
@@ -429,16 +429,16 @@ const es: Translations = {
     title: 'Lo que dicen nuestros clientes.',
     items: [
       {
-        name: 'Valentina Ríos',
-        role: 'Fundadora, Fridge & Flow',
+        name: 'Ivan',
+        role: 'COO – Multicover',
         quote:
-          'Simpla se tomó el tiempo de entender cómo funciona nuestro negocio antes de correr un solo anuncio. Eso cambió todo — triplicamos la facturación en seis meses y el equipo se sintió como un verdadero socio.',
+          'Simpla hizo un trabajo espectacular desarrollando nuestro sitio web autoadministrable. Muy atentos, muy rápidos y el resultado superó todas las expectativas.',
       },
       {
-        name: 'Matias Carranza',
-        role: 'CEO, Nómada Studio',
+        name: 'Leo',
+        role: 'CEO – Mixturev',
         quote:
-          'Todas las agencias con las que trabajamos antes nos daban un paquete y corrían la misma fórmula de siempre. Simpla fue distinto. Construyeron sistemas que siguen generando resultados solos.',
+          'Corrieron nuestras campañas de Google y Meta Ads y aumentaron las ventas del ecommerce de forma real y medible. Totalmente recomendables, sin dudarlo.',
       },
     ],
   },
