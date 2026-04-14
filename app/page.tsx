@@ -731,9 +731,9 @@ export default function Home() {
               { src: '/assets/Logos/images (1).png',       alt: 'Client' },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', imgClass: 'h-10 max-w-[150px]' },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
-              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus' },
+              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', dark: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
             ].map((logo, i) => (
               <motion.div
@@ -742,13 +742,21 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="h-24 rounded-2xl border border-outline-variant/10 bg-white flex items-center justify-center px-6 group hover:border-primary/20 hover:shadow-sm transition-all duration-200"
+                className={`h-24 rounded-2xl border flex items-center justify-center px-6 group hover:shadow-sm transition-all duration-200 ${
+                  (logo as any).dark
+                    ? 'bg-gray-900 border-gray-800 hover:border-gray-700'
+                    : 'bg-white border-outline-variant/10 hover:border-primary/20'
+                }`}
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-9 w-auto max-w-[120px] object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                  style={{ mixBlendMode: 'multiply' }}
+                  className={`w-auto object-contain transition-all duration-300 ${
+                    (logo as any).dark
+                      ? 'h-9 max-w-[120px] opacity-70 group-hover:opacity-100'
+                      : `${(logo as any).imgClass ?? 'h-9 max-w-[120px]'} grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100`
+                  }`}
+                  style={(logo as any).dark ? undefined : { mixBlendMode: 'multiply' }}
                 />
               </motion.div>
             ))}
