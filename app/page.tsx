@@ -17,8 +17,8 @@ const IMG = {
   portfolio2: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAS0pQANBBBDaxUZRiXhdQA-B2XsFW5YQuamuX9olD-oF9yRKuAIoT1PLvFWkBOZ4kpF5vq659Mzjs1Qy_vUUtqRVgw_1OWN6_JVLMNs66iFQYTnTTcurCujxPgxYaTSY9JFdZl3uwu-tZf8bKVArwDcGaxfHVGCya5RpjXlgr_TxyJ-yJvgCy4TH5CrWrfuQSjOHH9blUMCCBHKMF0KYOjjRLEf8m5CL02D3qc9UN-ZSwWVwSI5tWljC_JBJX96U9IUe9ul-llq5Ie',
   portfolio3: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCaRxlttEqRf4YJZKx2ik7zm7njd_JahuqOxw4PDlnnMeKVUWxMYyMqxzb_LgdA6bTJTD1xatLHwUBP8ebH8MgE7zdkPA_UZe2AjjPW9cqvWeKZd7KvE8mOxTdcYiQQbWsx2svtbhso9TRQSsroIwFHKVEua2xKfXeYDJ1qs9lIxvFIYNa3m87Lk24pNgtt6y0mfWZ49iCbbfbcFfyxMZVm_Obu8erdyD_fSSrU9OEQlbHP5erVRIFZ5FYXdezmSsS4VK7wYVm8_0Lh',
   portfolio4: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHeTMrYREFjQ0Vlv19ytNxwYvftc-71OF7NDSKyjMyGEzhcxOBYnIJc__p3z_47P2aKYxWcoVonfkrbffk-nbmHTNeMzTYa327jMbboO-9egFmCaXiV_6uUfMmEtuxWEPRm9frIpJ_GBGXLZS-DulhGKA_p9Lq4OHIBrJNPrR3knHSTZrhIMAsVEcW1I2SAdw4xoUUIMFsE0SOmOL0i23z2B4p5E7zraM1ATffbyZQLsXgqfcNA8rn7hV7sA3h0oSxvdGeo9DGt7QV',
-  testimonial1: 'https://api.dicebear.com/9.x/avataaars/svg?seed=IvanMulticover&backgroundColor=b6e3f4&top=shortHair01&accessories=prescription01&facialHair=beardMedium&facialHairColor=2c1b18&clothesColor=3c4f5c',
-  testimonial2: 'https://api.dicebear.com/9.x/avataaars/svg?seed=LeoMixturev&backgroundColor=c0aafa&top=shortHair02&accessories=sunglasses&facialHair=moustacheFancy&facialHairColor=4a312c&clothesColor=5c3317',
+  testimonial1: 'https://api.dicebear.com/7.x/avataaars/png?seed=IvanMulticover&backgroundColor=b6e3f4&size=128',
+  testimonial2: 'https://api.dicebear.com/7.x/avataaars/png?seed=LeoMixturev&backgroundColor=c0aafa&size=128',
   teamPhoto:   'https://lh3.googleusercontent.com/aida-public/AB6AXuA1zimSg9D-HHeCm62cnWa9_lF_PxWVZK4i2bb8Y6M0-kb37x-GFfzktk2iP90UvivJVdQ4rvyKTMfvitVWeEHN6RQCYH4lLQdHE-EJcvdlqT12MSvX2M_WFMlLzRSS6lPFZ3tkzt2cFfiFi2I2I3VrqeDTkiVjPUfVNMb37BWVjoUr5Jm28pQAUFnlJYg2_gqvA5oM_V2doalDz0miA54HssAfhNROQjwCvxOV80jhUFvrHQLWPKphXESC9ue-AFtczmNn1_x7mMyi',
 }
 
@@ -811,11 +811,10 @@ export default function Home() {
           {/* Logo grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby' },
-              { src: '/assets/Logos/images (1).png',       alt: 'Life Beyond', isSolid: true },
+              { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby', scale: 0.65 },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.35 },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -835,14 +834,13 @@ export default function Home() {
                   src={logo.src}
                   alt={logo.alt}
                   style={{ 
-                    transform: `scale(${(logo as any).scale || 1})`,
-                    filter: (logo as any).invert ? 'invert(1) grayscale(1) opacity(0.4)' : undefined
+                    transform: `scale(${(logo as any).scale || 1})`
                   }}
-                  className={`w-full h-full max-h-12 object-contain transition-all duration-500 ${
+                  className={`w-full h-full max-h-12 object-contain transition-all duration-500 mix-blend-multiply ${
                     (logo as any).invert 
-                      ? 'group-hover:!filter-none group-hover:opacity-100' 
+                      ? 'invert opacity-50 group-hover:opacity-100' 
                       : 'grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100'
-                  } ${ (logo as any).isSolid ? '' : 'mix-blend-multiply' }`}
+                  }`}
                 />
               </motion.div>
             ))}
