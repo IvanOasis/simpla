@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/context/LanguageContext'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Simpla - Growth made simple',
@@ -38,6 +39,16 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
           rel="stylesheet" 
         />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GG30BD4ZQF" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GG30BD4ZQF');
+          `}
+        </Script>
       </head>
       <body className="antialiased">
         <LanguageProvider>{children}</LanguageProvider>
