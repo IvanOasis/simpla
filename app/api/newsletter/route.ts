@@ -1,20 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { google } from 'googleapis'
+import { Resend } from 'resend'
 
 export const runtime = 'nodejs'
 
-async function getSheet() {
-  const auth = new google.auth.GoogleAuth({
-    credentials: {
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-    },
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-  })
-
-  const sheets = google.sheets({ version: 'v4', auth })
-  return sheets
-}
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,30 +14,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
     }
 
-    const sheets = await getSheet()
-    const spreadsheetId = process.env.GOOGLE_SHEET_ID
-
-    // Read existing emails to avoid duplicates
-    const existing = await sheets.spreadsheets.values.get({
-      spreadsheetId,
-      range: 'Sheet1!A:A',
-    })
-
-    const rows = existing.data.values ?? []
-    const emails = rows.map(r => r[0]?.trim())
-
-    if (emails.includes(email)) {
-      return NextResponse.json({ message: 'Already subscribed' }, { status: 200 })
-    }
-
-    // Append new row: email | date
-    await sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range: 'Sheet1!A:B',
-      valueInputOption: 'RAW',
-      requestBody: {
-        values: [[email, new Date().toISOString()]],
-      },
+    // Notify you when someone subscribes
+    await resend.emails.send({
+      from: 'Simpla <onboarding@resend.dev>',
+      to: 'ivan.barbarosch@gmail.com',
+      subject: `Nuevo suscriptor: ${email}`,
+      html: `<p>Se suscribió al newsletter: <strong>${email}</strong></p><p>${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' })}</p>`,
     })
 
     return NextResponse.json({ message: 'Subscribed' }, { status: 200 })
