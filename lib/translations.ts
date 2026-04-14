@@ -73,9 +73,9 @@ const en: Translations = {
     headline1: 'We learn your business.',
     headline2: 'Then we grow it.',
     description:
-      'Simpla is a full-service marketing agency for SMBs and growing businesses. We combine strategic understanding with AI-powered execution — so your marketing works around the clock, not just during office hours.',
+      "We're a full-service marketing agency that treats your business like our own. Strategy, content, paid media, automation — everything under one roof, built around what you actually need.",
     cta1: "Let's talk",
-    cta2: 'See our work',
+    cta2: 'What we do',
     stats: [
       { value: 'SMB', label: 'Focused' },
       { value: 'AI', label: 'Powered' },
@@ -277,9 +277,9 @@ const es: Translations = {
     headline1: 'Aprendemos tu negocio.',
     headline2: 'Después lo hacemos crecer.',
     description:
-      'Simpla es una agencia de marketing integral para pymes y empresas en crecimiento. Combinamos entendimiento estratégico con ejecución basada en IA — para que tu marketing funcione todo el tiempo, no solo en horario de oficina.',
+      'Somos una agencia de marketing integral que trata tu negocio como si fuera el nuestro. Estrategia, contenido, pauta, automatización — todo bajo un mismo techo, construido alrededor de lo que realmente necesitás.',
     cta1: 'Hablemos',
-    cta2: 'Ver casos',
+    cta2: 'Lo que hacemos',
     stats: [
       { value: 'Pymes', label: 'Nuestro foco' },
       { value: 'IA', label: 'Potenciado' },

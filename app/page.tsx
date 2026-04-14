@@ -631,7 +631,7 @@ export default function Home() {
               <a href="#contact" className="bg-gradient-to-br from-primary to-secondary-container text-white px-7 py-3 rounded-full font-headline font-bold text-sm md:text-base shadow-xl shadow-primary/20 hover:-translate-y-0.5 transition-all duration-200">
                 {h.cta1}
               </a>
-              <a href="#work" className="flex items-center gap-2 px-5 py-3 rounded-full font-headline font-bold text-sm md:text-base text-primary hover:bg-surface-container-low transition-all duration-200">
+              <a href="#services" className="flex items-center gap-2 px-5 py-3 rounded-full font-headline font-bold text-sm md:text-base text-primary hover:bg-surface-container-low transition-all duration-200">
                 {h.cta2} <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
             </motion.div>
@@ -988,16 +988,6 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="space-y-5">
-            <h4 className="font-headline font-bold text-base">{lang === 'en' ? 'Newsletter' : 'Newsletter'}</h4>
-            <p className="text-white text-sm font-bold opacity-90">{lang === 'en' ? "Monthly insights on growth marketing." : "Insights mensuales sobre marketing."}</p>
-            <div className="flex p-1 bg-white/10 rounded-full border border-white/20">
-              <input className="bg-transparent border-none focus:outline-none focus:ring-0 px-4 text-sm w-full text-white placeholder:text-white/40" placeholder={c.placeholder} type="email" />
-              <button className="bg-white text-primary px-4 py-2 rounded-full font-headline font-bold text-sm hover:opacity-90 transition-all">
-                {lang === 'en' ? 'Join' : 'Unirse'}
-              </button>
-            </div>
-          </div>
         </div>
 
         <div className="px-8 sm:px-12 py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
