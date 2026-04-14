@@ -1046,43 +1046,83 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════ FOOTER */}
-      <footer className="w-full rounded-t-[2.5rem] bg-gradient-to-br from-[#7346a1] to-[#5491ff] text-white">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-8 sm:px-12 py-14">
-          <div className="space-y-5">
-            <div className="flex items-center gap-2.5">
-              <SimplaLogo className="w-8 h-8" />
-              <span className="font-headline font-black text-xl text-white">Simpla</span>
+      <footer className="w-full rounded-t-[3rem] bg-gradient-to-br from-[#1b1b1e] to-[#2c0051] text-white relative overflow-hidden">
+        {/* Ambient glow in footer */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#5491ff]/5 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="container mx-auto max-w-7xl px-6 lg:px-16 pt-24 pb-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+            {/* Brand Section */}
+            <div className="lg:col-span-5 space-y-8">
+              <div className="flex items-center gap-3">
+                <SimplaLogo className="w-10 h-10" />
+                <span className="font-headline font-black text-3xl tracking-tighter text-white">Simpla</span>
+              </div>
+              <p className="text-white/60 text-lg leading-relaxed max-w-sm font-medium italic">
+                "{f.description}"
+              </p>
+              <div className="flex gap-4">
+                <a href="https://www.linkedin.com/company/simpla-agency" target="_blank" rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/30 transition-all group" aria-label="LinkedIn">
+                  <svg className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <p className="text-white/70 text-sm leading-relaxed max-w-xs">{f.description}</p>
-            <div className="flex gap-3">
-              <a href="https://www.linkedin.com/company/simpla-agency" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" aria-label="LinkedIn">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
+
+            {/* Links Sections */}
+            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
+              <div className="space-y-7">
+                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">{f.servicesTitle}</h4>
+                <ul className="space-y-4">
+                  {f.services.map(s => (
+                    <li key={s}>
+                      <a href="#services" className="text-white/60 hover:text-white transition-all text-base font-medium hover:translate-x-1 block">
+                        {s}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-7">
+                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">{f.companyTitle}</h4>
+                <ul className="space-y-4">
+                  {f.companyLinks.map(l => (
+                    <li key={l.label}>
+                      <a href={l.href} className="text-white/60 hover:text-white transition-all text-base font-medium hover:translate-x-1 block">
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="hidden md:block space-y-7">
+                <h4 className="font-headline font-black text-sm uppercase tracking-widest text-primary-fixed-dim">Newsletter</h4>
+                <div className="space-y-4">
+                  <p className="text-white/50 text-sm leading-relaxed">Join 500+ leaders getting our weekly growth insights.</p>
+                  <div className="flex gap-2">
+                    <input type="email" placeholder="Email" className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-primary/40 w-full" />
+                    <button className="bg-primary hover:bg-primary-fixed-dim hover:text-primary transition-all px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider">→</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-5">
-            <h4 className="font-headline font-bold text-base">{f.servicesTitle}</h4>
-            <ul className="space-y-3 text-white/90 font-medium">
-              {f.services.map(s => <li key={s}><a href="#services" className="hover:text-white hover:underline decoration-white/30 transition-all text-sm">{s}</a></li>)}
-            </ul>
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+              <p className="text-white/30 text-[11px] font-bold uppercase tracking-widest">{f.copyright}</p>
+              <div className="flex gap-6">
+                <a href="#" className="text-white/30 hover:text-white/60 text-[10px] uppercase font-bold tracking-widest transition-colors">Privacy Policy</a>
+                <a href="#" className="text-white/30 hover:text-white/60 text-[10px] uppercase font-bold tracking-widest transition-colors">Terms of Service</a>
+              </div>
+            </div>
+            <p className="font-headline italic text-white/20 text-xs font-bold tracking-wide">{f.tagline}</p>
           </div>
-
-          <div className="space-y-5">
-            <h4 className="font-headline font-bold text-base">{f.companyTitle}</h4>
-            <ul className="space-y-3 text-white/90 font-medium">
-              {f.companyLinks.map(l => <li key={l.label}><a href={l.href} className="hover:text-white hover:underline decoration-white/30 transition-all text-sm">{l.label}</a></li>)}
-            </ul>
-          </div>
-
-        </div>
-
-        <div className="max-w-5xl mx-auto px-8 sm:px-12 py-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/60 text-xs font-bold">{f.copyright}</p>
-          <p className="font-headline italic text-white/50 text-xs font-bold">{f.tagline}</p>
         </div>
       </footer>
 
