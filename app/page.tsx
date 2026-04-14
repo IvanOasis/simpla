@@ -898,7 +898,10 @@ export default function Home() {
                   <span className="font-headline font-black text-6xl absolute -top-5 -left-3 opacity-15 leading-none select-none gradient-text" aria-hidden="true">"</span>
                   <p className="text-lg italic text-on-surface leading-relaxed mb-8">"{item.quote}"</p>
                   <div className="flex items-center gap-4">
-                    <img src={i === 0 ? IMG.testimonial1 : IMG.testimonial2} alt={item.name} className="w-12 h-12 rounded-full object-cover" />
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center font-headline font-bold text-[17px] text-white shadow-sm" 
+                         style={{ background: i === 0 ? 'linear-gradient(135deg, #b08ce0, #7346A1)' : 'linear-gradient(135deg, #8cb5ff, #2D66E0)' }}>
+                      {item.name.split(' ').map(n => n[0]).join('').substring(0, 2)}
+                    </div>
                     <div>
                       <h5 className="font-headline font-bold text-on-surface">{item.name}</h5>
                       <p className="text-sm text-on-surface-variant">{item.role}</p>
