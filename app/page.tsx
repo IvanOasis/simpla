@@ -720,18 +720,16 @@ export default function Home() {
                     {item.description}
                   </p>
 
-                  {/* subitems as pills */}
-                  <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {/* subitems as bullets */}
+                  <div className="flex flex-col gap-2 mt-auto pt-3 border-t border-outline-variant/10">
                     {item.subitems.map((subitem) => (
-                      <span key={subitem}
-                        className="text-[11px] font-semibold px-2.5 py-[3px] rounded-full border transition-colors duration-200"
-                        style={{
-                          background: `${details.color}0A`,
-                          color: details.color,
-                          borderColor: `${details.color}20`,
-                        }}>
-                        {subitem}
-                      </span>
+                      <div key={subitem} className="flex items-center gap-2.5">
+                        <div className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
+                          style={{ background: `${details.color}15` }}>
+                          <div className="w-1.5 h-1.5 rounded-full" style={{ background: details.color }} />
+                        </div>
+                        <span className="text-[13px] font-medium text-on-surface/75">{subitem}</span>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
