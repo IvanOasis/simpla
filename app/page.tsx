@@ -809,37 +809,30 @@ export default function Home() {
           </div>
 
           {/* Logo grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby' },
               { src: '/assets/Logos/images (1).png',       alt: 'Client' },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', imgClass: 'h-14 max-w-[180px]' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer' },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
-              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', dark: true },
+              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus' },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
             ].map((logo, i) => (
               <motion.div
                 key={logo.src}
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className={`h-24 rounded-2xl border flex items-center justify-center px-6 group hover:shadow-sm transition-all duration-200 ${
-                  (logo as any).dark
-                    ? 'bg-gray-900 border-gray-800 hover:border-gray-700'
-                    : 'bg-gray-50 border-outline-variant/10 hover:border-primary/20'
-                }`}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="h-28 rounded-3xl border border-white bg-white/50 flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className={`w-auto object-contain transition-all duration-300 ${
-                    (logo as any).dark
-                      ? 'h-9 max-w-[120px] opacity-70 group-hover:opacity-100'
-                      : `${(logo as any).imgClass ?? 'h-9 max-w-[120px]'} grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100`
-                  }`}
+                  className="w-full h-full max-h-12 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
                 />
               </motion.div>
             ))}
