@@ -814,6 +814,7 @@ export default function Home() {
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
               { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
+              { src: '/assets/Logos/Untitled design (13).png', alt: 'Realmint', invert: true },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -936,13 +937,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {b.posts.map((post, i) => {
               const accent = i % 2 === 0 ? '#7346a1' : '#5491ff'
+              const BLOG_IMAGES = [
+                '/assets/Blog/blog_seo_globe.png',
+                '/assets/Blog/blog_strategy_box.png',
+                '/assets/Blog/blog_automation_gears.png'
+              ]
               return (
                 <a key={post.title} href={`/blog/${posts[i]?.slug ?? '#'}`} className="group glass-card rounded-2xl overflow-hidden border border-outline-variant/15 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
-                  <div className="h-44 relative overflow-hidden" style={{ background: `${accent}08` }}>
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${accent}18 0%, rgba(83,144,255,0.08) 100%)` }} />
-                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(circle, ${accent} 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
-                    <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full opacity-20" style={{ background: `radial-gradient(circle, ${accent}, transparent 70%)` }} />
-                    <div className="absolute bottom-3 left-3">
+                  <div className="h-48 relative overflow-hidden bg-surface-container">
+                    <img src={BLOG_IMAGES[i]} alt={post.title} className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${accent}30 0%, transparent 100%)` }} />
+                    <div className="absolute bottom-3 left-3 z-20">
                       <span className="text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider" style={{ background: `${accent}18`, border: `1px solid ${accent}35`, color: accent }}>
                         {post.category}
                       </span>
@@ -959,6 +964,74 @@ export default function Home() {
                 </a>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ GLOBAL PRESENCE */}
+      <section className="py-32 bg-[#0B0510] relative overflow-hidden text-white border-t border-purple-900/30">
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px]" aria-hidden="true" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary-container/20 rounded-full blur-[120px]" aria-hidden="true" />
+        
+        <div className="container mx-auto px-6 lg:px-16 relative z-10">
+          <div className="text-center mb-20 space-y-6">
+            <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter leading-[1.1]">
+              From <span className="text-primary-fixed-dim">LATAM</span> to the <span className="text-secondary-fixed">world.</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-primary-fixed-dim to-secondary-fixed mx-auto rounded-full" />
+            <p className="text-lg md:text-xl font-medium opacity-80 max-w-2xl mx-auto leading-relaxed">
+              We operate globally, building cross-border partnerships and delivering world-class results for ambitious brands everywhere.
+            </p>
+          </div>
+
+          <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-3xl border border-white/10 bg-white/5 overflow-hidden backdrop-blur-md">
+             {/* Map Grid Background */}
+             <div className="absolute inset-0 opacity-15" style={{ 
+               backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)', 
+               backgroundSize: '4% 4%' 
+             }}></div>
+             
+             {/* Connection Arcs (SVG) */}
+             <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 overflow-visible">
+                <path d="M 28% 75% Q 30% 50% 20% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" className="animate-[spin_40s_linear_infinite]" />
+                <path d="M 28% 75% Q 40% 60% 48% 30%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 28% 75% Q 55% 70% 65% 45%" fill="none" stroke="url(#arc-gradient)" strokeWidth="1.5" strokeDasharray="4,4" />
+                <defs>
+                  <linearGradient id="arc-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#dcb8ff" />
+                    <stop offset="100%" stopColor="#5491ff" />
+                  </linearGradient>
+                </defs>
+             </svg>
+
+             {/* Animated Map Locators */}
+             {[
+               { name: 'Canada', top: '15%', left: '18%', delay: 0 },
+               { name: 'USA', top: '30%', left: '20%', delay: 0.2 },
+               { name: 'Mexico', top: '45%', left: '17%', delay: 0.4 },
+               { name: 'Argentina', top: '75%', left: '28%', delay: 0, primary: true },
+               { name: 'Uruguay', top: '72%', left: '32%', delay: 0.6 },
+               { name: 'UK', top: '22%', left: '46%', delay: 0.3 },
+               { name: 'Spain', top: '34%', left: '45%', delay: 0.8 },
+               { name: 'France', top: '28%', left: '48%', delay: 0.5 },
+               { name: 'Dubai', top: '45%', left: '65%', delay: 0.7 },
+             ].map((loc) => (
+                <div key={loc.name} className="absolute flex flex-col items-center gap-2 group cursor-default z-10" style={{ top: loc.top, left: loc.left }}>
+                  <motion.div 
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: loc.delay }}
+                    className="relative"
+                  >
+                    <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${loc.primary ? 'bg-secondary-fixed shadow-[0_0_20px_rgba(84,145,255,0.9)]' : 'bg-primary-fixed shadow-[0_0_15px_rgba(220,184,255,0.8)]'}`} />
+                    <div className={`absolute inset-0 rounded-full animate-ping opacity-60 ${loc.primary ? 'bg-secondary-fixed' : 'bg-primary-fixed'}`} />
+                  </motion.div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-5 md:top-6 bg-white/10 backdrop-blur-xl px-3 py-1.5 rounded-lg border border-white/20 whitespace-nowrap shadow-xl">
+                    <span className="text-[10px] md:text-xs font-bold font-headline">{loc.name}</span>
+                  </div>
+                </div>
+             ))}
           </div>
         </div>
       </section>
