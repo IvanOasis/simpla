@@ -506,37 +506,37 @@ function HeroRocket() {
 // ─── Testimonial Graphic ──────────────────────────────────────────────────
 function TestimonialGraphic() {
   return (
-    <div className="relative flex items-center justify-center w-full h-[400px] md:h-[500px] select-none" aria-hidden="true">
+    <div className="relative flex items-center justify-center w-full h-[450px] md:h-[580px] select-none" aria-hidden="true">
       {/* ambient glow */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary-container/10 rounded-full blur-[80px]" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#9E70CE]/20 to-[#5390FF]/20 rounded-full blur-[100px]" />
       
       <motion.div 
-        animate={{ y: [-12, 12, -12] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        animate={{ y: [-15, 15, -15] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         className="relative z-10 w-full h-full flex items-center justify-center"
       >
-        <svg viewBox="0 0 400 400" className="w-[85%] max-w-[340px] h-auto drop-shadow-2xl overflow-visible">
+        <svg viewBox="0 0 400 400" className="w-[98%] max-w-[450px] h-auto drop-shadow-[0_45px_65px_rgba(83,144,255,0.3)] overflow-visible">
           <defs>
             <linearGradient id="tg-main" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#dcc8f8" />
-              <stop offset="100%" stopColor="#9e60cc" />
+              <stop offset="0%" stopColor="#9E70CE" />
+              <stop offset="100%" stopColor="#7346A1" />
             </linearGradient>
             <linearGradient id="tg-sec" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#c8e8ff" />
-              <stop offset="100%" stopColor="#5491ff" />
+              <stop offset="0%" stopColor="#5390FF" />
+              <stop offset="100%" stopColor="#2D66E0" />
             </linearGradient>
             <linearGradient id="tg-star" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#fef08a" />
               <stop offset="100%" stopColor="#f59e0b" />
             </linearGradient>
             <filter id="tg-drop" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="-4" dy="8" stdDeviation="12" floodColor="#5020a0" floodOpacity="0.35"/>
+              <feDropShadow dx="-4" dy="8" stdDeviation="15" floodColor="#9E70CE" floodOpacity="0.4"/>
             </filter>
             <filter id="tg-drop-sec" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="4" dy="8" stdDeviation="10" floodColor="#3060d0" floodOpacity="0.25"/>
+              <feDropShadow dx="4" dy="8" stdDeviation="12" floodColor="#5390FF" floodOpacity="0.35"/>
             </filter>
             <filter id="tg-glow-star" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#f59e0b" floodOpacity="0.5"/>
+              <feDropShadow dx="0" dy="2" stdDeviation="6" floodColor="#f59e0b" floodOpacity="0.6"/>
             </filter>
           </defs>
 
@@ -549,14 +549,14 @@ function TestimonialGraphic() {
                 fill="url(#tg-main)" filter="url(#tg-drop)" />
           
           {/* HEAD/AVATAR inside bubble */}
-          <circle cx="110" cy="220" r="28" fill="white" opacity="0.8" />
-          <path d="M 85,270 C 85,250 95,240 110,240 C 125,240 135,250 135,270" stroke="white" strokeWidth="8" strokeLinecap="round" opacity="0.8" fill="none" />
+          <circle cx="110" cy="220" r="30" fill="white" opacity="0.9" />
+          <path d="M 82,275 C 82,252 94,240 110,240 C 126,240 138,252 138,275" stroke="white" strokeWidth="10" strokeLinecap="round" opacity="0.9" fill="none" />
           
           {/* INNER WHITE HIGHLIGHT streaks */}
-          <path d="M 80,100 C 120,60 180,50 220,50" stroke="white" strokeWidth="6" strokeLinecap="round" opacity="0.25" fill="none" />
+          <path d="M 80,100 C 120,60 180,50 220,50" stroke="white" strokeWidth="8" strokeLinecap="round" opacity="0.35" fill="none" />
           
           {/* RATING STARS 5x */}
-          <g transform="translate(160, 110) scale(1.1)">
+          <g transform="translate(160, 110) scale(1.2)">
             {[0, 30, 60, 90, 120].map((dx, i) => (
               <path key={i} transform={`translate(${dx}, 0)`}
                 d="M10,0 l3,6.5 l7,1 l-5,5 l1,7.5 l-6,-3.5 l-6,3.5 l1,-7.5 l-5,-5 l7,-1 z" 
@@ -565,21 +565,21 @@ function TestimonialGraphic() {
           </g>
 
           {/* CHAT LINES (Placeholder for text) */}
-          <rect x="160" y="195" width="160" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
-          <rect x="160" y="225" width="130" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
-          <rect x="160" y="255" width="100" height="10" rx="5" fill="white" opacity="0.9" style={{ filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))' }} />
+          <rect x="160" y="195" width="165" height="12" rx="6" fill="white" opacity="0.95" style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.15))' }} />
+          <rect x="160" y="228" width="135" height="12" rx="6" fill="white" opacity="0.95" style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.15))' }} />
+          <rect x="160" y="261" width="105" height="12" rx="6" fill="white" opacity="0.95" style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.15))' }} />
 
           {/* DECORATIVE SPARKLES */}
-          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 2, repeat: Infinity, delay: 0 }}>
+          <motion.g animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.3, 0.9] }} transition={{ duration: 2, repeat: Infinity, delay: 0 }}>
             <path d="M 20,40 Q 30,40 30,30 Q 30,40 40,40 Q 30,40 30,50 Q 30,40 20,40 Z" fill="#fef08a" />
           </motion.g>
           
-          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}>
+          <motion.g animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.3, 0.9] }} transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}>
             <path d="M 370,280 Q 385,280 385,265 Q 385,280 400,280 Q 385,280 385,295 Q 385,280 370,280 Z" fill="#fef08a" />
           </motion.g>
 
-          <motion.g animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.5 }}>
-            <path d="M 340,70 Q 350,70 350,60 Q 350,70 360,70 Q 350,70 350,80 Q 350,70 340,70 Z" fill="white" opacity="0.8" />
+          <motion.g animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.3, 0.9] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.5 }}>
+            <path d="M 340,70 Q 350,70 350,60 Q 350,70 360,70 Q 350,70 350,80 Q 350,70 340,70 Z" fill="white" opacity="0.9" />
           </motion.g>
         </svg>
       </motion.div>
@@ -1047,7 +1047,7 @@ export default function Home() {
 
       {/* ═══════════════════════════════════════════ FOOTER */}
       <footer className="w-full rounded-t-[2.5rem] bg-gradient-to-br from-[#7346a1] to-[#5491ff] text-white">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 sm:px-12 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-8 sm:px-12 py-14">
           <div className="space-y-5">
             <div className="flex items-center gap-2.5">
               <SimplaLogo className="w-8 h-8" />
@@ -1080,7 +1080,7 @@ export default function Home() {
 
         </div>
 
-        <div className="px-8 sm:px-12 py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-5xl mx-auto px-8 sm:px-12 py-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/60 text-xs font-bold">{f.copyright}</p>
           <p className="font-headline italic text-white/50 text-xs font-bold">{f.tagline}</p>
         </div>
