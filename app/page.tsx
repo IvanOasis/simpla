@@ -57,9 +57,9 @@ const SERVICE_DETAILS: Record<string, { icon: any, color: string, capabilities: 
 
 const METHOD_ICONS  = [Search, Map, Rocket, TrendingUp]
 
-function SimplaLogo({ className = '' }: { className?: string }) {
+function SIMPLALogo({ className = '' }: { className?: string }) {
   return (
-    <svg viewBox="0 0 300 300" className={className} aria-label="Simpla">
+    <svg viewBox="0 0 300 300" className={className} aria-label="SIMPLA">
       <defs>
         <linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#9E70CE" />
@@ -657,9 +657,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════ NAVBAR */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 shadow-[0_8px_32px_rgba(27,27,30,0.07)]' : 'bg-white/60'} backdrop-blur-xl`}>
         <div className="flex justify-between items-center px-6 sm:px-8 py-4 max-w-7xl mx-auto">
-          <a href="#" className="flex items-center gap-2.5 group" aria-label="Simpla home">
-            <SimplaLogo className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" />
-            <span className="font-headline font-bold text-xl tracking-tight text-on-surface">Simpla</span>
+          <a href="#" className="flex items-center gap-2.5 group" aria-label="SIMPLA home">
+            <SIMPLALogo className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" />
+            <span className="font-headline font-bold text-xl tracking-tight text-on-surface">SIMPLA</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -1152,8 +1152,8 @@ export default function Home() {
             {/* Brand Section */}
             <div className="lg:col-span-5 space-y-7">
               <div className="flex items-center gap-2.5">
-                <SimplaLogo className="w-9 h-9" />
-                <span className="font-headline font-black text-2xl text-white">Simpla</span>
+                <SIMPLALogo className="w-9 h-9" />
+                <span className="font-headline font-black text-2xl text-white">SIMPLA</span>
               </div>
               <p className="text-white/80 text-base leading-relaxed max-w-sm">
                 {f.description}
