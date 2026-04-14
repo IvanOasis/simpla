@@ -809,7 +809,7 @@ export default function Home() {
           </div>
 
           {/* Logo grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {[
               { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby', scale: 0.65 },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
@@ -826,7 +826,7 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className={`h-28 rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300 ${
+                className={`h-28 w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300 ${
                   (logo as any).invert ? 'bg-gray-100/50' : 'bg-white/50'
                 }`}
               >
