@@ -670,11 +670,11 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
                   whileHover={{ y: -4 }}
-                  className="group relative flex flex-col p-5 rounded-2xl border border-outline-variant/10 bg-white/50 hover:bg-white/80 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+                  className="group relative flex flex-col p-5 rounded-2xl border border-outline-variant/10 bg-white/50 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
                 >
-                  {/* subtle hover glow */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
-                    style={{ background: `radial-gradient(ellipse at 0% 0%, ${details.color}08 0%, transparent 70%)` }} />
+                  {/* hover background tint */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
+                    style={{ background: `linear-gradient(135deg, ${details.color}12 0%, ${details.color}05 100%)` }} />
 
                   {/* header: icon + title */}
                   <div className="flex items-center gap-3 mb-3">
@@ -687,13 +687,13 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  {/* description */}
-                  <p className="text-[13px] text-on-surface/65 leading-relaxed mb-4">
+                  {/* description — clamped so bullets always start at the same position */}
+                  <p className="text-[13px] text-on-surface/65 leading-relaxed mb-4 line-clamp-3">
                     {item.description}
                   </p>
 
                   {/* subitems as bullets */}
-                  <div className="flex flex-col gap-2 mt-auto pt-3 border-t border-outline-variant/10">
+                  <div className="flex flex-col gap-2 pt-3 border-t border-outline-variant/10">
                     {item.subitems.map((subitem) => (
                       <div key={subitem} className="flex items-center gap-2.5">
                         <div className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
