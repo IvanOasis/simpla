@@ -991,12 +991,11 @@ export default function Home() {
         
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
           <div className="text-center mb-20 space-y-6">
-            <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter leading-[1.1]">
-              From <span className="text-primary-fixed-dim">LATAM</span> to the <span className="text-secondary-fixed">world.</span>
-            </h2>
+            <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter leading-[1.1]"
+                dangerouslySetInnerHTML={{ __html: t.presence.title }} />
             <div className="w-20 h-1.5 bg-gradient-to-r from-primary-fixed-dim to-secondary-fixed mx-auto rounded-full" />
             <p className="text-lg md:text-xl font-medium opacity-80 max-w-2xl mx-auto leading-relaxed">
-              We operate globally, building cross-border partnerships and delivering world-class results for ambitious brands everywhere.
+              {t.presence.subtitle}
             </p>
           </div>
 

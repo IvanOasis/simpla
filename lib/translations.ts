@@ -62,6 +62,10 @@ export interface Translations {
       message: string
     }
   }
+  presence: {
+    title: string
+    subtitle: string
+  }
   footer: {
     description: string
     servicesTitle: string
@@ -253,7 +257,7 @@ const en: Translations = {
   contact: {
     title: 'Ready to grow?',
     subtitle:
-      "Tell us about your business. No packages, no templates — just a real conversation about what would actually move the needle for you.",
+      "Tell us about your business. Let's have a real conversation about what actually drives growth for you.",
     cta: "Let's talk",
     success: "Perfect — we'll be in touch soon.",
     labels: {
@@ -270,6 +274,10 @@ const en: Translations = {
       country: 'e.g. USA, UK, Spain',
       message: 'Tell us more about your business...',
     },
+  },
+  presence: {
+    title: "From <span class=\"text-primary-fixed-dim\">LATAM</span> to the <span class=\"text-secondary-fixed\">world.</span>",
+    subtitle: "We operate globally, building cross-border partnerships and delivering world-class results for ambitious brands everywhere.",
   },
   footer: {
     description:
@@ -476,7 +484,7 @@ const es: Translations = {
   contact: {
     title: '¿Listo para crecer?',
     subtitle:
-      'Contanos de tu negocio. Sin paquetes, sin plantillas — solo una conversación real sobre qué te movería la aguja.',
+      "Contanos de tu negocio. Tengamos una conversación real sobre qué es lo que realmente te hace crecer.",
     cta: 'Hablemos',
     success: 'Perfecto — te contactaremos pronto.',
     labels: {
@@ -493,6 +501,10 @@ const es: Translations = {
       country: 'ej. Argentina, España, México',
       message: 'Contanos más sobre tu negocio...',
     },
+  },
+  presence: {
+    title: "De <span class=\"text-primary-fixed-dim\">LATAM</span> para el <span class=\"text-secondary-fixed\">mundo.</span>",
+    subtitle: "Operamos globalmente, construyendo alianzas estratégicas y entregando resultados de clase mundial para marcas ambiciosas en todo el mundo.",
   },
   footer: {
     description:

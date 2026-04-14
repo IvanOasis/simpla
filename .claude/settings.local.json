@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude skill:*)",
+      "Bash(where claude:*)",
+      "Read(//mnt/c/Users/Iván/AppData/Roaming/**)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  }
+}
