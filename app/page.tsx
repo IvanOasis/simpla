@@ -812,12 +812,12 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby' },
-              { src: '/assets/Logos/images (1).png',       alt: 'Client' },
+              { src: '/assets/Logos/images (1).png',       alt: 'Life Beyond', isSolid: true },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.35 },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
-              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus' },
+              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
             ].map((logo, i) => (
               <motion.div
@@ -827,12 +827,22 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="h-28 rounded-3xl border border-white bg-white/50 flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300"
+                className={`h-28 rounded-3xl border border-white flex items-center justify-center p-8 group hover:shadow-xl hover:shadow-primary/5 hover:bg-white transition-all duration-300 ${
+                  (logo as any).invert ? 'bg-gray-100/50' : 'bg-white/50'
+                }`}
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-full h-full max-h-12 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
+                  style={{ 
+                    transform: `scale(${(logo as any).scale || 1})`,
+                    filter: (logo as any).invert ? 'invert(1) grayscale(1) opacity(0.4)' : undefined
+                  }}
+                  className={`w-full h-full max-h-12 object-contain transition-all duration-500 ${
+                    (logo as any).invert 
+                      ? 'group-hover:!filter-none group-hover:opacity-100' 
+                      : 'grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100'
+                  } ${ (logo as any).isSolid ? '' : 'mix-blend-multiply' }`}
                 />
               </motion.div>
             ))}
