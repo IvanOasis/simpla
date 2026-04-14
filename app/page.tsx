@@ -112,6 +112,13 @@ function HeroRocket() {
     tl.to(launch, { y: '-150vh', duration: 1.0, ease: 'power3.in' }, 0.35)
     await tl
 
+    // Desktop only: auto-scroll to next section after rocket leaves
+    if (window.innerWidth >= 768) {
+      await new Promise(r => setTimeout(r, 200))
+      const next = document.querySelector('#services') as HTMLElement | null
+      if (next) window.scrollTo({ top: next.offsetTop, behavior: 'smooth' })
+    }
+
     // wait 2s off-screen
     await gsap.delayedCall(2, () => {})
 
