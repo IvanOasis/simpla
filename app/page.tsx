@@ -684,57 +684,55 @@ export default function Home() {
             <p className="text-lg md:text-xl text-on-surface font-medium leading-relaxed opacity-80">{s.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {s.items.map((item, i) => {
-              // Map by index to ensure correct icon/color regardless of language string
               const serviceKeys = ['Content', 'Paid Media', 'Web & Visibility', 'Automation', 'Video & Creative', 'Strategy & Consulting']
               const details = SERVICE_DETAILS[serviceKeys[i]] || { icon: ArrowRight, color: '#7346a1' }
               const Icon    = details.icon
-              
+
               return (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="glass-card flex flex-col p-6 md:p-7 rounded-[2rem] border border-outline-variant/10 group transition-all duration-500 overflow-hidden relative bg-white/40 shadow-sm"
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  whileHover={{ y: -4 }}
+                  className="group relative flex flex-col p-5 rounded-2xl border border-outline-variant/10 bg-white/50 hover:bg-white/80 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent group-hover:from-white/40 transition-colors duration-500" />
-                  <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full blur-[80px] opacity-0 group-hover:opacity-10 transition-opacity duration-700" 
-                    style={{ background: details.color }} />
-                  
-                  <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-on-surface/5"
-                      style={{ background: `${details.color}10`, color: details.color }}>
-                      <Icon className="w-7 h-7" />
+                  {/* subtle hover glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
+                    style={{ background: `radial-gradient(ellipse at 0% 0%, ${details.color}08 0%, transparent 70%)` }} />
+
+                  {/* header: icon + title */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+                      style={{ background: `${details.color}12`, color: details.color }}>
+                      <Icon className="w-[18px] h-[18px]" />
                     </div>
- 
-                    <div className="mt-7">
-                      <h3 className="font-headline font-black text-xl md:text-2xl text-on-surface mb-2.5 group-hover:text-primary transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      <p className="text-on-surface/80 text-sm md:text-base leading-relaxed mb-6 font-medium">
-                        {item.description}
-                      </p>
- 
-                      <div className="space-y-2.5 pt-6 border-t border-outline-variant/5">
-                        {item.subitems.map((subitem) => (
-                          <div key={subitem} className="flex items-center gap-2.5 text-xs md:text-sm font-medium text-on-surface/70 group-hover:text-on-surface transition-colors">
-                            <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: details.color }} />
-                            {subitem}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
- 
-                    <div className="mt-8 flex items-center justify-between">
-                      <div className="w-9 h-9 rounded-full bg-white border border-outline-variant/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 shadow-sm">
-                        <ArrowUpRight className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-[9px] font-black text-outline/20 group-hover:text-primary/40 transition-colors uppercase tracking-[0.2em]">{serviceKeys[i] === 'Automation' ? 'High Impact' : `Area 0${i + 1}`}</span>
-                    </div>
+                    <h3 className="font-headline font-black text-base md:text-lg text-on-surface group-hover:text-primary transition-colors duration-200 leading-tight">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {/* description */}
+                  <p className="text-[13px] text-on-surface/65 leading-relaxed mb-4">
+                    {item.description}
+                  </p>
+
+                  {/* subitems as pills */}
+                  <div className="flex flex-wrap gap-1.5 mt-auto">
+                    {item.subitems.map((subitem) => (
+                      <span key={subitem}
+                        className="text-[11px] font-semibold px-2.5 py-[3px] rounded-full border transition-colors duration-200"
+                        style={{
+                          background: `${details.color}0A`,
+                          color: details.color,
+                          borderColor: `${details.color}20`,
+                        }}>
+                        {subitem}
+                      </span>
+                    ))}
                   </div>
                 </motion.div>
               )
