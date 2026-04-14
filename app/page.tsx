@@ -1195,7 +1195,7 @@ export default function Home() {
                 <div className="space-y-3">
                   <p className="text-white/80 text-sm">Growth insights weekly.</p>
                   {newsletterStatus === 'done' ? (
-                    <p className="text-white font-bold text-sm">¡Suscripto!</p>
+                    <p className="text-white font-bold text-sm">{lang === 'es' ? '¡Suscripto!' : 'Subscribed!'}</p>
                   ) : (
                     <form onSubmit={handleNewsletter} className="flex gap-2">
                       <input
