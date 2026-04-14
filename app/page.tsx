@@ -724,19 +724,32 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Logo grid — swap placeholders for real <img> tags when logos arrive */}
+          {/* Logo grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, i) => (
+            {[
+              { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby' },
+              { src: '/assets/Logos/images (1).png',       alt: 'Client' },
+              { src: '/assets/Logos/images.png',           alt: 'Client' },
+              { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer' },
+              { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
+              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus' },
+              { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
+            ].map((logo, i) => (
               <motion.div
-                key={i}
+                key={logo.src}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="h-24 rounded-2xl border border-outline-variant/10 bg-white/60 flex items-center justify-center group hover:border-primary/20 hover:bg-white transition-all duration-200"
+                className="h-24 rounded-2xl border border-outline-variant/10 bg-white flex items-center justify-center px-6 group hover:border-primary/20 hover:shadow-sm transition-all duration-200"
               >
-                {/* replace this div with: <img src="/logos/client-X.svg" alt="Client name" className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity" /> */}
-                <div className="w-24 h-6 rounded-full bg-outline-variant/10" />
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-9 w-auto max-w-[120px] object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  style={{ mixBlendMode: 'multiply' }}
+                />
               </motion.div>
             ))}
           </div>
