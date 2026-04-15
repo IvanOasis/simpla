@@ -837,14 +837,14 @@ export default function Home() {
           {/* Logo grid */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {[
-              { src: '/assets/Logos/Moby-Logo.png',        alt: 'Moby', scale: 0.65 },
-              { src: '/assets/Logos/images.png',           alt: 'Client' },
-              { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', scale: 1.8 },
-              { src: '/assets/Logos/realmint.png',         alt: 'Realmint', scale: 3.5 },
-              { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
-              { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', invert: true },
-              { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
+              { src: '/assets/Logos/pixeldustlogo.jpg',        alt: 'Pixeldust' },
+              { src: '/assets/Logos/images.png',             alt: 'Client' },
+              { src: '/assets/Logos/logotokkobroker.webp',   alt: 'Tokko Broker' },
+              { src: '/assets/Logos/metasoccer-logo.png',    alt: 'MetaSoccer', scale: 1.8 },
+              { src: '/assets/Logos/realmint.png',           alt: 'Realmint', scale: 3.5 },
+              { src: '/assets/Logos/naventlogo.png',         alt: 'Navent' },
+              { src: '/assets/Logos/obitus_logo.webp',       alt: 'Obitus', invert: true },
+              { src: '/assets/Logos/fundasmulticoverlogo.webp', alt: 'Multicover', invert: true },
             ].map((logo, i) => (
               <motion.div
                 key={logo.src}
