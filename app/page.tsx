@@ -844,7 +844,7 @@ export default function Home() {
               { src: '/assets/Logos/realmint.png',           alt: 'Realmint', scale: 3.5 },
               { src: '/assets/Logos/naventlogo.png',         alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',       alt: 'Obitus', invert: true },
-              { src: '/assets/Logos/fundasmulticoverlogo.webp', alt: 'Multicover', invert: true },
+              { src: '/assets/Logos/fundasmulticoverlogo.webp', alt: 'Multicover', invert: true, scale: 2.2 },
             ].map((logo, i) => (
               <motion.div
                 key={logo.src}
