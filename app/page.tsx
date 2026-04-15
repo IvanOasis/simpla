@@ -838,9 +838,9 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {[
               { src: '/assets/Logos/pixeldustlogo.jpg',        alt: 'Pixeldust' },
-              { src: '/assets/Logos/images.png',             alt: 'Client' },
+              { src: '/assets/Logos/images.png',             alt: 'Open Sports', multiply: true },
               { src: '/assets/Logos/logotokkobroker.webp',   alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',    alt: 'MetaSoccer', scale: 1.8 },
+              { src: '/assets/Logos/metasoccer-logo.png',    alt: 'MetaSoccer', scale: 1.8, multiply: true },
               { src: '/assets/Logos/realmint.png',           alt: 'Realmint', scale: 3.5 },
               { src: '/assets/Logos/naventlogo.png',         alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',       alt: 'Obitus', invert: true },
@@ -863,6 +863,8 @@ export default function Home() {
                   className={`w-full h-full max-h-12 object-contain transition-opacity duration-300 ${
                     (logo as any).invert
                       ? 'invert opacity-50 group-hover:opacity-100'
+                      : (logo as any).multiply
+                      ? 'mix-blend-multiply grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100'
                       : 'grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100'
                   }`}
                 />
