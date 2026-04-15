@@ -657,7 +657,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════ NAVBAR */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 shadow-[0_8px_32px_rgba(27,27,30,0.07)]' : 'bg-white/60'} backdrop-blur-xl`}>
         <div className="flex justify-between items-center px-6 sm:px-8 py-4 max-w-7xl mx-auto">
-          <a href="#" className="flex items-center gap-1.5 group" aria-label="SIMPLA home">
+          <a href="/" className="flex items-center gap-1.5 group" aria-label="SIMPLA home">
             <SIMPLALogo className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" />
             <img src="/assets/Simpla-Logo-Web.png" alt="SIMPLA" className="h-6 w-auto" />
           </a>

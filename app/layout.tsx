@@ -4,15 +4,40 @@ import { LanguageProvider } from '@/context/LanguageContext'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Simpla - Growth made simple',
+  metadataBase: new URL('https://simpla.agency'),
+  title: 'Simpla — Marketing Agency for Growing Businesses',
   description:
-    'Simpla is a full-service marketing agency for SMBs and growing businesses. We combine strategic understanding with AI-powered execution — so your marketing compounds over time, not just during office hours.',
+    'Simpla is a full-service marketing agency for SMBs and growing businesses. Strategy, content, paid media, automation and SEO — everything under one roof.',
   keywords:
     'marketing agency, SMB marketing, paid media, automation, SEO, GEO, AI marketing, LATAM marketing, content marketing, digital agency',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: 'https://simpla.agency',
+  },
   openGraph: {
-    title: 'Simpla - Growth made simple',
-    description: 'Marketing that works while you sleep.',
+    title: 'Simpla — Marketing Agency for Growing Businesses',
+    description: 'Strategy, content, paid media and automation. Marketing that compounds.',
+    url: 'https://simpla.agency',
+    siteName: 'Simpla',
     type: 'website',
+    images: [
+      {
+        url: '/assets/Simpla-Logo-Web.png',
+        width: 1200,
+        height: 630,
+        alt: 'Simpla — Marketing Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Simpla — Marketing Agency for Growing Businesses',
+    description: 'Strategy, content, paid media and automation. Marketing that compounds.',
+    images: ['/assets/Simpla-Logo-Web.png'],
   },
   icons: {
     icon: '/assets/simpla-favicon.svg',
@@ -38,6 +63,29 @@ export default function RootLayout({
         <link 
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
           rel="stylesheet" 
+        />
+        <Script
+          id="json-ld-org"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'MarketingAgency',
+              name: 'Simpla',
+              url: 'https://simpla.agency',
+              logo: 'https://simpla.agency/assets/Simpla-Logo-Web.png',
+              description:
+                'Full-service marketing agency for SMBs and growing businesses. Strategy, content, paid media, automation and SEO.',
+              areaServed: ['AR', 'ES', 'MX', 'US', 'GB'],
+              sameAs: ['https://www.linkedin.com/company/simpla-agency'],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer support',
+                url: 'https://simpla.agency/#contact',
+              },
+            }),
+          }}
         />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GG30BD4ZQF" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
