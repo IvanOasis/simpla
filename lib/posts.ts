@@ -19,8 +19,8 @@ export interface Post {
 
 export const posts: Post[] = [
   {
-    slug: 'geo-seo-missing-channel-2025',
-    title: 'GEO: Why your SEO strategy is missing the most important channel of 2025',
+    slug: 'geo-seo-missing-channel-2026',
+    title: 'GEO: Why your SEO strategy is missing the most important channel of 2026',
     excerpt:
       "ChatGPT, Perplexity, and Google AI Overviews are now answering your customers' questions. If your business isn't showing up there, someone else is.",
     category: 'Web & Visibility',

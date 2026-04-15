@@ -225,15 +225,15 @@ const en: Translations = {
   },
   blog: {
     title: 'How we think.',
-    subtitle: 'Straight talk on marketing, automation, and growing a business in 2025.',
+    subtitle: 'Straight talk on marketing, automation, and growing a business in 2026.',
     cta: 'Read all articles',
     posts: [
       {
-        title: 'GEO: Why your SEO strategy is missing the most important channel of 2025',
+        title: 'GEO: Why your SEO strategy is missing the most important channel of 2026',
         excerpt:
           "ChatGPT, Perplexity, and Google AI Overviews are now answering your customers' questions. If your business isn't showing up there, someone else is.",
         category: 'Web & Visibility',
-        date: 'Apr 2025',
+        date: 'Apr 2026',
         readTime: '6 min',
       },
       {
@@ -241,7 +241,7 @@ const en: Translations = {
         excerpt:
           "Most agencies sell you a bundle and run the same playbook they ran last month. Here's what to ask for instead.",
         category: 'Strategy',
-        date: 'Mar 2025',
+        date: 'Mar 2026',
         readTime: '5 min',
       },
       {
@@ -249,7 +249,7 @@ const en: Translations = {
         excerpt:
           "You don't need a big team to have a 24/7 marketing operation. You need the right systems. Here's where to start.",
         category: 'Automation',
-        date: 'Feb 2025',
+        date: 'Feb 2026',
         readTime: '7 min',
       },
     ],
@@ -298,7 +298,7 @@ const en: Translations = {
       { label: 'Blog', href: '#blog' },
       { label: 'Contact', href: '#contact' },
     ],
-    copyright: '© 2025 Simpla Agency. All rights reserved.',
+    copyright: '© 2026 Simpla Agency. All rights reserved.',
     tagline: 'Marketing that works while you sleep.',
   },
   manifesto: {
@@ -452,15 +452,15 @@ const es: Translations = {
   },
   blog: {
     title: 'Cómo pensamos.',
-    subtitle: 'Ideas directas sobre marketing, automatización y cómo hacer crecer un negocio en 2025.',
+    subtitle: 'Ideas directas sobre marketing, automatización y cómo hacer crecer un negocio en 2026.',
     cta: 'Ver todos los artículos',
     posts: [
       {
-        title: 'GEO: por qué tu estrategia de SEO está ignorando el canal más importante de 2025',
+        title: 'GEO: por qué tu estrategia de SEO está ignorando el canal más importante de 2026',
         excerpt:
           'ChatGPT, Perplexity y Google AI Overviews ya están respondiendo las preguntas de tus clientes. Si tu negocio no aparece ahí, alguien más lo hace.',
         category: 'Web & Visibilidad',
-        date: 'Abr 2025',
+        date: 'Abr 2026',
         readTime: '6 min',
       },
       {
@@ -468,7 +468,7 @@ const es: Translations = {
         excerpt:
           'La mayoría de las agencias te venden un paquete y corren la misma fórmula que corrieron el mes pasado. Acá está lo que tenés que pedir en cambio.',
         category: 'Estrategia',
-        date: 'Mar 2025',
+        date: 'Mar 2026',
         readTime: '5 min',
       },
       {
@@ -476,7 +476,7 @@ const es: Translations = {
         excerpt:
           'No necesitás un equipo grande para tener una operación de marketing las 24 horas. Necesitás los sistemas correctos. Por acá se empieza.',
         category: 'Automatización',
-        date: 'Feb 2025',
+        date: 'Feb 2026',
         readTime: '7 min',
       },
     ],
@@ -525,7 +525,7 @@ const es: Translations = {
       { label: 'Blog', href: '#blog' },
       { label: 'Contacto', href: '#contact' },
     ],
-    copyright: '© 2025 Simpla Agency. Todos los derechos reservados.',
+    copyright: '© 2026 Simpla Agency. Todos los derechos reservados.',
     tagline: 'Marketing que trabaja mientras dormís.',
   },
   manifesto: {
