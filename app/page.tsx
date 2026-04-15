@@ -659,7 +659,7 @@ export default function Home() {
         <div className="flex justify-between items-center px-6 sm:px-8 py-4 max-w-7xl mx-auto">
           <a href="#" className="flex items-center gap-2.5 group" aria-label="SIMPLA home">
             <SIMPLALogo className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" />
-            <span className="font-headline font-bold text-xl tracking-tight text-on-surface">SIMPLA</span>
+            <img src="/assets/Simpla-Logo-Web.png" alt="SIMPLA" className="h-6 w-auto" />
           </a>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -1153,7 +1153,7 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-7">
               <div className="flex items-center gap-2.5">
                 <SIMPLALogo className="w-9 h-9" />
-                <span className="font-headline font-black text-2xl text-white">SIMPLA</span>
+                <img src="/assets/Simpla-Logo-Web.png" alt="SIMPLA" className="h-7 w-auto brightness-0 invert" />
               </div>
               <p className="text-white/80 text-base leading-relaxed max-w-sm">
                 {f.description}
