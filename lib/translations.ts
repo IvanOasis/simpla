@@ -97,7 +97,7 @@ const en: Translations = {
   hero: {
     tagline: 'Performance done Simple',
     description:
-      "We run paid ads for businesses that are serious about growing. Meta, Google, TikTok, LinkedIn, and more — one team that handles your strategy, your creatives, and your spend. No packages, no guesswork. Just campaigns built to convert.",
+      "We run paid ads for businesses that are serious about growing. Meta, Google, TikTok, LinkedIn, and more. One team that handles your strategy, your creatives, and your spend. We start by understanding your business. Then we build campaigns that actually perform.",
     cta1: "Get a free audit",
     cta2: 'What we do',
     stats: [
@@ -113,12 +113,12 @@ const en: Translations = {
   services: {
     title: 'What we run.',
     subtitle:
-      'Every platform where your customers are ready to buy — and a team that treats your budget like it is their own.',
+      'Every platform where your customers are ready to buy. A team that treats your budget like it is their own.',
     items: [
       {
         title: 'Meta Ads',
         description:
-          'Facebook and Instagram are still the highest-ROI ad platforms for most businesses — when run by someone who actually knows what they are doing. We build full-funnel campaigns from cold audiences all the way to purchase, with creatives tested and audiences refined until the numbers make sense.',
+          'Facebook and Instagram are still the highest-ROI ad platforms for most businesses, when run by someone who actually knows what they are doing. We build full-funnel campaigns from cold audiences all the way to purchase, with creatives tested and audiences refined until the numbers make sense.',
         subitems: ['Full-Funnel Strategy', 'Creative Testing', 'Retargeting Sequences', 'Audience Research'],
       },
       {
@@ -130,13 +130,13 @@ const en: Translations = {
       {
         title: 'TikTok Ads',
         description:
-          'The platform with the fastest-growing ad inventory and the lowest CPMs right now. We handle both the content and the campaign — short-form ads that feel native to the feed and perform like paid.',
+          'The platform with the fastest-growing ad inventory and the lowest CPMs right now. We handle both the content and the campaign. Short-form ads that feel native to the feed and perform like paid.',
         subitems: ['UGC-Style Creatives', 'Spark Ads', 'Interest Targeting', 'Performance Creative'],
       },
       {
         title: 'LinkedIn Ads',
         description:
-          'The best B2B channel for reaching decision-makers — and the one with the worst average execution in the industry. We run Sponsored Content, Lead Gen Forms, and retargeting campaigns for companies that sell to other companies.',
+          'The best B2B channel for reaching decision-makers, and the one with the worst average execution in the industry. We run Sponsored Content, Lead Gen Forms, and retargeting campaigns for companies that sell to other companies.',
         subitems: ['Sponsored Content', 'Lead Gen Forms', 'Account-Based Targeting', 'B2B Retargeting'],
       },
       {
@@ -148,7 +148,7 @@ const en: Translations = {
       {
         title: 'Ad Creative',
         description:
-          'The creative is responsible for 60 to 70 percent of your campaign performance. We produce static ads, video, and UGC-style content built for paid — not repurposed from your Instagram. Every piece is made to stop the scroll and earn the click.',
+          'The creative is responsible for 60 to 70 percent of your campaign performance. We produce static ads, video, and UGC-style content built specifically for paid. Not repurposed from your Instagram. Every piece is made to stop the scroll and earn the click.',
         subitems: ['Static Ad Design', 'Short-Form Video', 'UGC Direction', 'A/B Creative Testing'],
       },
     ],
@@ -192,7 +192,7 @@ const en: Translations = {
         number: '02',
         title: 'We build the strategy',
         description:
-          'No templates, no copy-paste playbooks. We design a campaign architecture specific to your business, your offer, and your customer. The right platform, the right funnel, the right message — and clear agreement on how we measure success.',
+          'No templates, no copy-paste playbooks. We design a campaign architecture specific to your business, your offer, and your customer. The right platform, the right funnel, the right message. And clear agreement on how we measure success.',
       },
       {
         number: '03',
@@ -259,9 +259,9 @@ const en: Translations = {
   contact: {
     title: 'Get a free audit.',
     subtitle:
-      'Share access to your ad account and we will tell you exactly what is costing you money and what is worth scaling. No pitch, no commitment. Just a straight answer.',
+      'Share access to your ad account and we will tell you exactly what is costing you money and what is worth scaling. If it makes sense to work together, we will talk about it then.',
     cta: "Send it over",
-    success: "Perfect — we will be in touch within 24 hours.",
+    success: "Perfect. We will be in touch within 24 hours.",
     labels: {
       name: 'Full Name',
       email: 'Email Address',
@@ -281,7 +281,7 @@ const en: Translations = {
   },
   presence: {
     title: "From <span class=\"text-primary-fixed-dim\">LATAM</span> to the <span class=\"text-secondary-fixed\">world.</span>",
-    subtitle: "We work with ambitious brands across every timezone — driving real results, wherever growth happens.",
+    subtitle: "We work with ambitious brands across every timezone, driving real results wherever growth happens.",
   },
   footer: {
     description:
@@ -309,7 +309,7 @@ const en: Translations = {
     line1: 'Most agencies sell packages.',
     line2: 'We learn your business and run ads that pay for themselves.',
     body:
-      'Before any campaign goes live, we audit your account, understand your customers, and build a strategy around what actually moves revenue. Because running ads without that foundation is just burning money — and you have probably done enough of that already.',
+      'Before any campaign goes live, we audit your account, understand your customers, and build a strategy around what actually moves revenue. Because running ads without that foundation is just burning money. You have probably done enough of that already.',
   },
 }
 
@@ -326,7 +326,7 @@ const es: Translations = {
   hero: {
     tagline: 'Performance hecho Simple',
     description:
-      'Corremos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más — un solo equipo que maneja tu estrategia, tus creativos y tu pauta. Sin paquetes, sin improvisación. Solo campañas construidas para convertir.',
+      'Corremos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más. Un solo equipo que maneja tu estrategia, tus creativos y tu pauta. Entendemos tu negocio antes de invertir un peso.',
     cta1: 'Auditá tu cuenta gratis',
     cta2: 'Lo que hacemos',
     stats: [
@@ -342,12 +342,12 @@ const es: Translations = {
   services: {
     title: 'Lo que manejamos.',
     subtitle:
-      'Cada plataforma donde tus clientes están listos para comprar — y un equipo que trata tu presupuesto como si fuera propio.',
+      'Cada plataforma donde tus clientes están listos para comprar. Un equipo que trata tu presupuesto como si fuera propio.',
     items: [
       {
         title: 'Meta Ads',
         description:
-          'Facebook e Instagram siguen siendo los canales de mayor ROI para la mayoría de los negocios — cuando los maneja alguien que realmente sabe lo que hace. Construimos campañas de embudo completo, desde audiencias frías hasta la compra, con creativos testeados y audiencias refinadas hasta que los números cierren.',
+          'Facebook e Instagram siguen siendo los canales de mayor ROI para la mayoría de los negocios, cuando los maneja alguien que realmente sabe lo que hace. Construimos campañas de embudo completo, desde audiencias frías hasta la compra, con creativos testeados y audiencias refinadas hasta que los números cierren.',
         subitems: ['Estrategia de Embudo Completo', 'Testeo de Creativos', 'Secuencias de Retargeting', 'Investigación de Audiencias'],
       },
       {
@@ -365,7 +365,7 @@ const es: Translations = {
       {
         title: 'LinkedIn Ads',
         description:
-          'El mejor canal B2B para llegar a tomadores de decisiones — y el que tiene la peor ejecución promedio en la industria. Corremos Sponsored Content, Lead Gen Forms y campañas de retargeting para empresas que le venden a otras empresas.',
+          'El mejor canal B2B para llegar a tomadores de decisiones, y el que tiene la peor ejecución promedio en la industria. Corremos Sponsored Content, Lead Gen Forms y campañas de retargeting para empresas que le venden a otras empresas.',
         subitems: ['Sponsored Content', 'Lead Gen Forms', 'Targeting por Cuenta', 'Retargeting B2B'],
       },
       {
@@ -488,9 +488,9 @@ const es: Translations = {
   contact: {
     title: 'Auditá tu cuenta gratis.',
     subtitle:
-      'Compartí acceso a tu cuenta publicitaria y te decimos exactamente qué te está costando dinero y qué vale la pena escalar. Sin pitch, sin compromiso. Solo una respuesta directa.',
+      'Compartí acceso a tu cuenta publicitaria y te decimos exactamente qué te está costando dinero y qué vale la pena escalar. Si tiene sentido trabajar juntos, lo hablamos después.',
     cta: 'Mandarlo',
-    success: 'Perfecto — te contactamos en menos de 24 horas.',
+    success: 'Perfecto. Te contactamos en menos de 24 horas.',
     labels: {
       name: 'Nombre completo',
       email: 'Correo electrónico',
