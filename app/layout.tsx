@@ -5,11 +5,11 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://simpla.agency'),
-  title: 'Simpla — Marketing Agency for Growing Businesses',
+  title: 'Simpla — Performance Marketing Agency',
   description:
-    'Simpla is a full-service marketing agency for SMBs and growing businesses. Strategy, content, paid media, automation and SEO — everything under one roof.',
+    'Simpla is a performance marketing agency running paid ads on Meta, Google, TikTok, LinkedIn and more. We treat your business like our own.',
   keywords:
-    'marketing agency, SMB marketing, paid media, automation, SEO, GEO, AI marketing, LATAM marketing, content marketing, digital agency',
+    'performance marketing agency, Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, paid advertising, LATAM agency, performance agency',
   robots: {
     index: true,
     follow: true,
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     canonical: 'https://simpla.agency',
   },
   openGraph: {
-    title: 'Simpla — Marketing Agency for Growing Businesses',
-    description: 'Strategy, content, paid media and automation. Marketing that compounds.',
+    title: 'Simpla — Performance Marketing Agency',
+    description: 'Meta, Google, TikTok, LinkedIn and more. One team that handles your strategy, your creatives, and your spend.',
     url: 'https://simpla.agency',
     siteName: 'Simpla',
     type: 'website',
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Simpla — Marketing Agency for Growing Businesses',
-    description: 'Strategy, content, paid media and automation. Marketing that compounds.',
+    title: 'Simpla — Performance Marketing Agency',
+    description: 'Meta, Google, TikTok, LinkedIn and more. One team that handles your strategy, your creatives, and your spend.',
     images: ['/assets/Simpla-Logo-Web.png'],
   },
   icons: {
