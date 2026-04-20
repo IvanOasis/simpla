@@ -227,7 +227,7 @@ const en: Translations = {
   },
   blog: {
     title: 'How we think.',
-    subtitle: 'Straight talk on paid advertising, performance marketing, and growing a business in 2025.',
+    subtitle: 'Straight talk on paid advertising, performance marketing, and growing a business in 2026.',
     cta: 'Read all articles',
     posts: [
       {
@@ -302,7 +302,7 @@ const en: Translations = {
       { label: 'Blog', href: '#blog' },
       { label: 'Contact', href: '#contact' },
     ],
-    copyright: '© 2025 Simpla Agency. All rights reserved.',
+    copyright: '© 2026 Simpla Agency. All rights reserved.',
     tagline: 'Performance marketing that works while you sleep.',
   },
   manifesto: {
@@ -456,7 +456,7 @@ const es: Translations = {
   },
   blog: {
     title: 'Cómo pensamos.',
-    subtitle: 'Ideas directas sobre publicidad paga, performance marketing y cómo hacer crecer un negocio en 2025.',
+    subtitle: 'Ideas directas sobre publicidad paga, performance marketing y cómo hacer crecer un negocio en 2026.',
     cta: 'Ver todos los artículos',
     posts: [
       {
@@ -531,7 +531,7 @@ const es: Translations = {
       { label: 'Blog', href: '#blog' },
       { label: 'Contacto', href: '#contact' },
     ],
-    copyright: '© 2025 Simpla Agency. Todos los derechos reservados.',
+    copyright: '© 2026 Simpla Agency. Todos los derechos reservados.',
     tagline: 'Performance marketing que trabaja mientras dormís.',
   },
   manifesto: {

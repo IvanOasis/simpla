@@ -170,7 +170,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       {/* ── Footer ── */}
       <footer className="border-t border-outline-variant/10 py-8">
         <div className="max-w-2xl mx-auto px-6 flex items-center justify-between text-sm text-on-surface-variant">
-          <span>© 2025 Simpla Agency</span>
+          <span>© 2026 Simpla Agency</span>
           <Link href="/" className="hover:text-primary transition-colors font-medium">
             simpla.agency
           </Link>
