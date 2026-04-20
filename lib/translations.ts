@@ -113,7 +113,7 @@ const en: Translations = {
   services: {
     title: 'What we run.',
     subtitle:
-      'Every platform where your customers are ready to buy. A team that treats your budget like it is their own.',
+      'Every platform where your customers are ready to buy, with a team that treats your budget like it is their own.',
     items: [
       {
         title: 'Meta Ads',
@@ -180,7 +180,7 @@ const en: Translations = {
   },
   method: {
     title: 'How we work.',
-    subtitle: 'We start by understanding what is broken. Then we build the system. Then we scale what works.',
+    subtitle: 'We start by understanding what is broken, build a system around what works, and scale from there.',
     steps: [
       {
         number: '01',
@@ -342,7 +342,7 @@ const es: Translations = {
   services: {
     title: 'Lo que manejamos.',
     subtitle:
-      'Cada plataforma donde tus clientes están listos para comprar. Un equipo que trata tu presupuesto como si fuera propio.',
+      'Cada plataforma donde tus clientes están listos para comprar, con un equipo que trata tu presupuesto como si fuera propio.',
     items: [
       {
         title: 'Meta Ads',
@@ -409,7 +409,7 @@ const es: Translations = {
   },
   method: {
     title: 'Cómo trabajamos.',
-    subtitle: 'Empezamos entendiendo qué está roto. Después construimos el sistema. Después escalamos lo que funciona.',
+    subtitle: 'Empezamos entendiendo qué está roto, construimos un sistema alrededor de lo que funciona y escalamos desde ahí.',
     steps: [
       {
         number: '01',
