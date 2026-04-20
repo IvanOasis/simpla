@@ -64,6 +64,10 @@ export interface Translations {
       message: string
     }
   }
+  presence: {
+    title: string
+    subtitle: string
+  }
   footer: {
     description: string
     servicesTitle: string
@@ -274,6 +278,10 @@ const en: Translations = {
       budget: 'e.g. $2,000/mo',
       message: 'Tell us about your business, your goals, what has or has not worked...',
     },
+  },
+  presence: {
+    title: "From <span class=\"text-primary-fixed-dim\">LATAM</span> to the <span class=\"text-secondary-fixed\">world.</span>",
+    subtitle: "We work with ambitious brands across every timezone — driving real results, wherever growth happens.",
   },
   footer: {
     description:
@@ -499,6 +507,10 @@ const es: Translations = {
       budget: 'ej. USD 2.000/mes',
       message: 'Contanos de tu negocio, tus objetivos, qué funcionó y qué no...',
     },
+  },
+  presence: {
+    title: "De <span class=\"text-primary-fixed-dim\">LATAM</span> para el <span class=\"text-secondary-fixed\">mundo.</span>",
+    subtitle: "Trabajamos con marcas que piensan en grande, en cualquier mercado y zona horaria.",
   },
   footer: {
     description:
