@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: '/assets/Simpla-Logo-Web.png',
         width: 1200,
         height: 630,
-        alt: 'Simpla — Marketing Agency',
+        alt: 'Simpla — Performance Marketing Agency',
       },
     ],
   },
@@ -76,12 +76,15 @@ export default function RootLayout({
               url: 'https://simpla.agency',
               logo: 'https://simpla.agency/assets/Simpla-Logo-Web.png',
               description:
-                'Full-service marketing agency for SMBs and growing businesses. Strategy, content, paid media, automation and SEO.',
-              areaServed: ['AR', 'ES', 'MX', 'US', 'GB'],
-              sameAs: ['https://www.linkedin.com/company/simpla-agency'],
+                'Performance marketing agency running paid ads on Meta, Google, TikTok, LinkedIn and more. Based in LATAM, focused on the US market.',
+              areaServed: ['US', 'AR', 'MX', 'ES', 'GB', 'UY'],
+              sameAs: [
+                'https://www.linkedin.com/company/simpla-agency',
+                'https://www.instagram.com/simplaagency',
+              ],
               contactPoint: {
                 '@type': 'ContactPoint',
-                contactType: 'customer support',
+                contactType: 'sales',
                 url: 'https://simpla.agency/#contact',
               },
             }),
