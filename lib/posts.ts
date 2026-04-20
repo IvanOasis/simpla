@@ -25,7 +25,7 @@ export const posts: Post[] = [
       'The ads were working. Then, gradually or suddenly, they stopped. Most people blame the platform. The real problem is almost always in the account.',
     category: 'Meta Ads',
     categoryColor: '#5491ff',
-    date: 'May 2025',
+    date: 'Apr 2026',
     readTime: '6 min',
     sections: [
       {
@@ -80,7 +80,7 @@ export const posts: Post[] = [
       'Most advertisers spend most of their time on the other 30%. Targeting, bidding, campaign structure. These things matter — but the performance gap almost always lives in the creative.',
     category: 'Ad Creative',
     categoryColor: '#7346a1',
-    date: 'Apr 2025',
+    date: 'Mar 2026',
     readTime: '5 min',
     sections: [
       {
@@ -128,7 +128,7 @@ export const posts: Post[] = [
       "When CPL goes up, the instinct is to reduce spend. It feels logical. It is also usually the wrong move — because cutting budget doesn't fix a broken campaign.",
     category: 'Strategy',
     categoryColor: '#5491ff',
-    date: 'Mar 2025',
+    date: 'Feb 2026',
     readTime: '7 min',
     sections: [
       {

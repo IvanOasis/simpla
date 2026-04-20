@@ -235,7 +235,7 @@ const en: Translations = {
         excerpt:
           'The ads were working. Then, gradually or suddenly, they stopped. Most people blame the platform. The real problem is almost always in the account.',
         category: 'Meta Ads',
-        date: 'May 2025',
+        date: 'Apr 2026',
         readTime: '6 min',
       },
       {
@@ -243,7 +243,7 @@ const en: Translations = {
         excerpt:
           'Most advertisers spend most of their time on the other 30%. The performance gap almost always lives in the creative.',
         category: 'Ad Creative',
-        date: 'Apr 2025',
+        date: 'Mar 2026',
         readTime: '5 min',
       },
       {
@@ -251,7 +251,7 @@ const en: Translations = {
         excerpt:
           "When CPL goes up, the instinct is to reduce spend. It feels logical. It is also usually the wrong move.",
         category: 'Strategy',
-        date: 'Mar 2025',
+        date: 'Feb 2026',
         readTime: '7 min',
       },
     ],
@@ -464,7 +464,7 @@ const es: Translations = {
         excerpt:
           'Los anuncios funcionaban. Después dejaron de funcionar. La mayoría culpa a la plataforma. El problema real casi siempre está en la cuenta.',
         category: 'Meta Ads',
-        date: 'May 2025',
+        date: 'Abr 2026',
         readTime: '6 min',
       },
       {
@@ -472,7 +472,7 @@ const es: Translations = {
         excerpt:
           'La mayoría de los anunciantes pasan el tiempo en el 30% que menos importa. La diferencia de rendimiento casi siempre está en el creativo.',
         category: 'Creativos',
-        date: 'Abr 2025',
+        date: 'Mar 2026',
         readTime: '5 min',
       },
       {
@@ -480,7 +480,7 @@ const es: Translations = {
         excerpt:
           'Cuando el CPL sube, el instinto es reducir el gasto. Se siente lógico. Casi siempre es el movimiento equivocado.',
         category: 'Estrategia',
-        date: 'Mar 2025',
+        date: 'Feb 2026',
         readTime: '7 min',
       },
     ],
