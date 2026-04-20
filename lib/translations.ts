@@ -52,6 +52,7 @@ export interface Translations {
       email: string
       company: string
       country: string
+      budget: string
       message: string
     }
     placeholders: {
@@ -59,6 +60,7 @@ export interface Translations {
       email: string
       company: string
       country: string
+      budget: string
       message: string
     }
   }
@@ -86,64 +88,64 @@ const en: Translations = {
       { href: '#method', label: 'How we work' },
       { href: '#blog', label: 'Blog' },
     ],
-    cta: "Let's talk",
+    cta: "Get a free audit",
   },
   hero: {
-    tagline: 'Marketing done Simple',
+    tagline: 'Performance done Simple',
     description:
-      "We're a full-service marketing agency that treats your business like our own. Strategy, content, paid media, automation — everything under one roof, built around what you actually need.",
-    cta1: "Let's talk",
+      "We run paid ads for businesses that are serious about growing. Meta, Google, TikTok, LinkedIn, and more — one team that handles your strategy, your creatives, and your spend. No packages, no guesswork. Just campaigns built to convert.",
+    cta1: "Get a free audit",
     cta2: 'What we do',
     stats: [
-      { value: 'SMB', label: 'Focused' },
-      { value: 'AI', label: 'Powered' },
+      { value: 'LATAM', label: 'Based' },
+      { value: 'US', label: 'Focused' },
       { value: '24/7', label: 'Working' },
     ],
   },
   clients: {
     title: 'Happy clients.',
-    subtitle: 'Brands and businesses that trusted us to grow.',
+    subtitle: 'Businesses we have helped grow with paid advertising.',
   },
   services: {
-    title: 'What we do.',
+    title: 'What we run.',
     subtitle:
-      'Six practice areas. One agency that learns your business before opening a single tool.',
+      'Every platform where your customers are ready to buy — and a team that treats your budget like it is their own.',
     items: [
       {
-        title: 'Content',
+        title: 'Meta Ads',
         description:
-          'The right words, in the right place, at the right time. We create content that actually sounds like you — and makes people want to keep reading.',
-        subitems: ['Social Strategy', 'High-Converting Copy', 'Brand Storytelling', 'Content Calendars'],
+          'Facebook and Instagram are still the highest-ROI ad platforms for most businesses — when run by someone who actually knows what they are doing. We build full-funnel campaigns from cold audiences all the way to purchase, with creatives tested and audiences refined until the numbers make sense.',
+        subitems: ['Full-Funnel Strategy', 'Creative Testing', 'Retargeting Sequences', 'Audience Research'],
       },
       {
-        title: 'Paid Media',
+        title: 'Google Ads',
         description:
-          'Your budget deserves more than boosted posts. We run paid media across every platform where your customers actually spend time — and we optimize every dollar.',
-        subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Retargeting Funnels', 'Budget Optimization'],
+          'Capture demand at the exact moment someone is looking for what you offer. We run Search, Performance Max, and Shopping campaigns with attention to what most agencies ignore: Quality Score, bid strategy, and negative keyword lists that actually stop waste.',
+        subitems: ['Search Campaigns', 'Performance Max', 'Shopping Ads', 'Negative Keyword Audits'],
       },
       {
-        title: 'Web & Visibility',
+        title: 'TikTok Ads',
         description:
-          "If they can't find you, nothing else matters. We build fast, conversion-focused websites and make sure you show up — on Google, on AI search, and everywhere in between.",
-        subitems: ['High-Performance Landing Pages', 'AI-Powered SEO (GEO)', 'Conversion UX', 'Advanced Analytics'],
+          'The platform with the fastest-growing ad inventory and the lowest CPMs right now. We handle both the content and the campaign — short-form ads that feel native to the feed and perform like paid.',
+        subitems: ['UGC-Style Creatives', 'Spark Ads', 'Interest Targeting', 'Performance Creative'],
       },
       {
-        title: 'Automation',
+        title: 'LinkedIn Ads',
         description:
-          "The best marketing doesn't stop when you do. We build automations that nurture leads, follow up, and convert — without you lifting a finger.",
-        subitems: ['Lead-Gen Chatbots', 'CRM Automations', 'AI Outbound Systems', 'Workflow Optimization'],
+          'The best B2B channel for reaching decision-makers — and the one with the worst average execution in the industry. We run Sponsored Content, Lead Gen Forms, and retargeting campaigns for companies that sell to other companies.',
+        subitems: ['Sponsored Content', 'Lead Gen Forms', 'Account-Based Targeting', 'B2B Retargeting'],
       },
       {
-        title: 'Video & Creative',
+        title: 'More Platforms',
         description:
-          "Scroll-stopping content that's actually on-brand. From Reels to full productions, we handle the creative so you don't have to.",
-        subitems: ['Short-form Reels/TikTok', 'UGC Direction', 'AI-Generated Promos', 'Visual Brand Identity'],
+          'Twitter/X and Reddit reach audiences that no other platform touches. Niche communities, early adopters, and high-intent buyers that are invisible on Meta or Google. We run campaigns where your competitors are not looking.',
+        subitems: ['Twitter/X Ads', 'Reddit Ads', 'Niche Community Targeting', 'Promoted Posts'],
       },
       {
-        title: 'Strategy & Consulting',
+        title: 'Ad Creative',
         description:
-          'Before we do anything, we think. We map your market, define your ideal customer, and build a clear path to growth — so every move has a reason behind it.',
-        subitems: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Definition'],
+          'The creative is responsible for 60 to 70 percent of your campaign performance. We produce static ads, video, and UGC-style content built for paid — not repurposed from your Instagram. Every piece is made to stop the scroll and earn the click.',
+        subitems: ['Static Ad Design', 'Short-Form Video', 'UGC Direction', 'A/B Creative Testing'],
       },
     ],
   },
@@ -156,49 +158,49 @@ const en: Translations = {
         headline: '3× revenue in 6 months',
         client: 'Fridge & Flow',
         industry: 'E-commerce / Food',
-        services: 'Paid Media, Content',
+        services: 'Meta Ads, Ad Creative',
       },
       {
         headline: 'From zero to 50K monthly visitors',
         client: 'Nómada Studio',
         industry: 'Design / SaaS',
-        services: 'SEO, GEO, Web',
+        services: 'Google Ads, LinkedIn Ads',
       },
       {
         headline: '–62% cost per lead in 90 days',
         client: 'Kinetic',
         industry: 'Fitness / App',
-        services: 'Meta Ads, Automation',
+        services: 'Meta Ads, TikTok Ads',
       },
     ],
   },
   method: {
     title: 'How we work.',
-    subtitle: 'We start by understanding. Then we build. Then we compound.',
+    subtitle: 'We start by understanding what is broken. Then we build the system. Then we scale what works.',
     steps: [
       {
         number: '01',
-        title: 'We learn your business',
+        title: 'We audit your account',
         description:
-          'Before any campaign goes live, we invest time understanding your business model, your customers, and what success actually means for you. This is not a standard onboarding form. It is a real conversation.',
+          'Before we touch anything, we look at everything. Account structure, pixel health, creative performance, landing pages, audience overlap. You get a clear picture of what is working, what is wasted, and where the real opportunity is.',
       },
       {
         number: '02',
         title: 'We build the strategy',
         description:
-          "No templates, no copy-paste playbooks. We design a strategy specific to your business — the right channels, the right message, the right timing — and align on what we're measuring.",
+          'No templates, no copy-paste playbooks. We design a campaign architecture specific to your business, your offer, and your customer. The right platform, the right funnel, the right message — and clear agreement on how we measure success.',
       },
       {
         number: '03',
-        title: 'We execute with AI + automation',
+        title: 'We launch and test',
         description:
-          'We combine hands-on execution with modern infrastructure: automated workflows, content pipelines, and systems that run 24/7 without adding headcount.',
+          'We launch with multiple creative variants and audience hypotheses, structured to generate real data fast. Nothing runs on assumption. Everything runs on a test.',
       },
       {
         number: '04',
-        title: 'We report transparently',
+        title: 'We report and scale',
         description:
-          'Every client gets clear, honest reporting. We show what is working, what is not, and what we are doing about it. No vanity metrics, no spin. Just the truth and the next move.',
+          'Every client gets clear, honest reporting. We show exactly what is working, what is not, and what we are doing about it. When we find a winner, we scale it. When something is not performing, we say so and we fix it.',
       },
     ],
   },
@@ -221,7 +223,7 @@ const en: Translations = {
   },
   blog: {
     title: 'How we think.',
-    subtitle: 'Straight talk on marketing, automation, and growing a business in 2025.',
+    subtitle: 'Straight talk on paid advertising, performance marketing, and growing a business in 2025.',
     cta: 'Read all articles',
     posts: [
       {
@@ -251,37 +253,39 @@ const en: Translations = {
     ],
   },
   contact: {
-    title: 'Ready to grow?',
+    title: 'Get a free audit.',
     subtitle:
-      "Tell us about your business. No packages, no templates — just a real conversation about what would actually move the needle for you.",
-    cta: "Let's talk",
-    success: "Perfect — we'll be in touch soon.",
+      'Share access to your ad account and we will tell you exactly what is costing you money and what is worth scaling. No pitch, no commitment. Just a straight answer.',
+    cta: "Send it over",
+    success: "Perfect — we will be in touch within 24 hours.",
     labels: {
       name: 'Full Name',
       email: 'Email Address',
       company: 'Company',
       country: 'Country',
-      message: 'How can we help?',
+      budget: 'Monthly Ad Budget',
+      message: 'Anything else we should know?',
     },
     placeholders: {
       name: 'Jane Doe',
       email: 'jane@company.com',
       company: 'Company Name',
       country: 'e.g. USA, UK, Spain',
-      message: 'Tell us more about your business...',
+      budget: 'e.g. $2,000/mo',
+      message: 'Tell us about your business, your goals, what has or has not worked...',
     },
   },
   footer: {
     description:
-      'Simpla is a full-service marketing agency for SMBs and growing businesses. We learn your business, then we grow it.',
+      'Simpla is a performance marketing agency for businesses that want results. We learn your business, then we grow it with paid ads.',
     servicesTitle: 'Services',
     services: [
-      'Content',
-      'Paid Media',
-      'Web & Visibility',
-      'Automation',
-      'Video & Creative',
-      'Strategy & Consulting',
+      'Meta Ads',
+      'Google Ads',
+      'TikTok Ads',
+      'LinkedIn Ads',
+      'More Platforms',
+      'Ad Creative',
     ],
     companyTitle: 'Company',
     companyLinks: [
@@ -291,13 +295,13 @@ const en: Translations = {
       { label: 'Contact', href: '#contact' },
     ],
     copyright: '© 2025 Simpla Agency. All rights reserved.',
-    tagline: 'Marketing that works while you sleep.',
+    tagline: 'Performance marketing that works while you sleep.',
   },
   manifesto: {
     line1: 'Most agencies sell packages.',
-    line2: 'We learn your business first.',
+    line2: 'We learn your business and run ads that pay for themselves.',
     body:
-      "Before any campaign goes live, we invest time understanding your business model, your customers, and your bottlenecks. Because marketing without that understanding is just noise — and you've probably paid for enough of that already.",
+      'Before any campaign goes live, we audit your account, understand your customers, and build a strategy around what actually moves revenue. Because running ads without that foundation is just burning money — and you have probably done enough of that already.',
   },
 }
 
@@ -309,64 +313,64 @@ const es: Translations = {
       { href: '#method', label: 'Cómo trabajamos' },
       { href: '#blog', label: 'Blog' },
     ],
-    cta: 'Hablemos',
+    cta: 'Auditá tu cuenta',
   },
   hero: {
-    tagline: 'Marketing hecho Simple',
+    tagline: 'Performance hecho Simple',
     description:
-      'Somos una agencia de marketing integral que trata tu negocio como si fuera el nuestro. Estrategia, contenido, pauta, automatización — todo bajo un mismo techo, construido alrededor de lo que realmente necesitás.',
-    cta1: 'Hablemos',
+      'Corremos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más — un solo equipo que maneja tu estrategia, tus creativos y tu pauta. Sin paquetes, sin improvisación. Solo campañas construidas para convertir.',
+    cta1: 'Auditá tu cuenta gratis',
     cta2: 'Lo que hacemos',
     stats: [
-      { value: 'Pymes', label: 'Nuestro foco' },
-      { value: 'IA', label: 'Potenciado' },
+      { value: 'LATAM', label: 'Base' },
+      { value: 'EE.UU.', label: 'Foco' },
       { value: '24/7', label: 'Trabajando' },
     ],
   },
   clients: {
     title: 'Clientes felices.',
-    subtitle: 'Marcas y negocios que confiaron en nosotros para crecer.',
+    subtitle: 'Negocios que ayudamos a crecer con publicidad paga.',
   },
   services: {
-    title: 'Lo que hacemos.',
+    title: 'Lo que manejamos.',
     subtitle:
-      'Seis áreas de servicio. Una sola agencia que aprende tu negocio antes de abrir una sola herramienta.',
+      'Cada plataforma donde tus clientes están listos para comprar — y un equipo que trata tu presupuesto como si fuera propio.',
     items: [
       {
-        title: 'Contenido',
+        title: 'Meta Ads',
         description:
-          'Las palabras correctas, en el lugar correcto, en el momento correcto. Creamos contenido que suena como vos — y que hace que la gente quiera seguir leyendo.',
-        subitems: ['Estrategia en Redes', 'Copywriting de Conversión', 'Storytelling de Marca', 'Calendarios de Contenido'],
+          'Facebook e Instagram siguen siendo los canales de mayor ROI para la mayoría de los negocios — cuando los maneja alguien que realmente sabe lo que hace. Construimos campañas de embudo completo, desde audiencias frías hasta la compra, con creativos testeados y audiencias refinadas hasta que los números cierren.',
+        subitems: ['Estrategia de Embudo Completo', 'Testeo de Creativos', 'Secuencias de Retargeting', 'Investigación de Audiencias'],
       },
       {
-        title: 'Paid Media',
+        title: 'Google Ads',
         description:
-          'Tu presupuesto merece más que posteos impulsados. Manejamos pauta en cada plataforma donde tus clientes realmente pasan el tiempo — y optimizamos cada peso.',
-        subitems: ['Meta & Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Embudos de Retargeting', 'Optimización de Presupuesto'],
+          'Capturá demanda en el momento exacto en que alguien está buscando lo que ofrecés. Corremos campañas de Search, Performance Max y Shopping prestando atención a lo que la mayoría ignora: Quality Score, estrategia de puja y listas de palabras negativas que realmente frenan el gasto innecesario.',
+        subitems: ['Campañas de Search', 'Performance Max', 'Shopping Ads', 'Auditorías de Palabras Negativas'],
       },
       {
-        title: 'Web & Visibilidad',
+        title: 'TikTok Ads',
         description:
-          'Si no te encuentran, nada más importa. Construimos sitios rápidos y orientados a la conversión, y nos aseguramos de que aparezcas — en Google, en búsquedas con IA, y en todo lo que hay en el medio.',
-        subitems: ['Landing Pages de Alto Rendimiento', 'SEO Potenciado por IA (GEO)', 'UX de Conversión', 'Analítica Avanzada'],
+          'La plataforma con el inventario publicitario de mayor crecimiento y los CPMs más bajos del mercado hoy. Nos encargamos tanto del contenido como de la campaña: anuncios de formato corto que se sienten nativos al feed y rinden como pauta.',
+        subitems: ['Creativos Estilo UGC', 'Spark Ads', 'Targeting por Intereses', 'Creativos de Performance'],
       },
       {
-        title: 'Automatización',
+        title: 'LinkedIn Ads',
         description:
-          'El mejor marketing no para cuando vos parás. Construimos automatizaciones que nutren leads, hacen seguimiento y convierten — sin que tengas que mover un dedo.',
-        subitems: ['Chatbots de Captación', 'Automatizaciones de CRM', 'Sistemas de Outreach con IA', 'Optimización de Flujos'],
+          'El mejor canal B2B para llegar a tomadores de decisiones — y el que tiene la peor ejecución promedio en la industria. Corremos Sponsored Content, Lead Gen Forms y campañas de retargeting para empresas que le venden a otras empresas.',
+        subitems: ['Sponsored Content', 'Lead Gen Forms', 'Targeting por Cuenta', 'Retargeting B2B'],
       },
       {
-        title: 'Video & Creatividad',
+        title: 'Más Plataformas',
         description:
-          'Contenido que para el scroll y que es genuinamente tuyo. Desde Reels hasta producciones completas, nos encargamos de la creatividad para que vos no tengas que hacerlo.',
-        subitems: ['Reels y TikTok de Formato Corto', 'Dirección de UGC', 'Promos Generadas con IA', 'Identidad Visual de Marca'],
+          'Twitter/X y Reddit alcanzan audiencias que ninguna otra plataforma toca. Comunidades de nicho, early adopters y compradores de alta intención que no aparecen en Meta ni en Google. Corremos campañas donde tus competidores no están mirando.',
+        subitems: ['Twitter/X Ads', 'Reddit Ads', 'Targeting de Comunidades', 'Publicaciones Promocionadas'],
       },
       {
-        title: 'Estrategia & Consultoría',
+        title: 'Creativos',
         description:
-          'Antes de hacer cualquier cosa, pensamos. Mapeamos tu mercado, definimos tu cliente ideal y construimos un camino claro hacia el crecimiento — para que cada movimiento tenga una razón detrás.',
-        subitems: ['Posicionamiento de Mercado', 'Auditorías Competitivas', 'Hoja de Ruta de Crecimiento', 'Definición de ICP'],
+          'El creativo es responsable del 60 al 70 por ciento del rendimiento de tu campaña. Producimos gráficas, video y contenido estilo UGC hecho específicamente para pauta, no reciclado de tu Instagram. Cada pieza está creada para frenar el scroll y ganarse el clic.',
+        subitems: ['Diseño de Anuncios Estáticos', 'Video de Formato Corto', 'Dirección de UGC', 'Testeo A/B de Creativos'],
       },
     ],
   },
@@ -379,49 +383,49 @@ const es: Translations = {
         headline: '3× de facturación en 6 meses',
         client: 'Fridge & Flow',
         industry: 'E-commerce / Alimentos',
-        services: 'Paid Media, Contenido',
+        services: 'Meta Ads, Creativos',
       },
       {
         headline: 'De cero a 50K visitas mensuales',
         client: 'Nómada Studio',
         industry: 'Diseño / SaaS',
-        services: 'SEO, GEO, Web',
+        services: 'Google Ads, LinkedIn Ads',
       },
       {
         headline: '–62% costo por lead en 90 días',
         client: 'Kinetic',
         industry: 'Fitness / App',
-        services: 'Meta Ads, Automatización',
+        services: 'Meta Ads, TikTok Ads',
       },
     ],
   },
   method: {
     title: 'Cómo trabajamos.',
-    subtitle: 'Primero entendemos. Después construimos. Después todo se acumula.',
+    subtitle: 'Empezamos entendiendo qué está roto. Después construimos el sistema. Después escalamos lo que funciona.',
     steps: [
       {
         number: '01',
-        title: 'Aprendemos tu negocio',
+        title: 'Auditamos tu cuenta',
         description:
-          'Antes de lanzar cualquier campaña, nos tomamos el tiempo de entender tu modelo de negocio, tus clientes y qué significa realmente el éxito para vos. No es un formulario de onboarding. Es una conversación real.',
+          'Antes de tocar algo, miramos todo. Estructura de la cuenta, estado del píxel, rendimiento de los creativos, páginas de destino, superposición de audiencias. Obtenés un panorama claro de qué funciona, qué se desperdicia y dónde está la oportunidad real.',
       },
       {
         number: '02',
         title: 'Construimos la estrategia',
         description:
-          'Sin plantillas ni fórmulas copiadas. Diseñamos una estrategia específica para tu negocio — los canales correctos, el mensaje correcto, el momento correcto — y acordamos qué vamos a medir.',
+          'Sin plantillas ni fórmulas copiadas. Diseñamos una arquitectura de campaña específica para tu negocio, tu oferta y tu cliente. La plataforma correcta, el embudo correcto, el mensaje correcto, y un acuerdo claro sobre cómo medimos el éxito.',
       },
       {
         number: '03',
-        title: 'Ejecutamos con IA + automatización',
+        title: 'Lanzamos y testeamos',
         description:
-          'Combinamos ejecución directa con infraestructura moderna: flujos automatizados, pipelines de contenido y sistemas que funcionan las 24 horas sin sumar personal.',
+          'Lanzamos con múltiples variantes de creativos e hipótesis de audiencia, estructuradas para generar datos reales rápido. Nada corre por suposición. Todo corre como un test.',
       },
       {
         number: '04',
-        title: 'Reportamos sin filtros',
+        title: 'Reportamos y escalamos',
         description:
-          'Cada cliente recibe reportes claros y honestos. Mostramos lo que funciona, lo que no funciona y qué estamos haciendo al respecto. Sin métricas de vanidad, sin adornos. Solo la verdad y el próximo paso.',
+          'Cada cliente recibe reportes claros y honestos. Mostramos exactamente qué funciona, qué no y qué estamos haciendo al respecto. Cuando encontramos algo que gana, lo escalamos. Cuando algo no rinde, lo decimos y lo arreglamos.',
       },
     ],
   },
@@ -444,7 +448,7 @@ const es: Translations = {
   },
   blog: {
     title: 'Cómo pensamos.',
-    subtitle: 'Ideas directas sobre marketing, automatización y cómo hacer crecer un negocio en 2025.',
+    subtitle: 'Ideas directas sobre publicidad paga, performance marketing y cómo hacer crecer un negocio en 2025.',
     cta: 'Ver todos los artículos',
     posts: [
       {
@@ -474,37 +478,39 @@ const es: Translations = {
     ],
   },
   contact: {
-    title: '¿Arrancamos?',
+    title: 'Auditá tu cuenta gratis.',
     subtitle:
-      'Contanos de tu negocio. Sin paquetes, sin plantillas — solo una conversación real sobre qué te movería la aguja.',
-    cta: 'Hablemos',
-    success: 'Perfecto — te contactaremos pronto.',
+      'Compartí acceso a tu cuenta publicitaria y te decimos exactamente qué te está costando dinero y qué vale la pena escalar. Sin pitch, sin compromiso. Solo una respuesta directa.',
+    cta: 'Mandarlo',
+    success: 'Perfecto — te contactamos en menos de 24 horas.',
     labels: {
       name: 'Nombre completo',
       email: 'Correo electrónico',
       company: 'Empresa',
       country: 'País',
-      message: '¿En qué podemos ayudarte?',
+      budget: 'Presupuesto mensual en pauta',
+      message: '¿Algo más que debamos saber?',
     },
     placeholders: {
       name: 'Juan García',
       email: 'juan@empresa.com',
       company: 'Nombre de la empresa',
       country: 'ej. Argentina, España, México',
-      message: 'Contanos más sobre tu negocio...',
+      budget: 'ej. USD 2.000/mes',
+      message: 'Contanos de tu negocio, tus objetivos, qué funcionó y qué no...',
     },
   },
   footer: {
     description:
-      'Simpla es una agencia de marketing integral para pymes y empresas en crecimiento. Aprendemos tu negocio, después lo hacemos crecer.',
+      'Simpla es una agencia de performance marketing para negocios que quieren resultados. Aprendemos tu negocio y lo hacemos crecer con publicidad paga.',
     servicesTitle: 'Servicios',
     services: [
-      'Contenido',
-      'Paid Media',
-      'Web & Visibilidad',
-      'Automatización',
-      'Video & Creatividad',
-      'Estrategia & Consultoría',
+      'Meta Ads',
+      'Google Ads',
+      'TikTok Ads',
+      'LinkedIn Ads',
+      'Más Plataformas',
+      'Creativos',
     ],
     companyTitle: 'Empresa',
     companyLinks: [
@@ -514,13 +520,13 @@ const es: Translations = {
       { label: 'Contacto', href: '#contact' },
     ],
     copyright: '© 2025 Simpla Agency. Todos los derechos reservados.',
-    tagline: 'Marketing que trabaja mientras dormís.',
+    tagline: 'Performance marketing que trabaja mientras dormís.',
   },
   manifesto: {
     line1: 'La mayoría de las agencias venden paquetes.',
-    line2: 'Nosotros primero aprendemos tu negocio.',
+    line2: 'Nosotros aprendemos tu negocio y corremos anuncios que se pagan solos.',
     body:
-      'Antes de lanzar cualquier campaña, invertimos tiempo entendiendo tu modelo de negocio, tus clientes y tus puntos de mejora. Porque el marketing sin ese entendimiento es solo ruido — y probablemente ya pagaste suficiente por eso.',
+      'Antes de lanzar cualquier campaña, auditamos tu cuenta, entendemos a tus clientes y construimos una estrategia alrededor de lo que realmente mueve los ingresos. Porque correr anuncios sin esa base es quemar dinero, y probablemente ya lo hiciste suficiente.',
   },
 }
 

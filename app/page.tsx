@@ -4,9 +4,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   Menu, X, ArrowRight,
-  PenLine, BarChart3, Globe, Zap, Clapperboard, Compass,
+  BarChart3, Globe, Clapperboard,
   Search, Map, Rocket, TrendingUp, CheckCircle, Target,
-  MessageCircle, PlayCircle, MousePointer2, Smartphone, Cpu, ShieldCheck
+  Smartphone,
 } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { posts } from '@/lib/posts'
@@ -22,37 +22,13 @@ const IMG = {
   teamPhoto:   'https://lh3.googleusercontent.com/aida-public/AB6AXuA1zimSg9D-HHeCm62cnWa9_lF_PxWVZK4i2bb8Y6M0-kb37x-GFfzktk2iP90UvivJVdQ4rvyKTMfvitVWeEHN6RQCYH4lLQdHE-EJcvdlqT12MSvX2M_WFMlLzRSS6lPFZ3tkzt2cFfiFi2I2I3VrqeDTkiVjPUfVNMb37BWVjoUr5Jm28pQAUFnlJYg2_gqvA5oM_V2doalDz0miA54HssAfhNROQjwCvxOV80jhUFvrHQLWPKphXESC9ue-AFtczmNn1_x7mMyi',
 }
 
-const SERVICE_DETAILS: Record<string, { icon: any, color: string, capabilities: string[] }> = {
-  'Content': {
-    icon: PenLine,
-    color: '#7346a1',
-    capabilities: ['Social Strategy', 'High-Converting Copy', 'Brand Storytelling', 'Content Calendars']
-  },
-  'Paid Media': {
-    icon: Target,
-    color: '#5491ff',
-    capabilities: ['Meta & Google Ads', 'LinkedIn & TikTok', 'Retargeting Funnels', 'Budget Optimization']
-  },
-  'Web & Visibility': {
-    icon: Globe,
-    color: '#7346a1',
-    capabilities: ['High-Performance Landing Pages', 'AI-Powered SEO (GEO)', 'Conversion UX', 'Advanced Analytics']
-  },
-  'Automation': {
-    icon: Zap,
-    color: '#5491ff',
-    capabilities: ['Lead-Gen Chatbots', 'CRM Automations', 'AI Outbound Systems', 'Workflow Optimization']
-  },
-  'Video & Creative': {
-    icon: Clapperboard,
-    color: '#7346a1',
-    capabilities: ['Short-form Reels/TikTok', 'UGC Direction', 'AI-Generated Promos', 'Visual Brand Identity']
-  },
-  'Strategy & Consulting': {
-    icon: Compass,
-    color: '#5491ff',
-    capabilities: ['Market Positioning', 'Competitive Audits', 'Growth Roadmaps', 'ICP Identification']
-  }
+const SERVICE_DETAILS: Record<string, { icon: any, color: string }> = {
+  'Meta Ads':       { icon: Target,      color: '#5491ff' },
+  'Google Ads':     { icon: Search,      color: '#7346a1' },
+  'TikTok Ads':     { icon: Smartphone,  color: '#5491ff' },
+  'LinkedIn Ads':   { icon: BarChart3,   color: '#7346a1' },
+  'More Platforms': { icon: Globe,       color: '#5491ff' },
+  'Ad Creative':    { icon: Clapperboard, color: '#7346a1' },
 }
 
 const METHOD_ICONS  = [Search, Map, Rocket, TrendingUp]
@@ -597,6 +573,7 @@ export default function Home() {
     email: '',
     company: '',
     country: '',
+    budget: '',
     message: ''
   })
   const [submitted, setSubmitted] = useState(false)
@@ -742,7 +719,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {s.items.map((item, i) => {
-              const serviceKeys = ['Content', 'Paid Media', 'Web & Visibility', 'Automation', 'Video & Creative', 'Strategy & Consulting']
+              const serviceKeys = ['Meta Ads', 'Google Ads', 'TikTok Ads', 'LinkedIn Ads', 'More Platforms', 'Ad Creative']
               const details = SERVICE_DETAILS[serviceKeys[i]] || { icon: ArrowRight, color: '#7346a1' }
               const Icon    = details.icon
 
@@ -815,7 +792,7 @@ export default function Home() {
               { src: '/assets/Logos/images (1).png',       alt: 'Client' },
               { src: '/assets/Logos/images.png',           alt: 'Client' },
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker' },
-              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer', imgClass: 'h-14 max-w-[180px]' },
+              { src: '/assets/Logos/metasoccer-logo.png',  alt: 'MetaSoccer' },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent' },
               { src: '/assets/Logos/obitus_logo.webp',     alt: 'Obitus', dark: true },
               { src: '/assets/Logos/pixeldustlogo.jpg',    alt: 'Pixeldust' },
@@ -826,19 +803,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className={`h-24 rounded-2xl border flex items-center justify-center px-6 group hover:shadow-sm transition-all duration-200 ${
+                className={`h-24 rounded-2xl border flex items-center justify-center px-6 group hover:shadow-md transition-all duration-300 ${
                   (logo as any).dark
-                    ? 'bg-gray-900 border-gray-800 hover:border-gray-700'
-                    : 'bg-gray-50 border-outline-variant/10 hover:border-primary/20'
+                    ? 'bg-gray-900 border-gray-800 hover:border-gray-700 hover:-translate-y-1'
+                    : 'bg-white border-outline-variant/10 hover:border-primary/20 hover:-translate-y-1'
                 }`}
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className={`w-auto object-contain transition-all duration-300 ${
-                    (logo as any).dark
-                      ? 'h-9 max-w-[120px] opacity-70 group-hover:opacity-100'
-                      : `${(logo as any).imgClass ?? 'h-9 max-w-[120px]'} grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100`
+                  className={`w-full h-10 object-contain transition-transform duration-300 group-hover:scale-105 ${
+                    (logo as any).dark ? '' : 'mix-blend-multiply'
                   }`}
                 />
               </motion.div>
@@ -1011,6 +986,15 @@ export default function Home() {
                       placeholder={c.placeholders.country}
                       className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
                       aria-label="Country"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-on-surface/40 ml-4">{c.labels.budget}</label>
+                    <input
+                      type="text" value={formData.budget} onChange={e => setFormData({ ...formData, budget: e.target.value })}
+                      placeholder={c.placeholders.budget}
+                      className="w-full px-6 py-4 rounded-2xl text-base text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all bg-white/70 border border-outline-variant/60 backdrop-blur-xl"
+                      aria-label="Budget"
                     />
                   </div>
                 </div>
