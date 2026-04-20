@@ -321,13 +321,13 @@ const es: Translations = {
       { href: '#method', label: 'Cómo trabajamos' },
       { href: '#blog', label: 'Blog' },
     ],
-    cta: 'Auditá tu cuenta',
+    cta: 'Pedí tu auditoría',
   },
   hero: {
     tagline: 'Performance hecho Simple',
     description:
-      'Corremos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más. Un solo equipo que maneja tu estrategia, tus creativos y tu pauta. Entendemos tu negocio antes de invertir un peso.',
-    cta1: 'Auditá tu cuenta gratis',
+      'Manejamos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más. Un solo equipo que maneja tu estrategia, tus creativos y tu presupuesto. Entendemos tu negocio antes de invertir un peso.',
+    cta1: 'Solicitá tu auditoría gratis',
     cta2: 'Lo que hacemos',
     stats: [
       { value: 'LATAM', label: 'Base' },
@@ -353,7 +353,7 @@ const es: Translations = {
       {
         title: 'Google Ads',
         description:
-          'Capturá demanda en el momento exacto en que alguien está buscando lo que ofrecés. Corremos campañas de Search, Performance Max y Shopping prestando atención a lo que la mayoría ignora: Quality Score, estrategia de puja y listas de palabras negativas que realmente frenan el gasto innecesario.',
+          'Capturá demanda en el momento exacto en que alguien está buscando lo que ofrecés. Manejamos campañas de Search, Performance Max y Shopping prestando atención a lo que la mayoría ignora: Quality Score, estrategia de puja y listas de palabras negativas que realmente frenan el gasto innecesario.',
         subitems: ['Campañas de Search', 'Performance Max', 'Shopping Ads', 'Auditorías de Palabras Negativas'],
       },
       {
@@ -365,13 +365,13 @@ const es: Translations = {
       {
         title: 'LinkedIn Ads',
         description:
-          'El mejor canal B2B para llegar a tomadores de decisiones, y el que tiene la peor ejecución promedio en la industria. Corremos Sponsored Content, Lead Gen Forms y campañas de retargeting para empresas que le venden a otras empresas.',
+          'El mejor canal B2B para llegar a tomadores de decisiones, y el que tiene la peor ejecución promedio en la industria. Gestionamos Sponsored Content, Lead Gen Forms y campañas de retargeting para empresas que le venden a otras empresas.',
         subitems: ['Sponsored Content', 'Lead Gen Forms', 'Targeting por Cuenta', 'Retargeting B2B'],
       },
       {
         title: 'Más Plataformas',
         description:
-          'Twitter/X y Reddit alcanzan audiencias que ninguna otra plataforma toca. Comunidades de nicho, early adopters y compradores de alta intención que no aparecen en Meta ni en Google. Corremos campañas donde tus competidores no están mirando.',
+          'Twitter/X y Reddit alcanzan audiencias que ninguna otra plataforma toca. Comunidades de nicho, early adopters y compradores de alta intención que no aparecen en Meta ni en Google. Activamos campañas donde tus competidores no están mirando.',
         subitems: ['Twitter/X Ads', 'Reddit Ads', 'Targeting de Comunidades', 'Publicaciones Promocionadas'],
       },
       {
@@ -486,10 +486,10 @@ const es: Translations = {
     ],
   },
   contact: {
-    title: 'Auditá tu cuenta gratis.',
+    title: 'Solicitá tu auditoría gratis.',
     subtitle:
       'Compartí acceso a tu cuenta publicitaria y te decimos exactamente qué te está costando dinero y qué vale la pena escalar. Si tiene sentido trabajar juntos, lo hablamos después.',
-    cta: 'Mandarlo',
+    cta: 'Enviar',
     success: 'Perfecto. Te contactamos en menos de 24 horas.',
     labels: {
       name: 'Nombre completo',
@@ -536,9 +536,9 @@ const es: Translations = {
   },
   manifesto: {
     line1: 'La mayoría de las agencias venden paquetes.',
-    line2: 'Nosotros aprendemos tu negocio y corremos anuncios que se pagan solos.',
+    line2: 'Nosotros aprendemos tu negocio y manejamos la pauta que se paga sola.',
     body:
-      'Antes de lanzar cualquier campaña, auditamos tu cuenta, entendemos a tus clientes y construimos una estrategia alrededor de lo que realmente mueve los ingresos. Porque correr anuncios sin esa base es quemar dinero, y probablemente ya lo hiciste suficiente.',
+      'Antes de lanzar cualquier campaña, auditamos tu cuenta, entendemos a tus clientes y construimos una estrategia alrededor de lo que realmente mueve los ingresos. Porque pautar sin esa base es quemar dinero, y probablemente ya lo hiciste suficiente.',
   },
 }
 
