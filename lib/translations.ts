@@ -231,27 +231,27 @@ const en: Translations = {
     cta: 'Read all articles',
     posts: [
       {
-        title: 'GEO: Why your SEO strategy is missing the most important channel of 2025',
+        title: 'Why your Meta Ads stopped working (and how to fix it)',
         excerpt:
-          "ChatGPT, Perplexity, and Google AI Overviews are now answering your customers' questions. If your business isn't showing up there, someone else is.",
-        category: 'Web & Visibility',
-        date: 'Apr 2025',
+          'The ads were working. Then, gradually or suddenly, they stopped. Most people blame the platform. The real problem is almost always in the account.',
+        category: 'Meta Ads',
+        date: 'May 2025',
         readTime: '6 min',
       },
       {
-        title: 'The agency trap: why packages are killing your marketing ROI',
+        title: 'The creative is 70% of your ad performance. Here is how we think about it.',
         excerpt:
-          "Most agencies sell you a bundle and run the same playbook they ran last month. Here's what to ask for instead.",
-        category: 'Strategy',
-        date: 'Mar 2025',
+          'Most advertisers spend most of their time on the other 30%. The performance gap almost always lives in the creative.',
+        category: 'Ad Creative',
+        date: 'Apr 2025',
         readTime: '5 min',
       },
       {
-        title: 'Marketing that works while you sleep: a guide to automation for SMBs',
+        title: 'How to cut your cost per lead without cutting your budget',
         excerpt:
-          "You don't need a big team to have a 24/7 marketing operation. You need the right systems. Here's where to start.",
-        category: 'Automation',
-        date: 'Feb 2025',
+          "When CPL goes up, the instinct is to reduce spend. It feels logical. It is also usually the wrong move.",
+        category: 'Strategy',
+        date: 'Mar 2025',
         readTime: '7 min',
       },
     ],
@@ -460,27 +460,27 @@ const es: Translations = {
     cta: 'Ver todos los artículos',
     posts: [
       {
-        title: 'GEO: por qué tu estrategia de SEO está ignorando el canal más importante de 2025',
+        title: 'Por qué tus Meta Ads dejaron de funcionar (y cómo arreglarlo)',
         excerpt:
-          'ChatGPT, Perplexity y Google AI Overviews ya están respondiendo las preguntas de tus clientes. Si tu negocio no aparece ahí, alguien más lo hace.',
-        category: 'Web & Visibilidad',
-        date: 'Abr 2025',
+          'Los anuncios funcionaban. Después dejaron de funcionar. La mayoría culpa a la plataforma. El problema real casi siempre está en la cuenta.',
+        category: 'Meta Ads',
+        date: 'May 2025',
         readTime: '6 min',
       },
       {
-        title: 'La trampa de los paquetes: por qué destruyen tu ROI de marketing',
+        title: 'El creativo es el 70% de tu rendimiento en pauta. Así es como lo pensamos.',
         excerpt:
-          'La mayoría de las agencias te venden un paquete y corren la misma fórmula que corrieron el mes pasado. Acá está lo que tenés que pedir en cambio.',
-        category: 'Estrategia',
-        date: 'Mar 2025',
+          'La mayoría de los anunciantes pasan el tiempo en el 30% que menos importa. La diferencia de rendimiento casi siempre está en el creativo.',
+        category: 'Creativos',
+        date: 'Abr 2025',
         readTime: '5 min',
       },
       {
-        title: 'Marketing que trabaja mientras dormís: guía de automatización para pymes',
+        title: 'Cómo bajar tu costo por lead sin bajar tu presupuesto',
         excerpt:
-          'No necesitás un equipo grande para tener una operación de marketing las 24 horas. Necesitás los sistemas correctos. Por acá se empieza.',
-        category: 'Automatización',
-        date: 'Feb 2025',
+          'Cuando el CPL sube, el instinto es reducir el gasto. Se siente lógico. Casi siempre es el movimiento equivocado.',
+        category: 'Estrategia',
+        date: 'Mar 2025',
         readTime: '7 min',
       },
     ],

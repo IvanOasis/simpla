@@ -19,200 +19,155 @@ export interface Post {
 
 export const posts: Post[] = [
   {
-    slug: 'geo-seo-missing-channel-2026',
-    title: 'GEO: Why your SEO strategy is missing the most important channel of 2026',
+    slug: 'why-meta-ads-stopped-working',
+    title: 'Why your Meta Ads stopped working (and how to fix it)',
     excerpt:
-      "ChatGPT, Perplexity, and Google AI Overviews are now answering your customers' questions. If your business isn't showing up there, someone else is.",
-    category: 'Web & Visibility',
-    categoryColor: '#7346a1',
-    date: 'Apr 2025',
+      'The ads were working. Then, gradually or suddenly, they stopped. Most people blame the platform. The real problem is almost always in the account.',
+    category: 'Meta Ads',
+    categoryColor: '#5491ff',
+    date: 'May 2025',
     readTime: '6 min',
     sections: [
       {
         paragraphs: [
-          "Something changed in how people search for things — and most businesses haven't noticed yet. A growing percentage of your potential customers no longer scroll through a list of blue links to find an answer. They type a question into ChatGPT, Perplexity, or Google's AI Overviews and read the response. If your business isn't in that response, you don't exist for them.",
-          "This is the core premise of GEO — Generative Engine Optimization — and it's becoming one of the most important levers in digital marketing.",
+          'There is a version of this story that almost every business owner knows. The ads were working. Leads were coming in, sales were happening, the cost per result was something you could defend. Then, gradually or suddenly, it stopped. The same budget, the same targeting, the same creative — but the results are gone.',
+          'Most people blame the platform. Meta changed the algorithm. iOS 14 broke tracking. Competition is up. These things are true but they are rarely the real problem. The real problem is almost always in the account.',
         ],
       },
       {
-        heading: 'What is GEO?',
+        heading: 'Ad fatigue is real and most accounts ignore it',
         paragraphs: [
-          'GEO is the practice of optimizing your content so that AI-powered search engines cite your business when users ask relevant questions. Traditional SEO gets you ranked in the ten blue links. GEO gets you cited in the AI-generated answer that often appears before those links — or replaces the search results entirely.',
-          'The two disciplines overlap but are not the same. A page can rank #1 on Google and never get cited by an AI engine. A page that ranks #5 might be cited repeatedly because it answers a specific question more directly.',
+          'An ad creative has a lifespan. Once a significant portion of your target audience has seen it three or four times, performance drops. Click-through rates fall, costs rise, and the algorithm starts spending your budget less efficiently. The solution is not to run the same creative indefinitely and hope. It is to have a system that refreshes creative before fatigue sets in.',
+          'Most accounts do not have that system. They have two or three ads that were set up months ago and have never been touched.',
         ],
       },
       {
-        heading: 'Why it matters right now',
+        heading: 'Your audience has been over-targeted',
         paragraphs: [
-          "The numbers are hard to ignore. Google AI Overviews now appear in a significant percentage of commercial searches. ChatGPT has over 100 million weekly active users asking research-grade questions. Perplexity is growing at a rate that suggests it won't be a niche tool for much longer.",
-          "Your customers are using these tools to discover products, compare vendors, understand pricing, and make buying decisions. If your brand doesn't show up in those answers, you're invisible to a portion of the market that is only going to grow.",
+          "Facebook's targeting pools are not infinite. If you have been running ads to the same custom audiences and lookalikes for months, you have probably reached most of the people in them. Diminishing returns are not a platform problem — they are a math problem.",
+          'The fix is not to widen your targeting blindly. It is to build a proper full-funnel structure: new cold audiences at the top, warm retargeting in the middle, and conversion campaigns at the bottom. Each layer does a different job.',
         ],
       },
       {
-        heading: 'How AI engines decide what to cite',
-        paragraphs: [
-          "AI engines don't just pull from high-ranking pages. They look for signals that a source is authoritative, accurate, and clearly written. In practice, this means:",
-        ],
+        heading: 'The four things we check first',
         list: [
-          'Topical authority — do you own a subject, and do other credible sources reference you?',
-          'Structured, direct content that answers specific questions without burying the answer',
-          'Fresh, consistently updated information',
-          'Your brand being mentioned as a named entity across credible sources',
-          'Technical clarity — schema markup, clean structure, fast load times',
+          'Frequency: if your frequency is above 3 on a cold audience campaign, your creative needs refreshing',
+          'CPM trends: rising CPMs usually mean your relevance score is dropping',
+          'Landing page conversion rate: if the ad is getting clicks but not conversions, the problem is not the ad',
+          'Attribution window: if you changed your attribution settings, your reported results may have changed without your actual results changing',
         ],
       },
       {
+        heading: 'What good account health looks like',
         paragraphs: [
-          "A page that ranks #4 in Google might get cited by ChatGPT more often than the #1 result if it's written more directly. That's a fundamentally different optimization challenge than traditional SEO.",
+          'A healthy Meta Ads account has clear campaign objectives that match each stage of the funnel, fresh creative rotating in at least every three to four weeks, consistent pixel health with proper event tracking, and landing pages that match the specific promise of each ad.',
+          'None of this is complicated. It is just rarely done consistently.',
         ],
       },
       {
-        heading: 'What GEO looks like in practice',
-        paragraphs: ['GEO is not a checklist. It is a content philosophy. Here is how we approach it:'],
-        numbered: [
-          'Question mapping — We identify every question your ideal customer might ask an AI, including the long-tail, specific ones that reflect real buying intent.',
-          'Answer-first writing — Each piece of content leads with a direct, clear answer before expanding into depth. AI engines favor this structure.',
-          'Entity building — We build your brand\'s presence across credible sources so AI models recognize you as a real, trustworthy entity worth citing.',
-          'Technical optimization — Schema markup and clean information architecture that makes it easy for AI models to parse and extract your content.',
-        ],
-      },
-      {
-        heading: 'The window is now',
+        heading: 'Where to start',
         paragraphs: [
-          "GEO is still early. Most businesses haven't started. That's the opportunity — the same window that existed with SEO in 2008 before everyone figured it out. The brands that invest now will own these answers for years. The ones that wait will find themselves paying to compete for placements that early movers have already locked in.",
-          "If your current SEO strategy doesn't include a plan for AI search, it's not a complete strategy. It's half of one.",
+          'Pull your frequency report for the last 30 days on your top-spending campaigns. If any cold audience campaign is above 3, that is your first problem to fix. New creative, same audience. Run both in parallel and let the data decide.',
+          'If frequency looks fine, check your landing page conversion rate. A Meta ad that gets a 2% CTR but a 0.5% landing page conversion rate has a landing page problem, not an ad problem. These are different issues with different solutions — and confusing them is one of the most expensive mistakes in paid advertising.',
         ],
       },
     ],
   },
   {
-    slug: 'agency-trap-packages-killing-roi',
-    title: 'The agency trap: why packages are killing your marketing ROI',
+    slug: 'creative-is-70-percent-of-performance',
+    title: 'The creative is 70% of your ad performance. Here is how we think about it.',
     excerpt:
-      "Most agencies sell you a bundle and run the same playbook they ran last month. Here's what to ask for instead.",
-    category: 'Strategy',
-    categoryColor: '#5491ff',
-    date: 'Mar 2025',
+      'Most advertisers spend most of their time on the other 30%. Targeting, bidding, campaign structure. These things matter — but the performance gap almost always lives in the creative.',
+    category: 'Ad Creative',
+    categoryColor: '#7346a1',
+    date: 'Apr 2025',
     readTime: '5 min',
     sections: [
       {
         paragraphs: [
-          "Walk into almost any digital agency and you'll be offered a package. The Bronze Plan. The Growth Bundle. The Performance Package. They come with fixed deliverables, fixed hours, and a fixed monthly fee. The problem isn't the price. The problem is the premise — that every business needs the same things.",
-          "A startup acquiring its first thousand customers doesn't need the same marketing stack as a mid-sized company defending market share. A local services business doesn't need a content calendar built for a DTC brand. Packages don't make that distinction. They can't.",
+          'There is a number that gets cited often in paid advertising: the creative accounts for somewhere between 60 and 70 percent of campaign performance. The rest is targeting, bidding, and account structure.',
+          'Most advertisers spend most of their time on the other 30 percent. They obsess over audience targeting, bid strategies, and campaign architecture. These things matter, but they are not where most of the performance gap lives. The performance gap lives in the creative.',
         ],
       },
       {
-        heading: 'What actually happens inside an agency on retainer',
+        heading: "What 'creative' actually means",
         paragraphs: [
-          "Here's what most clients don't see: inside a typical agency, your account is one of 20 to 30 active retainers. Account managers are managing volume. Execution teams are following templates. The strategy call in month one becomes the strategy call in month six — the same slides with updated numbers.",
-          "This isn't a character flaw. It's the economics of the model. High volume, standardized delivery, maximum margin. The package is not designed around your results. It's designed around their operations.",
+          'In the context of paid ads, creative means everything the user sees and hears before they click. The image or video. The headline. The first line of body copy. The call to action. Each of these elements is doing a job, and when one of them fails, the whole ad fails.',
+          'A common mistake is treating the creative as the last step — something you put together quickly after the targeting and budget decisions are made. In a well-run account, it is the first thing you think about.',
         ],
       },
       {
-        heading: 'The metrics problem',
+        heading: 'The three jobs a good ad creative does',
+        numbered: [
+          'It stops the scroll. The first frame of a video or the visual of a static ad has roughly one to two seconds to earn attention. If it does not stop someone mid-scroll, nothing else matters. This is not about being loud or flashy. It is about relevance — showing something that the right person immediately recognizes as being for them.',
+          'It delivers the message. Once you have attention, you have a few seconds to communicate your offer clearly. The best performing ads tend to be direct: here is what we do, here is who it is for, here is why it is worth your time.',
+          'It earns the click. The call to action has to match the offer. If the ad promises a free consultation, the CTA should say "Book your free call" — not "Learn More." Alignment between the ad promise and the CTA is one of the most consistently underestimated factors in conversion rate.',
+        ],
+      },
+      {
+        heading: 'How to test creative properly',
         paragraphs: [
-          "Agencies that sell packages also tend to measure success in ways that are disconnected from your actual business outcomes. Impressions. Reach. Engagement rate. These are easy to report, easy to optimize, and easy to present in a slide — but they don't tell you whether your marketing is moving revenue.",
+          'Testing one variable at a time is the standard advice, and it is correct. If you change the visual, the headline, and the CTA in the same test, you do not know what moved the needle.',
+          'A practical structure for most businesses: run three to four creative variants against the same audience with the same budget split, let them run for seven to ten days or until you have meaningful data, then cut the bottom performers and iterate on the winner. The goal is not to find one great ad and run it forever. The goal is to build a testing rhythm that consistently finds new winners before the current ones burn out.',
+        ],
+      },
+      {
+        heading: 'What most businesses get wrong',
+        paragraphs: [
+          'They run one or two creatives for months. They make changes based on gut feel rather than data. They confuse high reach with high performance. And when results drop, they assume the platform is broken rather than looking at their creative.',
         ],
         quote:
-          "If an agency has never asked you what your actual business goal is — not your 'marketing goal,' your business goal — that's a warning sign.",
-      },
-      {
-        heading: 'What a real partnership looks like',
-        paragraphs: [
-          'Working with a marketing partner who actually understands your business looks different. The differences are visible from the first conversation:',
-        ],
-        list: [
-          'The first meeting is about your business model, your customers, and your bottlenecks — not your current ad spend',
-          'The strategy is built around your specific constraint, not a general channel mix',
-          'The success metrics are tied to revenue or pipeline, not reach and impressions',
-          'Reporting includes what is not working, and what is being done about it',
-          'The strategy evolves as the business evolves — not on an annual review cycle',
-        ],
-      },
-      {
-        paragraphs: [
-          "This kind of partnership takes more time upfront. It is less efficient at scale. That's exactly why most agencies don't do it — and why it tends to produce better results for clients who find it.",
-        ],
-      },
-      {
-        heading: 'Questions to ask before you sign',
-        paragraphs: [
-          'Before engaging any marketing agency, these four questions will tell you quickly whether you are buying a package or a partnership:',
-        ],
-        numbered: [
-          "What metrics will we use to define success, and how do they connect to revenue?",
-          "What is your process for understanding a new client's business before any work begins?",
-          "Can I see examples of strategies you have built for businesses in a situation similar to mine?",
-          "If something is not working in month three, what does that conversation look like?",
-        ],
-      },
-      {
-        paragraphs: [
-          "A package-focused agency will struggle to answer those questions well. A real partner will have clear answers ready because they have already thought about them.",
-        ],
+          'The businesses that consistently win at paid advertising treat creative as an ongoing operation, not a one-time task. It is not about producing more content. It is about having a system.',
       },
     ],
   },
   {
-    slug: 'marketing-while-you-sleep-automation-smbs',
-    title: 'Marketing that works while you sleep: a guide to automation for SMBs',
+    slug: 'how-to-cut-cost-per-lead',
+    title: 'How to cut your cost per lead without cutting your budget',
     excerpt:
-      "You don't need a big team to have a 24/7 marketing operation. You need the right systems. Here's where to start.",
-    category: 'Automation',
-    categoryColor: '#7346a1',
-    date: 'Feb 2025',
+      "When CPL goes up, the instinct is to reduce spend. It feels logical. It is also usually the wrong move — because cutting budget doesn't fix a broken campaign.",
+    category: 'Strategy',
+    categoryColor: '#5491ff',
+    date: 'Mar 2025',
     readTime: '7 min',
     sections: [
       {
         paragraphs: [
-          "Most small businesses run their marketing manually. Someone writes the posts, someone sends the emails, someone follows up with leads. It works — until it doesn't. When that person gets busy, the marketing slows. When they leave, the knowledge goes with them.",
-          "The result is a marketing operation that's entirely dependent on human bandwidth. That's fragile, and it scales poorly. The fix isn't hiring more people. It's building systems.",
+          'When cost per lead goes up, the instinct for most businesses is to reduce the budget. Spend less, lose less. It feels logical. It is also usually the wrong move.',
+          'Cutting budget in a struggling campaign does not fix the campaign. It just means you are spending less on something that is not working. The goal is to find out what is not working and fix it — and in most cases, the issue is one of four things.',
         ],
       },
       {
-        heading: "What 'automation' actually means for a small business",
+        heading: 'Where CPL actually comes from',
         paragraphs: [
-          "Automation doesn't mean replacing your team with robots. For a growing business, it means removing the steps that don't require human judgment — so the humans can focus on the steps that do.",
-          "A lead fills out a form and automatically receives a personalized follow-up sequence. A prospect visits your pricing page three times and gets flagged in your CRM for a sales call. A client's project closes and 30 days later they receive a check-in email. None of these require AI. They just require setting up the right workflow once and letting it run.",
+          'Cost per lead is the product of two numbers: your cost per click and your landing page conversion rate. CPL equals CPC divided by CVR. This is worth writing down, because it tells you exactly where to look when CPL is too high.',
+          'If your CPC is high, the problem is in the ad — the creative, the targeting, or both. If your CPC is acceptable but your conversion rate is low, the problem is on the landing page. These are different problems with different fixes, and treating them as the same thing wastes time and money.',
         ],
       },
       {
-        heading: 'The three automations every SMB should build first',
-        paragraphs: [
-          "In our work with small and growing businesses, these are consistently the highest-ROI starting points:",
-        ],
-        numbered: [
-          'Lead capture and follow-up sequence — A form-to-email sequence that nurtures new leads in the first 72 hours, when intent is highest. Most businesses have the form. Almost none have the sequence. That gap is leaving money on the table.',
-          'Abandoned inquiry recovery — If someone starts a purchase or inquiry and doesn\'t complete it, a well-timed follow-up email recovers a meaningful percentage of those leads. One sequence, set up once, running indefinitely.',
-          'Customer reactivation — A simple automated email to past customers at the 60 or 90-day mark. It feels personal but runs on its own. Customer lifetime value increases without adding headcount.',
+        heading: 'The four levers',
+        list: [
+          'Creative relevance: ads that closely match what your audience is thinking about get lower CPCs through better relevance scores. A generic ad costs more to deliver than a specific one.',
+          'Audience precision: broad targeting can lower CPMs but increase CPL if the audience does not convert. Narrowing to people who have shown actual intent usually improves CPL even as CPM rises.',
+          'Landing page conversion rate: a 1% improvement in CVR cuts your CPL significantly if your CPC stays constant. This is often the highest-leverage fix available and the most ignored.',
+          'Offer clarity: a vague offer gets fewer conversions than a specific one. "Get a free consultation" outperforms "Contact us." Specificity reduces friction at every step.',
         ],
       },
       {
-        heading: 'Where AI fits into the picture',
+        heading: 'A practical example',
         paragraphs: [
-          "The current wave of AI tools adds a layer of personalization and speed on top of basic automation. Instead of sending every lead the same email sequence, you can now tailor the content to what you know about them. Instead of manually reformatting a blog post into ten social media formats, AI does it in seconds.",
-          "The businesses winning with AI aren't replacing their marketing. They're making it compound faster. Each piece of content does more. Each lead interaction is more relevant. Each system gets smarter over time.",
+          'A business is running Meta Ads with a CPL of $45. Their target is $20. They have two options: cut budget, or diagnose.',
+          'On diagnosis: their CPC is $2.50, which is reasonable for their industry. Their landing page conversion rate is 5.5%. Plugging in the formula: $2.50 divided by 0.055 equals $45.45. To hit $20, they need either a lower CPC or a higher CVR — or some combination of both.',
+          'They ran two landing page tests over three weeks. The first changed the headline to directly match the language in the ad. The second added a single testimonial above the form. CVR went to 9.8%. New CPL: $25.50. Still above target, but moving in the right direction without touching the budget.',
+        ],
+      },
+      {
+        heading: 'Where to start this week',
+        paragraphs: [
+          'Calculate your actual CPL breakdown. Take your last 30 days of spend, divide by leads, then check your landing page conversion rate in analytics. If your CVR is below 8%, start there. If your CPC is the outlier, start with the creative.',
         ],
         quote:
-          "You don't need a sophisticated AI stack to start. You need one workflow that currently requires a person, automated so that person can focus on something harder.",
-      },
-      {
-        heading: 'How to start without getting overwhelmed',
-        paragraphs: [
-          "Don't try to automate everything at once. The businesses that fail at automation try to build a full system before proving any single piece works.",
-        ],
-        list: [
-          'Pick one workflow that currently requires manual effort',
-          'Map it out on paper before touching any tool',
-          'Build it in whatever system you already use — most CRMs have basic automation built in',
-          'Measure the result for 30 days',
-          'Then move to the next workflow',
-        ],
-      },
-      {
-        paragraphs: [
-          "The goal isn't a fully automated marketing machine on day one. The goal is one less thing that requires someone's attention every week — and one more thing that runs while you sleep.",
-        ],
+          'Most accounts have one obvious lever that is being ignored. Finding it is usually a 20-minute exercise. Fixing it is what takes the work.',
       },
     ],
   },
