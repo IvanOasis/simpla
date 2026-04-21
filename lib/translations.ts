@@ -328,7 +328,7 @@ const es: Translations = {
     description:
       'Manejamos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más. Un solo equipo que maneja tu estrategia, tus creativos y tu presupuesto. Entendemos tu negocio antes de invertir un peso.',
     cta1: 'Solicitá tu auditoría gratis',
-    cta2: 'Lo que hacemos',
+    cta2: 'Ver servicios',
     stats: [
       { value: 'LATAM', label: 'Base' },
       { value: 'EE.UU.', label: 'Foco' },
@@ -340,7 +340,7 @@ const es: Translations = {
     subtitle: 'Negocios que ayudamos a crecer con publicidad paga.',
   },
   services: {
-    title: 'Lo que manejamos.',
+    title: 'Qué hacemos.',
     subtitle:
       'Cada plataforma donde tus clientes están listos para comprar, con un equipo que trata tu presupuesto como si fuera propio.',
     items: [
