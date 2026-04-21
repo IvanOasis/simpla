@@ -95,7 +95,7 @@ const en: Translations = {
     cta: "Get a free audit",
   },
   hero: {
-    tagline: 'Performance done Simple',
+    tagline: 'Performance that prints revenue',
     description:
       "We run paid ads for businesses that are serious about growing. Meta, Google, TikTok, LinkedIn, and more. One team that handles your strategy, your creatives, and your spend. We start by understanding your business. Then we build campaigns that actually perform.",
     cta1: "Get a free audit",
@@ -324,7 +324,7 @@ const es: Translations = {
     cta: 'Pedí tu auditoría',
   },
   hero: {
-    tagline: 'Performance hecho Simple',
+    tagline: 'Performance que genera revenue',
     description:
       'Manejamos publicidad paga para negocios que quieren crecer en serio. Meta, Google, TikTok, LinkedIn y más. Un solo equipo que maneja tu estrategia, tus creativos y tu presupuesto. Entendemos tu negocio antes de invertir un peso.',
     cta1: 'Solicitá tu auditoría gratis',
