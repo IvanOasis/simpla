@@ -212,14 +212,14 @@ const en: Translations = {
     title: 'What clients say.',
     items: [
       {
-        name: 'Valentina Ríos',
-        role: 'Founder, Fridge & Flow',
+        name: 'Ivan',
+        role: 'COO, Multicover',
         quote:
           'Simpla actually took the time to understand how our business works before running a single ad. That changed everything — we tripled revenue in six months and the team felt like true partners.',
       },
       {
-        name: 'Matias Carranza',
-        role: 'CEO, Nómada Studio',
+        name: 'Martina',
+        role: 'CEO, DritzSales',
         quote:
           'Every agency we worked with before handed us a package and ran the same playbook. Simpla was different. They built systems that keep generating results on their own.',
       },
@@ -441,14 +441,14 @@ const es: Translations = {
     title: 'Lo que dicen nuestros clientes.',
     items: [
       {
-        name: 'Valentina Ríos',
-        role: 'Fundadora, Fridge & Flow',
+        name: 'Ivan',
+        role: 'COO, Multicover',
         quote:
           'Simpla se tomó el tiempo de entender cómo funciona nuestro negocio antes de correr un solo anuncio. Eso cambió todo — triplicamos la facturación en seis meses y el equipo se sintió como un verdadero socio.',
       },
       {
-        name: 'Matias Carranza',
-        role: 'CEO, Nómada Studio',
+        name: 'Martina',
+        role: 'CEO, DritzSales',
         quote:
           'Todas las agencias con las que trabajamos antes nos daban un paquete y corrían la misma fórmula de siempre. Simpla fue distinto. Construyeron sistemas que siguen generando resultados solos.',
       },
