@@ -7,9 +7,9 @@ import { services } from '@/lib/services'
 import { BOOKING_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Simpla | Customer.io Lifecycle Specialists for SaaS',
+  title: 'Simpla | Lifecycle & Product Marketing for SaaS',
   description:
-    'Simpla designs, implements and optimizes Customer.io lifecycle systems for SaaS and digital products. Migration, data health, onboarding, retention.',
+    'Simpla designs, implements and optimizes lifecycle and product marketing systems for SaaS and digital products. Specialists in Customer.io.',
   alternates: { canonical: 'https://simpla.agency' },
   openGraph: {
     title: 'Simpla | Customer.io Lifecycle Specialists for SaaS',
@@ -44,13 +44,13 @@ export default function Home() {
 
           <h1 className="font-display font-bold text-ink leading-[1.05] tracking-[-0.03em] max-w-3xl mx-auto mb-7"
             style={{ fontSize: 'clamp(2.75rem, 6vw, 5rem)' }}>
-            The Customer.io lifecycle<br />specialists for SaaS{' '}
+            Lifecycle and product marketing<br />for SaaS and digital products{' '}
             <span className="text-brand">✦</span>
           </h1>
 
           <p className="text-lg text-ash leading-relaxed max-w-xl mx-auto mb-10">
-            From strategy to execution, we bring deep expertise in Customer.io lifecycle systems —
-            migration, data health, full architecture, and ongoing growth ops.
+            We design, implement and optimize the lifecycle systems that convert, activate and retain users.
+            Specialists in Customer.io — from first migration to full architecture.
           </p>
 
           <a href={BOOKING_URL} className="btn-primary inline-flex items-center gap-2 text-base px-8 py-4">
