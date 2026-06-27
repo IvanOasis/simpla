@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { LanguageProvider } from '@/context/LanguageContext'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://simpla.agency'),
-  title: 'Simpla — Performance Marketing Agency',
+  title: {
+    default: 'Simpla | Customer.io Lifecycle Specialists for SaaS',
+    template: '%s | Simpla',
+  },
   description:
-    'Simpla is a performance marketing agency running paid ads on Meta, Google, TikTok, LinkedIn and more. We treat your business like our own.',
+    'Simpla designs, implements and optimizes Customer.io lifecycle systems for SaaS and digital products. Migration, data health, lifecycle architecture, growth ops.',
   keywords:
-    'performance marketing agency, Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, paid advertising, LATAM agency, performance agency',
+    'lifecycle marketing agency, customer lifecycle, Customer.io partner, SaaS onboarding, churn reduction, lifecycle system, user activation, retention marketing',
   robots: {
     index: true,
     follow: true,
@@ -19,8 +21,9 @@ export const metadata: Metadata = {
     canonical: 'https://simpla.agency',
   },
   openGraph: {
-    title: 'Simpla — Performance Marketing Agency',
-    description: 'Meta, Google, TikTok, LinkedIn and more. One team that handles your strategy, your creatives, and your spend.',
+    title: 'Simpla | Customer.io Lifecycle Specialists for SaaS',
+    description:
+      'Simpla designs, implements and optimizes Customer.io lifecycle systems for SaaS and digital products.',
     url: 'https://simpla.agency',
     siteName: 'Simpla',
     type: 'website',
@@ -29,14 +32,15 @@ export const metadata: Metadata = {
         url: '/assets/Simpla-Logo-Web.png',
         width: 1200,
         height: 630,
-        alt: 'Simpla — Performance Marketing Agency',
+        alt: 'Simpla — Customer.io Lifecycle Specialists for SaaS',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Simpla — Performance Marketing Agency',
-    description: 'Meta, Google, TikTok, LinkedIn and more. One team that handles your strategy, your creatives, and your spend.',
+    title: 'Simpla | Customer.io Lifecycle Specialists for SaaS',
+    description:
+      'Simpla designs, implements and optimizes Customer.io lifecycle systems for SaaS and digital products.',
     images: ['/assets/Simpla-Logo-Web.png'],
   },
   icons: {
@@ -52,18 +56,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
-          rel="stylesheet" 
-        />
         <Script
           id="json-ld-org"
           type="application/ld+json"
@@ -71,13 +65,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'MarketingAgency',
+              '@type': 'ProfessionalService',
               name: 'Simpla',
               url: 'https://simpla.agency',
-              logo: 'https://simpla.agency/assets/Simpla-Logo-Web.png',
               description:
-                'Performance marketing agency running paid ads on Meta, Google, TikTok, LinkedIn and more. Based in LATAM, focused on the US market.',
-              areaServed: ['US', 'AR', 'MX', 'ES', 'GB', 'UY'],
+                'Lifecycle marketing agency helping SaaS and digital product companies design, implement and optimize Customer.io systems that convert, activate and retain users.',
+              areaServed: ['US', 'AR', 'MX', 'UY', 'GB'],
               sameAs: [
                 'https://www.linkedin.com/company/simpla-agency',
                 'https://www.instagram.com/simplaagency',
@@ -85,27 +78,26 @@ export default function RootLayout({
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'sales',
-                url: 'https://simpla.agency/#contact',
+                url: 'https://simpla.agency/contact',
               },
             }),
           }}
         />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GG30BD4ZQF" strategy="afterInteractive" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GG30BD4ZQF"
+          strategy="afterInteractive"
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-GG30BD4ZQF');
           `}
         </Script>
       </head>
-      <body className="antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
-
-
