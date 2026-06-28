@@ -8,19 +8,7 @@ export const metadata: Metadata = {
   title: 'How We Work | Simpla',
   description:
     'Three stages: diagnosis, system design, build and handoff. How Simpla implements lifecycle systems for SaaS and digital products.',
-  alternates: { canonical: 'https://simpla.agency/how-we-work' },
-  openGraph: {
-    title: 'How We Work | Simpla',
-    description:
-      'Three stages: diagnosis, system design, build and handoff. How Simpla implements lifecycle systems for SaaS and digital products.',
-    url: 'https://simpla.agency/how-we-work',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How We Work | Simpla',
-    description: 'Three stages: diagnosis, system design, build and handoff.',
-  },
+  robots: { index: false, follow: false },
 }
 
 const TOOL_CATEGORIES = [
