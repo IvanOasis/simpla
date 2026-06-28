@@ -1,25 +1,22 @@
 import world from '@svg-maps/world'
 
-// Coordinates approximated in 1010×666 Natural Earth viewBox
-// Formula: x = (lon + 180) / 360 * 1010, y = (90 - lat) / 180 * 666
+// City coordinates calibrated to the @svg-maps/world Natural Earth projection
+// Formula: x = 2.918 * lon + 475.3, y = -3.094 * lat + 463.1
 const PINS = [
-  // Americas
-  { x: 341, y: 461 }, // Argentina – Buenos Aires
-  { x: 349, y: 459 }, // Uruguay – Montevideo
-  { x: 374, y: 421 }, // Brazil – São Paulo
-  { x: 295, y: 318 }, // Colombia – Bogotá
-  { x: 227, y: 261 }, // Mexico – Mexico City
-  { x: 297, y: 183 }, // USA – New York
-  { x: 265, y: 167 }, // Canada – Toronto
-  // Europe
-  { x: 503, y: 143 }, // England – London
-  { x: 541, y: 140 }, // Germany – Berlin
-  { x: 537, y: 179 }, // Italy – Rome
-  { x: 490, y: 184 }, // Spain – Madrid
-  // Asia
-  { x: 706, y: 262 }, // India – Mumbai
-  { x: 893, y: 205 }, // Japan – Tokyo
-  { x: 793, y: 330 }, // Singapore
+  { x: 305, y: 570 }, // Argentina  – Buenos Aires
+  { x: 311, y: 571 }, // Uruguay    – Montevideo
+  { x: 339, y: 536 }, // Brazil     – São Paulo
+  { x: 259, y: 449 }, // Colombia   – Bogotá
+  { x: 186, y: 403 }, // Mexico     – Mexico City
+  { x: 259, y: 337 }, // USA        – New York
+  { x: 244, y: 328 }, // Canada     – Toronto
+  { x: 475, y: 304 }, // England    – London
+  { x: 514, y: 301 }, // Germany    – Berlin
+  { x: 512, y: 333 }, // Italy      – Rome
+  { x: 465, y: 338 }, // Spain      – Madrid
+  { x: 688, y: 404 }, // India      – Mumbai
+  { x: 883, y: 353 }, // Japan      – Tokyo
+  { x: 778, y: 459 }, // Singapore
 ]
 
 export default function WorldMap() {
@@ -65,7 +62,7 @@ export default function WorldMap() {
         {/* Client pins */}
         {PINS.map((pin, i) => (
           <g key={i}>
-            <circle cx={pin.x} cy={pin.y} r={6} fill="rgba(123,94,255,0.18)" />
+            <circle cx={pin.x} cy={pin.y} r={6} fill="rgba(123,94,255,0.2)" />
             <circle cx={pin.x} cy={pin.y} r={2.5} fill="#7B5EFF" />
           </g>
         ))}
