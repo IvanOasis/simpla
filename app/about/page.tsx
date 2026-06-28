@@ -109,11 +109,11 @@ export default function AboutPage() {
             Want to know if we are <span className="text-gradient">the right fit?</span>
           </h2>
           <p className="text-ash text-lg mb-10 max-w-md mx-auto leading-relaxed">
-            Start with the free audit call. No commitment. Just 30 minutes and an honest read on your
+            Start with a discovery call. No commitment. Just 30 minutes and an honest read on your
             lifecycle.
           </p>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>

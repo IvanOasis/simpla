@@ -207,7 +207,7 @@ export default function HowWeWorkPage() {
             The first call is free. Thirty minutes to understand your situation before anything else.
           </p>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>

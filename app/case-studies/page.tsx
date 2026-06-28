@@ -281,7 +281,7 @@ export default function CaseStudiesPage() {
             Want to build <span className="text-gradient">something like this?</span>
           </h2>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>

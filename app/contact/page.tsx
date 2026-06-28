@@ -30,6 +30,12 @@ const WHAT_WE_COVER = [
   'Whether Simpla is the right fit, and if not, who might be',
 ]
 
+const NEXT_STEPS = [
+  { step: '01', title: 'Pick a time', body: 'Choose any 30-minute slot that works for you. No pre-call homework required.' },
+  { step: '02', title: 'We review your setup', body: 'We look at your lifecycle before the call so the conversation is specific, not generic.' },
+  { step: '03', title: 'You get a clear read', body: 'What is working, what is broken, what to fix first. No pitch unless it makes sense.' },
+]
+
 export default function ContactPage() {
   return (
     <main>
@@ -82,22 +88,46 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Right: Calendly embed */}
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-smoke bg-snow aspect-[4/3] flex flex-col items-center justify-center text-center p-10">
-                <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-3">
-                  Book your call
-                </p>
-                <p className="font-display font-bold text-ink text-xl mb-3">
+            {/* Right: CTA + next steps */}
+            <div className="lg:col-span-7 flex flex-col gap-5">
+              {/* Primary CTA card */}
+              <div className="rounded-2xl border border-brand/20 bg-snow p-8">
+                <p className="eyebrow mb-3">Book your call</p>
+                <p className="font-display font-bold text-ink text-2xl leading-tight tracking-[-0.02em] mb-2">
                   Schedule your discovery call
                 </p>
-                <p className="text-sm text-ash mb-8 max-w-sm leading-relaxed">
+                <p className="text-sm text-ash mb-6 leading-relaxed">
                   30 minutes. No slides. Just an honest conversation about your lifecycle and
                   whether we can help.
                 </p>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full text-center"
+                >
                   Book a discovery call
                 </a>
+              </div>
+
+              {/* What happens next */}
+              <div className="rounded-2xl border border-smoke bg-white p-8">
+                <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-6">
+                  What happens next
+                </p>
+                <div className="space-y-6">
+                  {NEXT_STEPS.map(({ step, title, body }) => (
+                    <div key={step} className="flex gap-4">
+                      <span className="font-mono text-brand text-[11px] shrink-0 mt-0.5 pt-0.5">
+                        {step}
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-ink mb-1">{title}</p>
+                        <p className="text-sm text-ash leading-relaxed">{body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

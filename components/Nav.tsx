@@ -45,7 +45,7 @@ export default function Nav() {
             href={BOOKING_URL}
             className="inline-flex items-center gap-1.5 bg-ink text-white font-body font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-ink/85 transition-colors"
           >
-            Book a free audit <span aria-hidden="true">›</span>
+            Book a discovery call <span aria-hidden="true">›</span>
           </a>
         </div>
 
@@ -77,7 +77,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className="btn-primary mt-3 w-full"
             >
-              Book a free audit
+              Book a discovery call
             </a>
           </div>
         </nav>

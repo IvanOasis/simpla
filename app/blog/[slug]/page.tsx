@@ -171,10 +171,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             Ready to find out where your lifecycle is breaking?
           </p>
           <p className="text-ash mb-8 max-w-sm mx-auto leading-relaxed">
-            A free 30-minute audit of your current setup. No obligation.
+            A free 30-minute discovery call. We&rsquo;ll look at your setup and tell you honestly what to fix first.
           </p>
           <a href={BOOKING_URL} className="btn-primary">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </article>

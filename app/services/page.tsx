@@ -188,11 +188,11 @@ export default function ServicesPage() {
             Not sure <span className="text-gradient">which service fits?</span>
           </h2>
           <p className="text-ash text-lg mb-10 max-w-md mx-auto leading-relaxed">
-            Book a free 30-minute audit call. We&rsquo;ll look at your situation and tell you which
+            Book a free 30-minute discovery call. We&rsquo;ll look at your situation and tell you which
             service makes sense, or tell you honestly if none of them do.
           </p>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>

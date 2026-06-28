@@ -125,7 +125,7 @@ export default function Home() {
 
             <div className="flex flex-wrap items-center justify-center gap-4 anim-fade-up anim-delay-2">
               <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-                Book a free audit <ArrowRight className="w-4 h-4" />
+                Book a discovery call <ArrowRight className="w-4 h-4" />
               </a>
               <Link
                 href="/services"
@@ -486,17 +486,17 @@ export default function Home() {
             }}
           />
           <h2
-            className="font-fraunces font-bold text-ink leading-[1.1] tracking-[-0.02em] max-w-2xl mx-auto mb-6"
+            className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em] max-w-2xl mx-auto mb-6"
             style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)' }}
           >
             Not sure where <span className="text-gradient">your lifecycle is breaking?</span>
           </h2>
           <p className="text-lg text-ash leading-relaxed max-w-lg mx-auto mb-10">
-            That is exactly what the free audit is for. 30 minutes to look at your current setup and
-            tell you honestly what is working, what is broken, and what to fix first.
+            30 minutes to look at your current setup and tell you honestly what is working, what is
+            broken, and what to fix first. No pitch, no proposal until we know it makes sense.
           </p>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
-            Book a free audit <ArrowRight className="w-4 h-4" />
+            Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>
