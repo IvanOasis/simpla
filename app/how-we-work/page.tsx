@@ -76,7 +76,7 @@ export default function HowWeWorkPage() {
                 activation, users going quiet after signup, data that doesn&rsquo;t add up.
               </p>
 
-              <div className="rounded-xl border border-smoke bg-snow p-6">
+              <div>
                 <p className="text-sm font-semibold text-ash mb-4">
                   During the call, we review
                 </p>
@@ -134,11 +134,11 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-smoke bg-white p-6">
-                <p className="text-sm font-semibold text-ash mb-5">
+              <div>
+                <p className="text-sm font-semibold text-ash mb-4">
                   The document covers
                 </p>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-3">
                   {[
                     'User states and the behavioral criteria that define each one',
                     'Event schema your engineering team will implement',
@@ -194,8 +194,8 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-smoke bg-snow p-6">
-                <p className="text-sm font-semibold text-ash mb-5">
+              <div>
+                <p className="text-sm font-semibold text-ash mb-4">
                   You walk away with
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3">

@@ -202,18 +202,10 @@ export default function Home() {
               lifecycle tool and barely using it. Your team writes the same generic message to every
               user regardless of what they have done.
             </p>
-            <div
-              className="rounded-xl px-6 py-5 border-l-4 border-brand"
-              style={{
-                background: 'linear-gradient(135deg, #f0ecff 0%, #f7f4ff 100%)',
-                boxShadow: '0 1px 3px rgba(123,94,255,0.08), 0 4px 16px rgba(123,94,255,0.06)',
-              }}
-            >
-              <p className="text-ink font-display font-medium leading-relaxed">
-                These are not product problems. They are lifecycle infrastructure problems. And they
-                are fixable.
-              </p>
-            </div>
+            <p className="text-ink font-display font-medium leading-relaxed">
+              These are not product problems. They are lifecycle infrastructure problems. And they
+              are fixable.
+            </p>
           </div>
         </div>
       </section>
