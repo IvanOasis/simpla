@@ -35,7 +35,7 @@ export const posts: Post[] = [
     dateISO: '2026-05-15',
     readTime: '6 min',
     coverImage: '/assets/Blog/blog_automation_gears.png',
-    draft: true,
+    draft: false,
     sections: [
       {
         heading: 'What "broken" actually means',
@@ -80,7 +80,7 @@ export const posts: Post[] = [
     dateISO: '2026-05-22',
     readTime: '8 min',
     coverImage: '/assets/Blog/blog_strategy_box.png',
-    draft: true,
+    draft: false,
     sections: [
       {
         heading: 'What a user state actually is',
@@ -137,7 +137,7 @@ export const posts: Post[] = [
     dateISO: '2026-05-29',
     readTime: '7 min',
     coverImage: '/assets/Blog/blog_seo_globe.png',
-    draft: true,
+    draft: false,
     sections: [
       {
         heading: 'This is more common than you think',

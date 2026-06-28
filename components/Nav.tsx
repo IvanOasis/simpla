@@ -43,7 +43,7 @@ export default function Nav() {
         <div className="hidden lg:block">
           <a
             href={BOOKING_URL}
-            className="inline-flex items-center gap-1.5 bg-ink text-white font-body font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-ink/85 transition-colors"
+            className="btn-primary text-sm px-5 py-2.5"
           >
             Book a discovery call <span aria-hidden="true">›</span>
           </a>
