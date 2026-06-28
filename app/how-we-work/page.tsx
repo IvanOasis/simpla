@@ -53,7 +53,7 @@ export default function HowWeWorkPage() {
           >
             Three stages. <span className="text-gradient">One outcome.</span>
           </h1>
-          <p className="text-lg text-ash leading-relaxed max-w-lg">
+          <p className="text-lg text-ash leading-relaxed">
             A lifecycle system that works — and that your team can maintain after we leave.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function HowWeWorkPage() {
           <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-4">
               <div
-                className="font-display font-black text-smoke leading-none select-none"
+                className="font-display font-black text-gradient leading-none select-none"
                 style={{ fontSize: 'clamp(5rem, 11vw, 8rem)' }}
               >
                 01
@@ -120,8 +120,8 @@ export default function HowWeWorkPage() {
           <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-4">
               <div
-                className="font-display font-black leading-none select-none"
-                style={{ fontSize: 'clamp(5rem, 11vw, 8rem)', color: '#dde1ed' }}
+                className="font-display font-black text-gradient leading-none select-none"
+                style={{ fontSize: 'clamp(5rem, 11vw, 8rem)' }}
               >
                 02
               </div>
@@ -180,7 +180,7 @@ export default function HowWeWorkPage() {
           <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-4">
               <div
-                className="font-display font-black text-smoke leading-none select-none"
+                className="font-display font-black text-gradient leading-none select-none"
                 style={{ fontSize: 'clamp(5rem, 11vw, 8rem)' }}
               >
                 03
