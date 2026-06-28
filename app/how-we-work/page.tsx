@@ -90,7 +90,7 @@ export default function HowWeWorkPage() {
 
               <div className="rounded-xl border border-smoke bg-snow p-6">
                 <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-4">
-                  Before the call, we review
+                  During the call, we review
                 </p>
                 <ul className="space-y-3">
                   {[
