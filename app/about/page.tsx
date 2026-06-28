@@ -117,25 +117,20 @@ export default function AboutPage() {
       {/* Location */}
       <section className="py-20 border-b border-smoke">
         <div className="container-page">
-          <div className="grid lg:grid-cols-12 gap-12 mb-10">
-            <div className="lg:col-span-4">
-              <p className="eyebrow mb-2">Where we are</p>
-            </div>
-            <div className="lg:col-span-8">
-              <h2
-                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-4"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
-              >
-                Based in LATAM. <span className="text-gradient">Working globally.</span>
-              </h2>
-              <p className="text-ash leading-relaxed text-[1.0625rem]">
-                We are based in Buenos Aires and work with companies across North America, Europe,
-                and Latin America. Remote-first since day one: our clients care about outcomes,
-                not time zones.
-              </p>
-            </div>
+          <div className="text-center mb-10">
+            <h2
+              className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-4"
+              style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
+            >
+              Based in LATAM. <span className="text-gradient">Working globally.</span>
+            </h2>
+            <p className="text-ash leading-relaxed text-[1.0625rem] max-w-xl mx-auto">
+              Buenos Aires-based, working with teams across the Americas, Europe, and Asia.
+            </p>
           </div>
-          <WorldMap />
+          <div className="max-w-4xl mx-auto">
+            <WorldMap />
+          </div>
         </div>
       </section>
 

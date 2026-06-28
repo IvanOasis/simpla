@@ -1,8 +1,26 @@
 import world from '@svg-maps/world'
 
-// Buenos Aires: -34.6°S, -58.4°W → approx (341, 461) in 1010×666 Natural Earth viewBox
-const BA_X = 341
-const BA_Y = 461
+// Coordinates approximated in 1010×666 Natural Earth viewBox
+// Formula: x = (lon + 180) / 360 * 1010, y = (90 - lat) / 180 * 666
+const PINS = [
+  // Americas
+  { x: 341, y: 461 }, // Argentina – Buenos Aires
+  { x: 349, y: 459 }, // Uruguay – Montevideo
+  { x: 374, y: 421 }, // Brazil – São Paulo
+  { x: 295, y: 318 }, // Colombia – Bogotá
+  { x: 227, y: 261 }, // Mexico – Mexico City
+  { x: 297, y: 183 }, // USA – New York
+  { x: 265, y: 167 }, // Canada – Toronto
+  // Europe
+  { x: 503, y: 143 }, // England – London
+  { x: 541, y: 140 }, // Germany – Berlin
+  { x: 537, y: 179 }, // Italy – Rome
+  { x: 490, y: 184 }, // Spain – Madrid
+  // Asia
+  { x: 706, y: 262 }, // India – Mumbai
+  { x: 893, y: 205 }, // Japan – Tokyo
+  { x: 793, y: 330 }, // Singapore
+]
 
 export default function WorldMap() {
   return (
@@ -33,50 +51,25 @@ export default function WorldMap() {
         aria-hidden="true"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
       >
+        {/* Country fills */}
         {world.locations.map((loc: { id: string; path: string }) => (
           <path
             key={loc.id}
             d={loc.path}
-            fill={loc.id === 'ar' ? 'rgba(123,94,255,0.35)' : 'rgba(255,255,255,0.07)'}
-            stroke={loc.id === 'ar' ? 'rgba(123,94,255,0.6)' : 'rgba(255,255,255,0.05)'}
-            strokeWidth={loc.id === 'ar' ? 0.8 : 0.4}
+            fill="rgba(255,255,255,0.07)"
+            stroke="rgba(255,255,255,0.05)"
+            strokeWidth={0.4}
           />
         ))}
 
-        {/* Buenos Aires glow */}
-        <circle cx={BA_X} cy={BA_Y} r={22} fill="rgba(123,94,255,0.2)" />
-
-        {/* Rings */}
-        <circle cx={BA_X} cy={BA_Y} r={12} fill="none" stroke="rgba(123,94,255,0.4)" strokeWidth={0.8} />
-        <circle cx={BA_X} cy={BA_Y} r={6}  fill="none" stroke="rgba(123,94,255,0.65)" strokeWidth={0.8} />
-
-        {/* Dot */}
-        <circle cx={BA_X} cy={BA_Y} r={3} fill="#7B5EFF" />
+        {/* Client pins */}
+        {PINS.map((pin, i) => (
+          <g key={i}>
+            <circle cx={pin.x} cy={pin.y} r={6} fill="rgba(123,94,255,0.18)" />
+            <circle cx={pin.x} cy={pin.y} r={2.5} fill="#7B5EFF" />
+          </g>
+        ))}
       </svg>
-
-      {/* Coordinates */}
-      <div style={{ position: 'absolute', top: '1rem', left: '1.25rem' }}>
-        <p className="font-mono text-white/30 uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.12em' }}>
-          34°36&prime;S · 58°22&prime;W
-        </p>
-      </div>
-
-      {/* City label */}
-      <div style={{ position: 'absolute', bottom: '1rem', left: '1.25rem' }}>
-        <p className="font-display font-bold text-white leading-none" style={{ fontSize: '1.1rem' }}>
-          Buenos Aires
-        </p>
-        <p className="font-mono text-white/40 uppercase mt-1" style={{ fontSize: '0.6rem', letterSpacing: '0.14em' }}>
-          Argentina
-        </p>
-      </div>
-
-      {/* Global label */}
-      <div style={{ position: 'absolute', bottom: '1rem', right: '1.25rem' }}>
-        <p className="font-mono text-white/25 uppercase text-right" style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>
-          Americas · Europe
-        </p>
-      </div>
     </div>
   )
 }
