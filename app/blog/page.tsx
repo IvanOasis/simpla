@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import BlogThumbnail from '@/components/BlogThumbnail'
 import { posts } from '@/lib/posts'
 
 export const metadata: Metadata = {
@@ -58,25 +58,8 @@ export default function BlogIndex() {
                 className="group flex flex-col rounded-2xl border border-smoke bg-white overflow-hidden hover:border-brand/30 hover:shadow-lg transition-all duration-200"
               >
                 {/* Thumbnail */}
-                <div className="relative aspect-[16/9] bg-snow overflow-hidden">
-                  {post.coverImage ? (
-                    <Image
-                      src={post.coverImage}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-snow">
-                      <span className="font-mono text-xs text-ash">—</span>
-                    </div>
-                  )}
-                  {post.draft && (
-                    <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-wider text-brand bg-white/90 border border-brand/30 rounded-full px-2 py-0.5">
-                      Draft
-                    </span>
-                  )}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <BlogThumbnail slug={post.slug} title={post.title} />
                 </div>
 
                 {/* Content */}
