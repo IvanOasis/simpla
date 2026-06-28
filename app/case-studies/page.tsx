@@ -87,25 +87,11 @@ export default function CaseStudiesPage() {
         <div className="container-page pt-36 pb-20">
           <p className="eyebrow mb-4">Case Studies</p>
           <h1
-            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6 max-w-2xl"
+            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] max-w-2xl"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
           >
             Work <span className="text-gradient">we have done</span>
           </h1>
-          <p className="text-lg text-ash leading-relaxed mb-6 max-w-xl">
-            Real implementations. No invented metrics. Just what we built and how.
-          </p>
-          <div
-            className="inline-block rounded-xl px-5 py-4 text-sm text-ash leading-relaxed"
-            style={{
-              background: 'rgba(255,255,255,0.7)',
-              border: '1px solid rgba(228,231,240,0.8)',
-              boxShadow: '0 1px 4px rgba(15,21,35,0.05)',
-            }}
-          >
-            We don&rsquo;t publish specific metrics without client approval. What we share is what we
-            built, why, and what the system looked like when we handed it over.
-          </div>
         </div>
       </section>
 
@@ -116,37 +102,32 @@ export default function CaseStudiesPage() {
         style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f8f9fd 100%)' }}
       >
         <div className="container-page">
-          <div className="grid lg:grid-cols-12 gap-12 mb-14">
-            <div className="lg:col-span-4">
-              <span
-                className="inline-block font-mono text-[10px] uppercase tracking-[0.16em] px-3 py-1.5 rounded-full mb-5 text-brand"
-                style={{
-                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(123,94,255,0.2)',
-                }}
-              >
-                Crypto Wallet · B2C · Consumer App
-              </span>
+
+          {/* Header */}
+          <div className="mb-12 pb-12 border-b border-smoke">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ash mb-5">
+              01 — Crypto wallet, B2C
+            </p>
+            <div className="grid lg:grid-cols-12 gap-10">
               <h2
-                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
+                className="lg:col-span-7 font-display font-bold text-ink tracking-[-0.02em] leading-tight"
+                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
               >
                 Building a lifecycle system from scratch for a well-known Solana trading wallet
               </h2>
-            </div>
-            <div className="lg:col-span-8">
-              <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-3">Situation</p>
-              <p className="text-ash leading-relaxed text-[1.0625rem]">
-                A well-known crypto wallet for Solana traders had no lifecycle system in place. Users
-                were downloading the app, and beyond an initial onboarding email, there was no
-                communication based on what they actually did inside the product. The team had no
-                visibility into which users were active, which were at risk, or which had churned.
-              </p>
+              <div className="lg:col-span-5 lg:pt-2">
+                <p className="text-ash leading-relaxed text-[1.0625rem]">
+                  A well-known crypto wallet for Solana traders had no lifecycle system in place. Users
+                  were downloading the app, and beyond an initial onboarding email, there was no
+                  communication based on what they actually did inside the product.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="mb-12">
-            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-8">What we built</p>
+          {/* What we built */}
+          <div className="mb-10">
+            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-6">What we built</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {CS1_SECTIONS.map((s) => (
                 <div key={s.heading} className="card-sm rounded-2xl p-7">
@@ -159,6 +140,7 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
+          {/* Outcome */}
           <div className="card-dark rounded-2xl p-8 relative overflow-hidden">
             <div
               aria-hidden="true"
@@ -172,7 +154,7 @@ export default function CaseStudiesPage() {
                 pointerEvents: 'none',
               }}
             />
-            <p className="text-xs font-mono uppercase tracking-[0.14em] text-white/40 mb-3">
+            <p className="text-xs font-mono uppercase tracking-[0.14em] text-white/50 mb-3">
               Outcome
             </p>
             <p className="font-display font-medium leading-relaxed text-white text-[1.0625rem] max-w-2xl">
@@ -181,6 +163,7 @@ export default function CaseStudiesPage() {
               monitoring. The foundation was in place to iterate and improve from real behavioral data.
             </p>
           </div>
+
         </div>
       </section>
 
@@ -196,37 +179,32 @@ export default function CaseStudiesPage() {
         }}
       >
         <div className="container-page">
-          <div className="grid lg:grid-cols-12 gap-12 mb-14">
-            <div className="lg:col-span-4">
-              <span
-                className="inline-block font-mono text-[10px] uppercase tracking-[0.16em] px-3 py-1.5 rounded-full mb-5 text-brand"
-                style={{
-                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(123,94,255,0.2)',
-                }}
-              >
-                B2B SaaS · HubSpot and Intercom
-              </span>
+
+          {/* Header */}
+          <div className="mb-12 pb-12 border-b border-smoke">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ash mb-5">
+              02 — B2B SaaS, HubSpot + Intercom
+            </p>
+            <div className="grid lg:grid-cols-12 gap-10">
               <h2
-                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
+                className="lg:col-span-7 font-display font-bold text-ink tracking-[-0.02em] leading-tight"
+                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
               >
                 Lifecycle implementation for a B2B SaaS with HubSpot and Intercom
               </h2>
-            </div>
-            <div className="lg:col-span-8">
-              <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-3">Situation</p>
-              <p className="text-ash leading-relaxed text-[1.0625rem]">
-                A B2B SaaS company needed to build out their lifecycle marketing infrastructure. The
-                team had HubSpot for CRM and sales, but no systematic approach to communicating with
-                users based on their behavior in the product. Intercom was introduced as the product
-                communication layer.
-              </p>
+              <div className="lg:col-span-5 lg:pt-2">
+                <p className="text-ash leading-relaxed text-[1.0625rem]">
+                  A B2B SaaS company needed to build out their lifecycle marketing infrastructure. The
+                  team had HubSpot for CRM and sales, but no systematic approach to communicating with
+                  users based on their behavior in the product.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="mb-12">
-            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-8">What we built</p>
+          {/* What we built */}
+          <div className="mb-10">
+            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-6">What we built</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {CS2_SECTIONS.map((s) => (
                 <div key={s.heading} className="card-sm rounded-2xl p-7">
@@ -239,6 +217,7 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
+          {/* Outcome */}
           <div className="card-dark rounded-2xl p-8 relative overflow-hidden">
             <div
               aria-hidden="true"
@@ -252,7 +231,7 @@ export default function CaseStudiesPage() {
                 pointerEvents: 'none',
               }}
             />
-            <p className="text-xs font-mono uppercase tracking-[0.14em] text-white/40 mb-3">
+            <p className="text-xs font-mono uppercase tracking-[0.14em] text-white/50 mb-3">
               Outcome
             </p>
             <p className="font-display font-medium leading-relaxed text-white text-[1.0625rem] max-w-2xl">
@@ -261,6 +240,7 @@ export default function CaseStudiesPage() {
               The lifecycle was running on real signals for the first time.
             </p>
           </div>
+
         </div>
       </section>
 
