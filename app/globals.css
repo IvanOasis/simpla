@@ -103,7 +103,8 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 border border-ink text-ink font-body font-semibold px-6 py-3.5 rounded-lg text-sm transition-all duration-200 hover:border-brand hover:text-brand;
+    @apply inline-flex items-center justify-center gap-2 bg-white/60 border border-smoke text-ink font-body font-semibold px-6 py-3.5 rounded-lg text-sm transition-all duration-200 hover:border-brand hover:text-brand;
+    box-shadow: 0 1px 3px rgba(15,21,35,0.05);
   }
 
   .btn-brand {

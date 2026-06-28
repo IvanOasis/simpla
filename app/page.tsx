@@ -133,8 +133,7 @@ export default function Home() {
               </a>
               <Link
                 href="/services"
-                className="text-sm font-body font-semibold text-ink border border-smoke rounded-lg px-8 py-4 hover:border-ink transition-colors bg-white/60"
-                style={{ boxShadow: '0 1px 3px rgba(15,21,35,0.05)' }}
+                className="btn-outline px-8 py-4"
               >
                 See our services
               </Link>
@@ -346,8 +345,7 @@ export default function Home() {
           <div className="lg:col-span-4 lg:text-right">
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-2 font-body font-semibold text-ink text-sm border border-ink/20 rounded-lg px-6 py-3.5 hover:bg-ink hover:text-white transition-all duration-200 bg-white/70"
-              style={{ boxShadow: '0 1px 4px rgba(15,21,35,0.06), 0 4px 16px rgba(15,21,35,0.05)' }}
+              className="btn-outline"
             >
               See our work <ArrowRight className="w-4 h-4" />
             </Link>
