@@ -125,7 +125,7 @@ export default function AboutPage() {
               Based in LATAM. <span className="text-gradient">Working globally.</span>
             </h2>
             <p className="text-ash leading-relaxed text-[1.0625rem] max-w-xl mx-auto">
-              Buenos Aires-based, working with teams across the Americas, Europe, and Asia.
+              Buenos Aires-based, working with teams across LATAM, North America, Europe, and Asia.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
