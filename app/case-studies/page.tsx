@@ -125,9 +125,9 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
-          {/* What we built */}
+          {/* What we did */}
           <div className="mb-10">
-            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we built</p>
+            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we did</p>
             <div className="divide-y divide-smoke">
               {CS1_SECTIONS.map((s) => (
                 <div key={s.heading} className="grid lg:grid-cols-12 gap-4 lg:gap-12 py-7">
@@ -202,9 +202,9 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
-          {/* What we built */}
+          {/* What we did */}
           <div className="mb-10">
-            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we built</p>
+            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we did</p>
             <div className="divide-y divide-smoke">
               {CS2_SECTIONS.map((s) => (
                 <div key={s.heading} className="grid lg:grid-cols-12 gap-4 lg:gap-12 py-7">
