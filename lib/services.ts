@@ -96,8 +96,6 @@ export const services: Service[] = [
       'Monthly retainer for clients post-implementation. We analyze your data, run experiments, write new messages as your product evolves, and send a written report every month.',
     situation:
       'Your lifecycle system is live. But your product keeps evolving. New features ship. User behavior shifts. What worked three months ago starts to drift. Without someone watching the data and running experiments, the system slowly stops being relevant.',
-    availabilityNote:
-      'This service is only available to clients who completed a Lifecycle Implementation with us. We can\'t optimize a system we didn\'t build or audit.',
     sections: [
       {
         heading: 'Data analysis',

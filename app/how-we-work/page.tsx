@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { BOOKING_URL } from '@/lib/constants'
@@ -24,47 +24,10 @@ export const metadata: Metadata = {
 }
 
 const TOOL_CATEGORIES = [
-  { label: 'Lifecycle and messaging', tools: 'Customer.io, Intercom, Braze, OneSignal' },
-  { label: 'Product analytics', tools: 'PostHog, Mixpanel, Amplitude' },
-  { label: 'Reporting', tools: 'Metabase, Looker Studio' },
-  { label: 'CRM', tools: 'HubSpot, Attio' },
-]
-
-const STAGES = [
-  {
-    n: '01',
-    id: 'diagnosis',
-    title: 'Diagnosis',
-    paragraphs: [
-      'We start with a free 30-minute call.',
-      "We ask you to walk us through your product, your current lifecycle setup, and where you feel the problem most: churn, activation, users going quiet after signup, data that doesn't add up.",
-      "We come prepared. Before the call we review whatever you can share: your current tool, your existing workflows, any analytics you have access to.",
-    ],
-    highlight: "If the problem is something you can fix yourself, we'll tell you. If we're not the right fit for your situation, we'll tell you that too.",
-  },
-  {
-    n: '02',
-    id: 'system-design',
-    title: 'System Design',
-    paragraphs: [
-      "Based on what we find in the diagnosis, we design the right system for your situation.",
-      "We don't recommend a full lifecycle build if you need one broken workflow fixed. We scope to the problem.",
-      "The design document covers: your user states and the behavioral criteria that define each one, the event schema your engineering team will implement, the workflow architecture, which channels we'll use, and how we'll measure success.",
-    ],
-    highlight: "You review it. We align on it. Then we build.",
-  },
-  {
-    n: '03',
-    id: 'build-handoff',
-    title: 'Build and Handoff',
-    paragraphs: [
-      "We build the system in your lifecycle tool, write every message that goes inside it, coordinate with your engineering team on the event implementation, and QA against real user profiles before anything goes live.",
-      "When it's live, we monitor the first few days closely.",
-      "Then we hand over. A full written record of the system. A walkthrough recording. A training session. When we're done, your team has everything they need to run the system independently.",
-      "Some clients do exactly that. Others prefer to keep iterating with us through Ongoing Optimization. The documentation we produce is designed to support both paths.",
-    ],
-    highlight: null,
-  },
+  { label: 'Lifecycle & messaging', tools: ['Customer.io', 'Intercom', 'Braze', 'OneSignal'] },
+  { label: 'Product analytics', tools: ['PostHog', 'Mixpanel', 'Amplitude'] },
+  { label: 'Reporting', tools: ['Metabase', 'Looker Studio'] },
+  { label: 'CRM', tools: ['HubSpot', 'Attio'] },
 ]
 
 export default function HowWeWorkPage() {
@@ -82,107 +45,248 @@ export default function HowWeWorkPage() {
           `,
         }}
       >
-        <div className="container-page pt-36 pb-20">
+        <div className="container-page pt-36 pb-24">
           <p className="eyebrow mb-4">How We Work</p>
           <h1
-            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6 max-w-2xl"
+            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6 max-w-xl"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
           >
-            How we <span className="text-gradient">work</span>
+            Three stages.<br />One outcome.
           </h1>
-          <p className="text-lg text-ash leading-relaxed max-w-xl">
-            Three stages. One outcome: a lifecycle system that works when we leave.
+          <p className="text-lg text-ash leading-relaxed max-w-lg mb-14">
+            A lifecycle system that works — and that your team can maintain after we leave.
           </p>
+
+          {/* Stage navigator */}
+          <div className="flex flex-wrap items-center gap-y-3">
+            {[
+              { n: '01', label: 'Diagnosis', href: '#stage-01' },
+              { n: '02', label: 'System Design', href: '#stage-02' },
+              { n: '03', label: 'Build & Handoff', href: '#stage-03' },
+            ].map((s, i) => (
+              <div key={s.n} className="flex items-center">
+                <a
+                  href={s.href}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/60 transition-colors group"
+                >
+                  <span className="font-mono text-[10px] text-brand">{s.n}</span>
+                  <span className="text-sm font-semibold text-ink group-hover:text-brand transition-colors">
+                    {s.label}
+                  </span>
+                </a>
+                {i < 2 && (
+                  <span className="text-smoke select-none px-1">—</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Stages */}
-      {STAGES.map((stage, idx) => (
-        <section
-          key={stage.id}
-          id={stage.id}
-          className="py-20 border-b border-smoke scroll-mt-20"
-          style={{
-            background: idx % 2 === 0
-              ? 'linear-gradient(180deg, #ffffff 0%, #f8f9fd 100%)'
-              : 'linear-gradient(180deg, #f8f9fd 0%, #ffffff 100%)',
-          }}
-        >
-          <div className="container-page grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-4">
-              <span
-                className="inline-flex items-center justify-center w-12 h-12 rounded-2xl font-display font-bold text-brand text-lg mb-5"
-                style={{
-                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(123,94,255,0.22)',
-                  boxShadow: '0 2px 12px rgba(123,94,255,0.14)',
-                }}
-              >
-                {stage.n}
-              </span>
-              <h2
-                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-              >
-                {stage.title}
-              </h2>
-            </div>
-            <div className="lg:col-span-8 space-y-5 text-ash leading-relaxed text-[1.0625rem]">
-              {stage.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-              {stage.highlight && (
-                <div
-                  className="rounded-xl px-6 py-5 border-l-4 border-brand mt-6"
-                  style={{
-                    background: 'linear-gradient(135deg, #f0ecff 0%, #f7f4ff 100%)',
-                    boxShadow: '0 1px 4px rgba(123,94,255,0.08), 0 4px 16px rgba(123,94,255,0.05)',
-                  }}
-                >
-                  <p className="text-ink font-display font-medium leading-relaxed">{stage.highlight}</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-      ))}
+      {/* Stages — one connected section, structurally different per stage */}
+      <section className="border-b border-smoke">
 
-      {/* Tools */}
-      <section
-        className="py-20 border-b border-smoke"
-        style={{
-          background: `
-            radial-gradient(ellipse 60% 50% at 100% 50%, rgba(158,112,206,0.07) 0%, transparent 55%),
-            linear-gradient(180deg, #f8f9fd 0%, #f5f0ff 50%, #f8f9fd 100%)
-          `,
-        }}
-      >
-        <div className="container-page grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <h2
-              className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-6"
-              style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)' }}
-            >
-              Tools we work with
-            </h2>
+        {/* 01 Diagnosis */}
+        <div id="stage-01" className="border-b border-smoke scroll-mt-20">
+          <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-4">
+              <div
+                className="font-display font-black text-smoke leading-none select-none"
+                style={{ fontSize: 'clamp(5rem, 11vw, 8rem)' }}
+              >
+                01
+              </div>
+              <h2
+                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mt-1 mb-2"
+                style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
+              >
+                Diagnosis
+              </h2>
+              <p className="text-xs font-mono uppercase tracking-[0.16em] text-ash">The starting point</p>
+            </div>
+
+            <div className="lg:col-span-8 space-y-6 pt-2 lg:pt-4">
+              <p className="text-ash leading-relaxed text-[1.0625rem]">
+                We start with a free 30-minute call. We ask you to walk us through your product,
+                your current lifecycle setup, and where you feel the problem most — churn,
+                activation, users going quiet after signup, data that doesn&rsquo;t add up.
+              </p>
+
+              <div className="rounded-xl border border-smoke bg-snow p-6">
+                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-4">
+                  Before the call, we review
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    'Your lifecycle tool and any existing workflows',
+                    'Analytics and event tracking setup',
+                    'Current email, push, or in-app configuration',
+                    'Where you think the problem lives',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-ink leading-relaxed">
+                      <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-ink font-medium leading-relaxed border-l-2 border-brand pl-4">
+                If the problem is something you can fix yourself, we&rsquo;ll tell you. If
+                we&rsquo;re not the right fit, we&rsquo;ll tell you that too.
+              </p>
+            </div>
           </div>
-          <div className="lg:col-span-8">
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+        </div>
+
+        {/* 02 System Design */}
+        <div id="stage-02" className="border-b border-smoke scroll-mt-20 bg-snow">
+          <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-4">
+              <div
+                className="font-display font-black leading-none select-none"
+                style={{ fontSize: 'clamp(5rem, 11vw, 8rem)', color: '#dde1ed' }}
+              >
+                02
+              </div>
+              <h2
+                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mt-1 mb-2"
+                style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
+              >
+                System Design
+              </h2>
+              <p className="text-xs font-mono uppercase tracking-[0.16em] text-ash">The plan</p>
+            </div>
+
+            <div className="lg:col-span-8 space-y-6 pt-2 lg:pt-4">
+              <div className="space-y-4 text-ash leading-relaxed text-[1.0625rem]">
+                <p>
+                  Based on the diagnosis, we design the right system for your situation. We
+                  don&rsquo;t recommend a full lifecycle build if you need one broken workflow fixed.
+                  We scope to the problem.
+                </p>
+                <p>
+                  We produce a design document you review and sign off on before we build anything.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-smoke bg-white p-6">
+                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-5">
+                  The document covers
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    'User states and the behavioral criteria that define each one',
+                    'Event schema your engineering team will implement',
+                    'Workflow architecture across all stages',
+                    'Which channels to use and why',
+                    'How we will measure success',
+                  ].map((item, i) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="font-mono text-[10px] text-brand shrink-0 mt-1 pt-0.5">
+                        0{i + 1}
+                      </span>
+                      <p className="text-sm text-ink leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <p className="text-ink font-medium leading-relaxed border-l-2 border-brand pl-4">
+                You review it. We align on it. Then we build.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 03 Build & Handoff */}
+        <div id="stage-03" className="scroll-mt-20">
+          <div className="container-page py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-4">
+              <div
+                className="font-display font-black text-smoke leading-none select-none"
+                style={{ fontSize: 'clamp(5rem, 11vw, 8rem)' }}
+              >
+                03
+              </div>
+              <h2
+                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mt-1 mb-2"
+                style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
+              >
+                Build &amp; Handoff
+              </h2>
+              <p className="text-xs font-mono uppercase tracking-[0.16em] text-ash">The work</p>
+            </div>
+
+            <div className="lg:col-span-8 space-y-6 pt-2 lg:pt-4">
+              <div className="space-y-4 text-ash leading-relaxed text-[1.0625rem]">
+                <p>
+                  We build the system in your lifecycle tool, write every message that goes inside
+                  it, coordinate with your engineering team on event implementation, and QA against
+                  real user profiles before anything goes live.
+                </p>
+                <p>
+                  When it&rsquo;s live, we monitor the first few days closely. Then we hand over.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-smoke bg-snow p-6">
+                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-5">
+                  You walk away with
+                </p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    'System live in your lifecycle tool',
+                    'Every message written and tested',
+                    'Full written system documentation',
+                    'Walkthrough recording',
+                    'Team training session',
+                    'Independence — or the option to keep iterating with us',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+                      <p className="text-sm text-ink leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      {/* Tools — horizontal layout, structurally lighter */}
+      <section className="py-20 border-b border-smoke">
+        <div className="container-page">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
+            <div className="lg:w-56 shrink-0">
+              <h2 className="font-display font-bold text-ink tracking-[-0.02em] text-xl mb-2">
+                Tools we work with
+              </h2>
+              <p className="text-sm text-ash leading-relaxed">
+                Tool-agnostic by principle. We recommend what fits your stage, stack, and budget.
+              </p>
+            </div>
+            <div className="flex-1 space-y-5">
               {TOOL_CATEGORIES.map((cat) => (
-                <div key={cat.label} className="card-sm rounded-xl p-6">
-                  <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-2">
+                <div key={cat.label} className="flex flex-wrap items-center gap-x-6 gap-y-2">
+                  <span className="text-xs font-mono uppercase tracking-[0.14em] text-ash w-44 shrink-0">
                     {cat.label}
-                  </p>
-                  <p className="text-ink font-display font-semibold text-sm leading-relaxed">
-                    {cat.tools}
-                  </p>
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {cat.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="text-sm text-ink px-3 py-1 rounded-full border border-smoke bg-white font-medium"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
-            <p className="text-ash text-sm leading-relaxed">
-              We are tool-agnostic by principle. We&rsquo;ll recommend what fits your stage, your
-              stack, and your budget.
-            </p>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, PenLine, Database, Plug, Key } from 'lucide-react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { BOOKING_URL } from '@/lib/constants'
@@ -38,21 +38,25 @@ const TOOLS = [
 const WHY_POINTS = [
   {
     n: '01',
+    Icon: PenLine,
     title: 'We build the system and write the messages.',
     body: "Most lifecycle agencies hand you a configured tool and leave the copy to you. We write every message inside the workflows, crafted for the specific user state, the specific moment, and the specific action we need the user to take.",
   },
   {
     n: '02',
+    Icon: Database,
     title: 'We start with your data, not your tool.',
     body: "Before we touch any platform, we design your event architecture. What to track, how to name it, what properties each event needs. Your engineering team gets a spec they can implement without back-and-forth.",
   },
   {
     n: '03',
+    Icon: Plug,
     title: 'We work with the tools you already use.',
     body: "We work with Customer.io, Intercom, Braze, OneSignal and others, connected to product analytics like PostHog and Mixpanel. We'll recommend what fits your stage and budget.",
   },
   {
     n: '04',
+    Icon: Key,
     title: 'You own the system when we are done.',
     body: "We document everything. Your team can run it independently after we hand it over. No lock-in.",
   },
@@ -287,7 +291,7 @@ export default function Home() {
             {WHY_POINTS.map((p) => (
               <div
                 key={p.n}
-                className="rounded-2xl p-8"
+                className="rounded-2xl p-8 flex flex-col gap-5"
                 style={{
                   background: 'linear-gradient(145deg, #ffffff 0%, #f5f8ff 100%)',
                   border: '1px solid rgba(228,231,240,0.8)',
@@ -295,11 +299,21 @@ export default function Home() {
                   boxShadow: '0 1px 3px rgba(15,21,35,0.04), 0 6px 20px rgba(15,21,35,0.05)',
                 }}
               >
-                <span className="font-mono text-[11px] text-brand block mb-4">{p.n}</span>
-                <h3 className="font-display font-bold text-ink text-lg mb-3 leading-snug">
-                  {p.title}
-                </h3>
-                <p className="text-ash text-sm leading-relaxed">{p.body}</p>
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                  style={{
+                    background: 'linear-gradient(135deg, #ede8ff 0%, #e4dcff 100%)',
+                    border: '1px solid rgba(123,94,255,0.18)',
+                  }}
+                >
+                  <p.Icon className="w-5 h-5 text-brand" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-ink text-lg mb-3 leading-snug">
+                    {p.title}
+                  </h3>
+                  <p className="text-ash text-sm leading-relaxed">{p.body}</p>
+                </div>
               </div>
             ))}
           </div>
