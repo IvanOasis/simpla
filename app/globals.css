@@ -73,9 +73,9 @@
 }
 
 .card-dark {
-  background: linear-gradient(135deg, #1c2640 0%, #0F1523 100%);
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 8px 32px rgba(15,21,35,0.4);
+  background: linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 8px 32px rgba(123,94,255,0.28);
 }
 
 @layer components {

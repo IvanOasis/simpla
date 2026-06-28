@@ -372,8 +372,9 @@ export default function Home() {
                 key={i}
                 className="relative rounded-2xl p-9 overflow-hidden"
                 style={{
-                  background: 'linear-gradient(145deg, #1c2540 0%, #0f1523 100%)',
-                  boxShadow: '0 8px 32px rgba(15,21,35,0.28), 0 2px 8px rgba(15,21,35,0.2)',
+                  background: 'linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%)',
+                  boxShadow: '0 8px 32px rgba(123,94,255,0.28)',
+                  border: '1px solid rgba(255,255,255,0.14)',
                 }}
               >
                 {/* Decorative glow */}
@@ -385,13 +386,13 @@ export default function Home() {
                     right: '-40px',
                     width: '200px',
                     height: '200px',
-                    background: 'radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)',
                     pointerEvents: 'none',
                   }}
                 />
                 {/* Quote mark */}
                 <div
-                  className="font-display font-bold text-brand/30 leading-none mb-4 select-none"
+                  className="font-display font-bold text-white/20 leading-none mb-4 select-none"
                   style={{ fontSize: '5rem', lineHeight: 0.8 }}
                   aria-hidden="true"
                 >

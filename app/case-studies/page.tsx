@@ -168,7 +168,7 @@ export default function CaseStudiesPage() {
                 right: '-60px',
                 width: '250px',
                 height: '250px',
-                background: 'radial-gradient(circle, rgba(123,94,255,0.18) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }}
             />
@@ -248,7 +248,7 @@ export default function CaseStudiesPage() {
                 right: '-60px',
                 width: '250px',
                 height: '250px',
-                background: 'radial-gradient(circle, rgba(158,112,206,0.18) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }}
             />

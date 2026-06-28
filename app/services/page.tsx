@@ -142,11 +142,11 @@ export default function ServicesPage() {
               </div>
               <Link
                 href="/contact"
-                className="shrink-0 inline-flex items-center gap-2 font-body font-semibold text-sm px-5 py-3 rounded-lg transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-2 font-body font-semibold text-sm px-5 py-3 rounded-lg transition-all duration-200 hover:bg-white/90"
                 style={{
-                  background: 'linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%)',
-                  color: 'white',
-                  boxShadow: '0 2px 8px rgba(123,94,255,0.35)',
+                  background: 'rgba(255,255,255,1)',
+                  color: '#7B5EFF',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
                 }}
               >
                 Get started <ArrowRight className="w-4 h-4" />
