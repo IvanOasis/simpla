@@ -45,41 +45,17 @@ export default function HowWeWorkPage() {
           `,
         }}
       >
-        <div className="container-page pt-36 pb-24">
+        <div className="container-page pt-36 pb-20">
           <p className="eyebrow mb-4">How We Work</p>
           <h1
-            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6 max-w-xl"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
+            className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6"
+            style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
           >
-            Three stages.<br /><span className="text-gradient">One outcome.</span>
+            Three stages. <span className="text-gradient">One outcome.</span>
           </h1>
-          <p className="text-lg text-ash leading-relaxed max-w-lg mb-14">
+          <p className="text-lg text-ash leading-relaxed max-w-lg">
             A lifecycle system that works — and that your team can maintain after we leave.
           </p>
-
-          {/* Stage navigator */}
-          <div className="flex flex-wrap items-center gap-y-3">
-            {[
-              { n: '01', label: 'Diagnosis', href: '#stage-01' },
-              { n: '02', label: 'System Design', href: '#stage-02' },
-              { n: '03', label: 'Build & Handoff', href: '#stage-03' },
-            ].map((s, i) => (
-              <div key={s.n} className="flex items-center">
-                <a
-                  href={s.href}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/60 transition-colors group"
-                >
-                  <span className="font-mono text-[10px] text-brand">{s.n}</span>
-                  <span className="text-sm font-semibold text-ink group-hover:text-brand transition-colors">
-                    {s.label}
-                  </span>
-                </a>
-                {i < 2 && (
-                  <span className="hidden sm:inline text-smoke select-none px-1">—</span>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
