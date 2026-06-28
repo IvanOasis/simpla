@@ -107,7 +107,7 @@ export default function AboutPage() {
               Every project is led directly. No handoffs to junior staff after the kickoff. The
               same people who scope the work are the ones who build it.
             </p>
-            <p className="text-ink font-medium border-l-2 border-brand pl-4">
+            <p className="text-ink font-medium">
               Lifecycle systems are technical. They start with your data, not your copy.
             </p>
           </div>

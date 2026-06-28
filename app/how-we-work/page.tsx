@@ -95,7 +95,7 @@ export default function HowWeWorkPage() {
                 </ul>
               </div>
 
-              <p className="text-ink font-medium leading-relaxed border-l-2 border-brand pl-4">
+              <p className="text-ink font-medium leading-relaxed">
                 If the problem is something you can fix yourself, we&rsquo;ll tell you. If
                 we&rsquo;re not the right fit, we&rsquo;ll tell you that too.
               </p>
@@ -156,7 +156,7 @@ export default function HowWeWorkPage() {
                 </div>
               </div>
 
-              <p className="text-ink font-medium leading-relaxed border-l-2 border-brand pl-4">
+              <p className="text-ink font-medium leading-relaxed">
                 You review it. We align on it. Then we build.
               </p>
             </div>
