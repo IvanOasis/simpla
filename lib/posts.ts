@@ -17,6 +17,7 @@ export interface Post {
   date: string
   dateISO: string
   readTime: string
+  coverImage?: string
   draft?: boolean
   sections: PostSection[]
 }
@@ -33,6 +34,7 @@ export const posts: Post[] = [
     date: 'May 15, 2026',
     dateISO: '2026-05-15',
     readTime: '6 min',
+    coverImage: '/assets/Blog/blog_automation_gears.png',
     draft: true,
     sections: [
       {
@@ -77,6 +79,7 @@ export const posts: Post[] = [
     date: 'May 22, 2026',
     dateISO: '2026-05-22',
     readTime: '8 min',
+    coverImage: '/assets/Blog/blog_strategy_box.png',
     draft: true,
     sections: [
       {
@@ -133,6 +136,7 @@ export const posts: Post[] = [
     date: 'May 29, 2026',
     dateISO: '2026-05-29',
     readTime: '7 min',
+    coverImage: '/assets/Blog/blog_seo_globe.png',
     draft: true,
     sections: [
       {

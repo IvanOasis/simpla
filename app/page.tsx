@@ -149,7 +149,7 @@ export default function Home() {
           <p className="text-center text-xs font-mono uppercase tracking-[0.18em] text-ash mb-10">
             Trusted by SaaS and digital product teams
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-8 items-center">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 items-center">
             {[
               { src: '/assets/Logos/logotokkobroker.webp', alt: 'Tokko Broker', dark: false },
               { src: '/assets/Logos/naventlogo.png',       alt: 'Navent',       dark: false },
@@ -425,51 +425,26 @@ export default function Home() {
             We work across the main lifecycle and product analytics platforms. We&rsquo;ll recommend
             what fits your stack.
           </p>
-          <div className="flex flex-col gap-12">
-            {/* Row 1 — 4 logos */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-8">
-              {TOOLS.slice(0, 4).map((t) => (
-                <a
-                  key={t.name}
-                  href={t.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-200"
-                  aria-label={t.name}
-                >
-                  <div style={{ position: 'relative', width: '180px', height: '44px', flexShrink: 0 }}>
-                    <img
-                      src={t.logo}
-                      alt={t.name}
-                      loading="eager"
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
-            {/* Row 2 — 3 logos centered */}
-            <div className="flex justify-center gap-10 flex-wrap">
-              {TOOLS.slice(4).map((t) => (
-                <a
-                  key={t.name}
-                  href={t.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-200"
-                  aria-label={t.name}
-                >
-                  <div style={{ position: 'relative', width: '180px', height: '44px', flexShrink: 0 }}>
-                    <img
-                      src={t.logo}
-                      alt={t.name}
-                      loading="eager"
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-x-14 gap-y-10">
+            {TOOLS.map((t) => (
+              <a
+                key={t.name}
+                href={t.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-200"
+                aria-label={t.name}
+              >
+                <div style={{ position: 'relative', width: '148px', height: '40px', flexShrink: 0 }}>
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    loading="eager"
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
+                  />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Nav from '@/components/Nav'
@@ -99,6 +100,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </h1>
           <p className="text-lg text-ash leading-relaxed">{post.excerpt}</p>
           <div className="mt-8 h-px bg-smoke" />
+
+          {post.coverImage && (
+            <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden mt-10">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 672px"
+                priority
+              />
+            </div>
+          )}
         </header>
 
         <div className="prose-post space-y-8">

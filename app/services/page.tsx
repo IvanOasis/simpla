@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -139,8 +140,8 @@ export default function ServicesPage() {
                 </p>
                 <p className="font-display font-medium leading-relaxed text-white">{s.deliverable}</p>
               </div>
-              <a
-                href={BOOKING_URL}
+              <Link
+                href="/contact"
                 className="shrink-0 inline-flex items-center gap-2 font-body font-semibold text-sm px-5 py-3 rounded-lg transition-all duration-200"
                 style={{
                   background: 'linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%)',
@@ -149,7 +150,7 @@ export default function ServicesPage() {
                 }}
               >
                 Get started <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </section>

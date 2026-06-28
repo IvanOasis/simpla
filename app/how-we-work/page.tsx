@@ -75,7 +75,7 @@ export default function HowWeWorkPage() {
                   </span>
                 </a>
                 {i < 2 && (
-                  <span className="text-smoke select-none px-1">—</span>
+                  <span className="hidden sm:inline text-smoke select-none px-1">—</span>
                 )}
               </div>
             ))}
