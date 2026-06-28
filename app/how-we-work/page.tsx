@@ -51,7 +51,7 @@ export default function HowWeWorkPage() {
             className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6 max-w-xl"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
           >
-            Three stages.<br />One outcome.
+            Three stages.<br /><span className="text-gradient">One outcome.</span>
           </h1>
           <p className="text-lg text-ash leading-relaxed max-w-lg mb-14">
             A lifecycle system that works — and that your team can maintain after we leave.
