@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         // Derived from Simpla logo gradient (#9E70CE → #5390FF)
-        brand: '#5390FF',      // blue accent (logo end color)
+        brand: '#7B5EFF',      // violet accent
         purple: '#9E70CE',     // purple accent (logo start color)
         snow: '#F7F8FC',       // subtle section backgrounds
         smoke: '#E4E7F0',      // card borders, dividers

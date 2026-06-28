@@ -19,19 +19,22 @@ export async function generateMetadata({
   const post = getPostBySlug(params.slug)
   if (!post) return {}
   return {
-    title: `${post.title} | Simpla`,
-    description: post.excerpt,
+    title: post.seoTitle,
+    description: post.seoDescription,
     alternates: { canonical: `https://simpla.agency/blog/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Simpla`,
-      description: post.excerpt,
+      title: post.seoTitle,
+      description: post.seoDescription,
       url: `https://simpla.agency/blog/${post.slug}`,
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.title} | Simpla`,
-      description: post.excerpt,
+      title: post.seoTitle,
+      description: post.seoDescription,
+    },
+    other: {
+      'article:published_time': post.dateISO,
     },
   }
 }
@@ -44,8 +47,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
+    description: post.seoDescription,
+    datePublished: post.dateISO,
     author: {
       '@type': 'Organization',
       name: 'Simpla',
@@ -82,12 +85,16 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               {post.date} &middot; {post.readTime} read
             </span>
             {post.draft && (
+              /* DRAFT */
               <span className="font-mono text-[10px] uppercase tracking-wider text-brand border border-brand/30 rounded-full px-2 py-0.5">
                 Draft
               </span>
             )}
           </div>
-          <h1 className="font-display font-semibold text-3xl md:text-5xl text-ink tracking-tight leading-[1.1] mb-6">
+          <h1
+            className="font-display font-bold text-ink tracking-[-0.02em] leading-[1.1] mb-6"
+            style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+          >
             {post.title}
           </h1>
           <p className="text-lg text-ash leading-relaxed">{post.excerpt}</p>
@@ -97,21 +104,22 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="prose-post space-y-8">
           {post.sections.map((section, si) => (
             <section key={si}>
-              {section.heading && (
-                <h2 className="font-display font-semibold text-xl md:text-2xl text-ink tracking-tight mb-4">
-                  {section.heading}
-                </h2>
-              )}
+              {section.heading &&
+                (section.headingLevel === 'h3' ? (
+                  <h3 className="font-display font-bold text-ink text-xl mb-4 leading-snug">
+                    {section.heading}
+                  </h3>
+                ) : (
+                  <h2 className="font-display font-bold text-2xl text-ink tracking-tight mb-4 leading-snug">
+                    {section.heading}
+                  </h2>
+                ))}
 
               {section.paragraphs?.map((p, pi) => (
-                <p key={pi} className="mb-4">{p}</p>
+                <p key={pi} className="mb-4">
+                  {p}
+                </p>
               ))}
-
-              {section.quote && (
-                <blockquote className="my-6 pl-5 border-l-2 border-brand py-1">
-                  <p className="italic text-ink">{section.quote}</p>
-                </blockquote>
-              )}
 
               {section.list && (
                 <ul className="space-y-2.5 my-4 list-none">
@@ -124,17 +132,18 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 </ul>
               )}
 
-              {section.numbered && (
-                <ol className="space-y-3 my-4 list-none">
-                  {section.numbered.map((item, ii) => (
-                    <li key={ii} className="flex items-start gap-4">
-                      <span className="font-mono mt-0.5 w-6 h-6 rounded-full border border-brand/40 text-brand flex items-center justify-center shrink-0 text-xs">
-                        {ii + 1}
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ol>
+              {section.internalLink && (
+                <div className="my-6 rounded-xl border border-brand/25 bg-brand/5 p-5">
+                  <p className="text-sm text-slate leading-relaxed mb-3">
+                    {section.internalLink.text}
+                  </p>
+                  <Link
+                    href={section.internalLink.href}
+                    className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-brand hover:text-brand/80 transition-colors"
+                  >
+                    {section.internalLink.label} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               )}
             </section>
           ))}
@@ -148,7 +157,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <div>
             <p className="text-sm font-semibold text-ink">Simpla</p>
             <p className="text-xs text-ash">
-              Customer.io lifecycle specialists —{' '}
+              Lifecycle specialists for SaaS and digital products.{' '}
               <Link href="/about" className="hover:text-ink transition-colors">
                 About us
               </Link>
@@ -157,15 +166,15 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 card p-10 text-center bg-snow">
-          <p className="font-display font-semibold text-2xl text-ink tracking-tight mb-3">
-            Ready to find out where yours is broken?
+        <div className="mt-16 rounded-2xl border border-smoke p-10 text-center bg-snow">
+          <p className="font-display font-bold text-2xl text-ink tracking-tight mb-3">
+            Ready to find out where your lifecycle is breaking?
           </p>
           <p className="text-ash mb-8 max-w-sm mx-auto leading-relaxed">
-            A free 30-minute audit of your current lifecycle setup — no obligation.
+            A free 30-minute audit of your current setup. No obligation.
           </p>
           <a href={BOOKING_URL} className="btn-primary">
-            Book a free lifecycle audit <ArrowRight className="w-4 h-4" />
+            Book a free audit <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </article>

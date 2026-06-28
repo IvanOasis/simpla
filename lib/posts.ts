@@ -1,126 +1,181 @@
-// Placeholder/draft posts — replace with real content before launch.
-// Structure is intentionally simple (array of objects) so new posts are easy to add.
+// DRAFT posts — mark with DRAFT comment. Replace with real content before launch.
 
 export interface PostSection {
   heading?: string
+  headingLevel?: 'h2' | 'h3'
   paragraphs?: string[]
   list?: string[]
-  quote?: string
-  numbered?: string[]
+  internalLink?: { href: string; label: string; text: string }
 }
 
 export interface Post {
   slug: string
   title: string
+  seoTitle: string
+  seoDescription: string
   excerpt: string
   date: string
+  dateISO: string
   readTime: string
   draft?: boolean
   sections: PostSection[]
 }
 
 export const posts: Post[] = [
+  // DRAFT
   {
-    slug: 'real-cost-of-a-broken-onboarding-flow',
-    title: 'The real cost of a broken onboarding flow',
-    excerpt:
-      'A welcome email is not an onboarding flow. Here is what actually leaks when there is no system guiding new users to their first real value.',
-    date: 'Jun 2026',
+    slug: 'cost-of-broken-onboarding',
+    title: 'The Real Cost of a Broken Onboarding Flow',
+    seoTitle: 'The Real Cost of a Broken Onboarding Flow | Simpla',
+    seoDescription:
+      'Most SaaS companies know their onboarding isn\'t great. Few understand what it\'s actually costing them in activation and revenue.',
+    excerpt: 'Most SaaS companies know their onboarding isn\'t great. Few understand what it\'s actually costing them.',
+    date: 'May 15, 2026',
+    dateISO: '2026-05-15',
     readTime: '6 min',
     draft: true,
     sections: [
       {
+        heading: 'What "broken" actually means',
         paragraphs: [
-          'Most SaaS products have an onboarding email. Very few have an onboarding system. The difference matters more than it sounds — a single email assumes every user needs the same nudge at the same time, regardless of what they did or didn’t do after signing up.',
-          'A real onboarding flow reacts. It knows whether a user connected their data, invited a teammate, or sat idle for three days, and it responds differently to each of those states. Without that, you are sending the same message to someone who is one step from activation and someone who never opened the product after signup.',
+          'Most onboarding isn\'t dramatically broken. It\'s just disconnected. A welcome email goes out. Maybe a follow-up three days later. Then silence until the user churns or converts. That\'s not a flow, it\'s a handful of time-based emails with no relationship to what the user actually did.',
         ],
       },
       {
-        heading: 'Where the leak actually happens',
+        heading: 'The compounding math',
         paragraphs: [
-          'Most teams assume churn is the expensive problem. It is not — at least not first. The expensive problem is the gap between signup and activation, because that is where you lose people before you ever get the chance to prove value.',
-        ],
-        list: [
-          'Users who sign up and never complete the first meaningful action in the product',
-          'Users who complete it but never come back a second time',
-          'Users who get stuck on a step nobody is watching, with no automated nudge to unstick them',
+          'If your activation rate is 30% and your trial-to-paid conversion is 20%, you\'re losing 70 users for every 100 who sign up before they ever get a chance to experience your product. A 10-point improvement in activation, from 30% to 40%, is a 33% increase in the pool of users who can potentially convert. At scale, that\'s not a marginal win.',
         ],
       },
       {
-        heading: 'What "fixing" onboarding actually requires',
+        heading: 'What behavioral onboarding looks like instead',
         paragraphs: [
-          'It is not more emails. It is defining what activation actually means for your product — the specific action that correlates with long-term retention — and building a system that tracks every user against that definition in real time.',
-          'Once that exists, the messaging writes itself: nudge people who stalled, reinforce people who succeeded, and stay quiet for people who are progressing on their own.',
+          'The core idea is simple: your product already knows what each user has and hasn\'t done. Your lifecycle system should use that information. A user who completed step 1 but skipped step 2 needs a different message than a user who hasn\'t started at all. Customer.io makes this possible, but only if your events are correctly defined and flowing reliably.',
         ],
+      },
+      {
+        heading: 'Where to start',
+        paragraphs: [
+          'Before you optimize messaging or redesign your onboarding UI, map your user states. Decide what "activated" means for your product: the specific action or combination of actions that predicts whether a user will stick around. Everything else follows from that.',
+        ],
+        internalLink: {
+          href: '/services#implementation',
+          label: 'Lifecycle Implementation',
+          text: 'If you\'re not sure where your onboarding is breaking, our Lifecycle Implementation service starts with exactly that mapping.',
+        },
       },
     ],
   },
+  // DRAFT
   {
-    slug: 'what-using-customerio-actually-means',
-    title: 'What "using Customer.io" actually means',
-    excerpt:
-      'Having the tool installed and having a lifecycle system are not the same thing. Most teams paying for Customer.io are doing the former.',
-    date: 'May 2026',
-    readTime: '5 min',
+    slug: 'how-to-define-user-states',
+    title: 'How to Define User States for a SaaS Product',
+    seoTitle: 'How to Define User States for a SaaS Product | Simpla',
+    seoDescription:
+      'User states are the foundation of any lifecycle system. A practical framework for defining them in a SaaS or digital product, with examples.',
+    excerpt: 'User states are the foundation of any lifecycle system. Here\'s a practical framework for defining them.',
+    date: 'May 22, 2026',
+    dateISO: '2026-05-22',
+    readTime: '8 min',
     draft: true,
     sections: [
       {
+        heading: 'What a user state actually is',
         paragraphs: [
-          'We see this pattern constantly: a team has Customer.io (or a comparable tool) connected, a few campaigns running, and a monthly bill — but no one could draw the actual logic of what triggers what. That is not a lifecycle system. That is a tool with some wiring.',
+          'A user state is a label for where someone is in their relationship with your product, defined by what they\'ve done, not by how long they\'ve been a customer. Time-based lifecycle is a proxy for behavior. Behavior-based lifecycle is the real thing.',
         ],
       },
       {
-        heading: 'The gap between installed and operating',
-        paragraphs: [
-          'A tool being installed means events are flowing somewhere. A lifecycle system being operational means those events map to defined user states, those states trigger specific workflows, and someone is watching whether those workflows actually move people forward.',
-          'Most teams have the first without the second. They are paying for infrastructure they are using at a fraction of its capacity — which is a worse outcome than not having the tool at all, because it creates the impression that lifecycle marketing "doesn’t work here" when really it was never built.',
+        heading: 'The standard states most SaaS products need',
+        list: [
+          'New: created an account, hasn\'t reached the activation moment yet.',
+          'Activated: completed the actions that predict long-term retention for your product.',
+          'Engaged: actively using core features on a regular cadence.',
+          'At-risk: showing signs of disengagement, reduced login frequency, key feature usage dropping.',
+          'Churned: no longer active by any meaningful definition.',
         ],
       },
       {
-        heading: 'A short test',
+        heading: 'How to find your activation moment',
         paragraphs: [
-          'Ask whoever owns your lifecycle tool to name your five most important user states and what automatically happens when someone enters each one. If the answer takes longer than thirty seconds, you have a wiring problem, not a tool problem.',
+          'Look at your retained users, the ones still paying 90 days after signup. What did they do in their first week that churned users didn\'t? That\'s your activation moment. It\'s almost always a specific action or combination of actions, not just "logged in."',
         ],
+      },
+      {
+        heading: 'Common mistakes',
+        list: [
+          'Defining too many states. Six to eight is the maximum before logic becomes unmanageable.',
+          'Using time as the primary signal instead of behavior.',
+          'Not defining transition criteria clearly enough for engineering to implement the tracking.',
+        ],
+      },
+      {
+        heading: 'What to do once you have them',
+        paragraphs: [
+          'The states themselves aren\'t the product. They\'re the input. Once defined, each state maps to a set of communications: what to say, through which channel, and what action you\'re trying to drive. That\'s where Customer.io comes in.',
+        ],
+        internalLink: {
+          href: '/services#audit',
+          label: 'Lifecycle Audit',
+          text: 'Before you build flows around user states, make sure the events flowing into your lifecycle tool are clean. Our Lifecycle Audit surfaces tracking issues that make user states unreliable.',
+        },
       },
     ],
   },
+  // DRAFT
   {
-    slug: 'how-to-define-user-states-for-a-b2b-saas',
-    title: 'How to define user states for a B2B SaaS',
-    excerpt:
-      'Before you build a single workflow, you need to agree on what "new," "activated," and "at risk" actually mean for your product. Most teams skip this.',
-    date: 'Apr 2026',
+    slug: 'customerio-posthog-data-mismatch',
+    title: 'Why Your Customer.io Data Doesn\'t Match PostHog',
+    seoTitle: 'Why Your Customer.io Data Doesn\'t Match PostHog | Simpla',
+    seoDescription:
+      'The discrepancy between Customer.io and PostHog is almost always fixable. Here are the three most common causes and how to diagnose them.',
+    excerpt: 'The discrepancy is almost always fixable. But you need to understand why it\'s happening before you touch anything.',
+    date: 'May 29, 2026',
+    dateISO: '2026-05-29',
     readTime: '7 min',
     draft: true,
     sections: [
       {
+        heading: 'This is more common than you think',
         paragraphs: [
-          'Every lifecycle system rests on one decision made early and rarely revisited: what are the states a user can be in, and what specifically moves them from one to the next? Get this wrong and every workflow built on top of it inherits the mistake.',
+          'If you\'re looking at the same event in PostHog and Customer.io and getting different numbers, you\'re not alone. The discrepancy is almost always one of three things: events firing at different points in the user flow, inconsistent user identification, or data not flowing reliably between systems.',
         ],
       },
       {
-        heading: 'Start from the data you already have',
+        heading: 'The three most common causes',
+        paragraphs: [],
+      },
+      {
+        heading: '1. Events fire at different points',
+        headingLevel: 'h3',
         paragraphs: [
-          'Don’t start from a template. Pull the behavior of your retained accounts versus your churned accounts over their first 90 days and look for the action that separates them. That action — not a generic "logged in" event — is your real activation signal.',
+          'PostHog often captures events on the frontend, when the user clicks something. Customer.io may receive the event from your backend, when the action is confirmed server-side. For most actions there\'s a small time lag. For some, the event never reaches Customer.io if the backend call fails. Result: PostHog shows 1,000 signups, Customer.io shows 940.',
         ],
       },
       {
-        heading: 'A reference structure, not a rule',
-        numbered: [
-          'New — signed up, has not yet reached the defined activation action.',
-          'Activated — completed the action correlated with retention, has not yet built a habit around it.',
-          'Engaged — using the product on a recurring cadence that matches its intended use case.',
-          'At risk — usage dropped below a threshold that historically precedes churn.',
-          'Churned or reactivated — the account lapsed, or came back after a dedicated win-back sequence.',
+        heading: '2. User identification is inconsistent',
+        headingLevel: 'h3',
+        paragraphs: [
+          'Anonymous users in PostHog get a generated ID. When they sign up, PostHog links that anonymous ID to the real user ID. If your Customer.io integration doesn\'t receive the identify call at the right moment, you end up with ghost profiles: events attached to nobody.',
         ],
       },
       {
-        heading: 'Where teams go wrong',
+        heading: '3. Events aren\'t being sent at all',
+        headingLevel: 'h3',
         paragraphs: [
-          'The most common mistake is defining states around product features instead of user behavior — "used Feature X" instead of "reached the outcome Feature X exists to deliver." States should describe a relationship to value, not a checklist of clicks.',
+          'An engineer implemented the Customer.io tracking in one part of the codebase. A new feature shipped that bypasses that code path. Events from the new flow never reach Customer.io. You find out when a segment that should have 5,000 users only has 3,200.',
         ],
-        quote:
-          'If you can’t explain why a user moved from one state to another in one sentence, the state definition is wrong, not the user.',
+      },
+      {
+        heading: 'How to diagnose it',
+        paragraphs: [
+          'Start with a specific event you can count definitively. Signups are usually the clearest. Compare the count in PostHog, your database, and Customer.io for the same 30-day period. If they don\'t match, you have a data integrity problem. From there, the investigation is process of elimination.',
+        ],
+        internalLink: {
+          href: '/services#audit',
+          label: 'Lifecycle Audit',
+          text: 'Our Lifecycle Audit is designed to systematically diagnose exactly this kind of discrepancy and produce a clean event schema your engineering team can implement.',
+        },
       },
     ],
   },
