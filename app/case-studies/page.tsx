@@ -106,7 +106,7 @@ export default function CaseStudiesPage() {
           {/* Header */}
           <div className="mb-12 pb-12 border-b border-smoke">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ash mb-5">
-              01 — Crypto wallet, B2C
+              01 · Crypto wallet, B2C
             </p>
             <div className="grid lg:grid-cols-12 gap-10">
               <h2
@@ -183,7 +183,7 @@ export default function CaseStudiesPage() {
           {/* Header */}
           <div className="mb-12 pb-12 border-b border-smoke">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ash mb-5">
-              02 — B2B SaaS, HubSpot + Intercom
+              02 · B2B SaaS, HubSpot + Intercom
             </p>
             <div className="grid lg:grid-cols-12 gap-10">
               <h2

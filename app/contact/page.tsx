@@ -7,7 +7,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact | Simpla',
   description:
-    "Get in touch with Simpla. Book a free 30-minute discovery call or send us a message — we'll get back to you within one business day.",
+    "Get in touch with Simpla. Book a free 30-minute discovery call or send us a message. We'll get back to you within one business day.",
   alternates: { canonical: 'https://simpla.agency/contact' },
   openGraph: {
     title: 'Contact | Simpla',

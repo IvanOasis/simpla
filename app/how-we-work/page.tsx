@@ -42,7 +42,7 @@ export default function HowWeWorkPage() {
             Three stages. <span className="text-gradient">One outcome.</span>
           </h1>
           <p className="text-lg text-ash leading-relaxed">
-            A lifecycle system that works — and that your team can maintain after we leave.
+            A lifecycle system that works. Your team maintains it long after we leave.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function HowWeWorkPage() {
             <div className="lg:col-span-8 space-y-6 pt-2 lg:pt-4">
               <p className="text-ash leading-relaxed text-[1.0625rem]">
                 We start with a free 30-minute call. We ask you to walk us through your product,
-                your current lifecycle setup, and where you feel the problem most — churn,
+                your current lifecycle setup, and where you feel the problem most: churn,
                 activation, users going quiet after signup, data that doesn&rsquo;t add up.
               </p>
 
@@ -205,7 +205,7 @@ export default function HowWeWorkPage() {
                     'Full written system documentation',
                     'Walkthrough recording',
                     'Team training session',
-                    'Independence — or the option to keep iterating with us',
+                    'Independence, or the option to keep iterating with us',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />

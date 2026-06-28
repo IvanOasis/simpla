@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -60,8 +59,8 @@ export default function AboutPage() {
             className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
           >
-            <span className="text-gradient">Lifecycle specialists.</span>{' '}
-            Not a full-service agency.
+            <span className="text-gradient">Lifecycle specialists</span>{' '}
+            for SaaS and digital products.
           </h1>
           <p className="text-lg text-ash leading-relaxed">
             One discipline. End to end. From data architecture to the messages that go inside the workflows.
@@ -78,13 +77,12 @@ export default function AboutPage() {
           <div className="lg:col-span-8 space-y-5 text-ash leading-relaxed text-[1.0625rem]">
             <p>
               Simpla is a boutique agency that builds lifecycle systems for SaaS and digital product
-              companies. We don&rsquo;t do social media, paid ads, or brand strategy. We build the
-              infrastructure that connects what users do in your product to what you say to them.
+              companies. We build the infrastructure that connects what users do in your product to
+              what you say to them: event schemas, user state definitions, segmentation logic,
+              behavioral workflows, and every message inside them.
             </p>
             <p>
-              That means event schemas, user state definitions, segmentation logic, behavioral
-              workflows, and every message inside them. We scope to what the problem actually
-              requires — not a larger engagement.
+              We scope to what the problem actually requires. Not a larger engagement than needed.
             </p>
           </div>
         </div>
@@ -98,18 +96,18 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-8 space-y-5 text-ash leading-relaxed text-[1.0625rem]">
             <p>
-              Simpla was founded by someone who spent over a decade inside SaaS, Web3, and digital
-              product companies — not as an external consultant observing from the outside, but as the
-              person responsible for making the system work. Defining the user states, writing the
-              event specs, implementing the tools, and building the workflows from scratch.
+              Simpla is a team of marketing and product professionals with over 10 years of
+              hands-on experience building lifecycle systems for SaaS, Web3, and digital product
+              companies. Not consultants advising from the outside: practitioners who have been
+              inside those teams, defining user states, building event schemas, and writing the
+              workflows from scratch.
             </p>
             <p>
-              Every project at Simpla is led directly. The same person who scopes the work designs
-              and builds it. No hand-offs to junior staff after the kickoff call.
+              Every project is led directly. No handoffs to junior staff after the kickoff. The
+              same people who scope the work are the ones who build it.
             </p>
             <p className="text-ink font-medium border-l-2 border-brand pl-4">
-              Lifecycle systems are technical. They start with your data, not your copy. We approach
-              every engagement as practitioners, not strategists.
+              Lifecycle systems are technical. They start with your data, not your copy.
             </p>
           </div>
         </div>
@@ -124,7 +122,8 @@ export default function AboutPage() {
             className="relative rounded-2xl overflow-hidden w-full"
             style={{
               background: 'linear-gradient(135deg, #0f1523 0%, #1a2040 100%)',
-              aspectRatio: '4 / 3',
+              aspectRatio: '3 / 4',
+              maxHeight: '460px',
             }}
           >
             {/* Grid lines */}
@@ -135,87 +134,53 @@ export default function AboutPage() {
                 inset: 0,
                 backgroundImage:
                   'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
-                backgroundSize: '36px 36px',
+                backgroundSize: '32px 32px',
               }}
             />
 
-            {/* Lat lines decoration */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage:
-                  'linear-gradient(rgba(123,94,255,0.06) 1px, transparent 1px)',
-                backgroundSize: '100% 25%',
-              }}
-            />
+            {/* SVG: South America outline + location markers */}
+            <svg
+              viewBox="0 0 180 240"
+              preserveAspectRatio="xMidYMid meet"
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <radialGradient id="baGlow" cx="44%" cy="60%" r="18%">
+                  <stop offset="0%" stopColor="#7B5EFF" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#7B5EFF" stopOpacity="0" />
+                </radialGradient>
+              </defs>
 
-            {/* Buenos Aires glow */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                top: '62%',
-                left: '36%',
-                width: 200,
-                height: 200,
-                background: 'radial-gradient(circle, rgba(123,94,255,0.4) 0%, transparent 65%)',
-                transform: 'translate(-50%, -50%)',
-                pointerEvents: 'none',
-              }}
-            />
+              {/* South America landmass */}
+              <path
+                d="M 50,8 L 68,4 L 90,8 L 112,18 L 130,35 C 140,50 145,70 145,90 C 145,110 138,128 128,140 L 115,150 L 100,155 L 88,152 L 80,155 L 68,162 L 60,178 L 52,198 L 46,218 L 42,230 L 38,220 L 34,198 L 30,172 L 27,145 L 25,115 L 26,85 L 30,58 L 38,35 L 46,18 Z"
+                fill="rgba(123,94,255,0.12)"
+                stroke="rgba(123,94,255,0.45)"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+              />
 
-            {/* Outer ring */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                top: '62%',
-                left: '36%',
-                width: 48,
-                height: 48,
-                border: '1px solid rgba(123,94,255,0.35)',
-                borderRadius: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
+              {/* Buenos Aires glow */}
+              <circle cx="80" cy="155" r="22" fill="url(#baGlow)" />
 
-            {/* Inner ring */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                top: '62%',
-                left: '36%',
-                width: 24,
-                height: 24,
-                border: '1px solid rgba(123,94,255,0.6)',
-                borderRadius: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
+              {/* Buenos Aires rings */}
+              <circle cx="80" cy="155" r="10" fill="none" stroke="rgba(123,94,255,0.35)" strokeWidth="1" />
+              <circle cx="80" cy="155" r="5"  fill="none" stroke="rgba(123,94,255,0.55)" strokeWidth="1" />
 
-            {/* Dot */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                top: '62%',
-                left: '36%',
-                width: 8,
-                height: 8,
-                background: '#7B5EFF',
-                borderRadius: '50%',
-                boxShadow: '0 0 14px rgba(123,94,255,0.9)',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
+              {/* Buenos Aires dot */}
+              <circle cx="80" cy="155" r="3" fill="#7B5EFF" />
 
-            {/* Secondary dots — other regions */}
-            <div aria-hidden="true" style={{ position: 'absolute', top: '30%', left: '27%', width: 4, height: 4, background: 'rgba(123,94,255,0.45)', borderRadius: '50%', boxShadow: '0 0 6px rgba(123,94,255,0.5)' }} />
-            <div aria-hidden="true" style={{ position: 'absolute', top: '24%', right: '20%', width: 4, height: 4, background: 'rgba(123,94,255,0.45)', borderRadius: '50%', boxShadow: '0 0 6px rgba(123,94,255,0.5)' }} />
-            <div aria-hidden="true" style={{ position: 'absolute', top: '38%', right: '10%', width: 4, height: 4, background: 'rgba(123,94,255,0.35)', borderRadius: '50%' }} />
+              {/* North America dot */}
+              <circle cx="68" cy="52" r="2" fill="rgba(123,94,255,0.5)" />
+              {/* Europe dot */}
+              <circle cx="158" cy="40" r="2" fill="rgba(123,94,255,0.5)" />
+
+              {/* Connection lines */}
+              <line x1="80" y1="155" x2="68" y2="52"  stroke="rgba(123,94,255,0.18)" strokeWidth="0.8" strokeDasharray="4 3" />
+              <line x1="80" y1="155" x2="158" y2="40" stroke="rgba(123,94,255,0.18)" strokeWidth="0.8" strokeDasharray="4 3" />
+            </svg>
 
             {/* Coordinates label */}
             <div style={{ position: 'absolute', top: '1.25rem', left: '1.25rem' }}>
@@ -223,7 +188,7 @@ export default function AboutPage() {
                 className="font-mono text-white/30 uppercase"
                 style={{ fontSize: '0.6rem', letterSpacing: '0.12em' }}
               >
-                34°36′S · 58°22′W
+                34°36&prime;S · 58°22&prime;W
               </p>
             </div>
 
@@ -261,8 +226,8 @@ export default function AboutPage() {
             <div className="space-y-4 text-ash leading-relaxed text-[1.0625rem]">
               <p>
                 We are based in Buenos Aires and work with companies across North America, Europe,
-                and Latin America. Remote-first since day one — our clients don&rsquo;t care where
-                we are located, they care that the system works.
+                and Latin America. Remote-first since day one: our clients care about outcomes,
+                not time zones.
               </p>
               <p>
                 Communication is async by default. Delivery is on schedule. Every handoff is
@@ -274,27 +239,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Companies we've worked with */}
+      {/* Companies */}
       <section className="py-20 border-b border-smoke bg-snow">
         <div className="container-page">
           <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-10">
             Companies we&rsquo;ve worked with
           </p>
-          <div className="flex flex-wrap items-center gap-x-10 gap-y-8">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-6">
             {LOGOS.map((logo) => (
-              <div key={logo.alt} className="flex items-center">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={120}
-                  height={36}
-                  className="object-contain"
-                  style={{
-                    maxHeight: '32px',
-                    width: 'auto',
-                    filter: logo.dark ? 'invert(1) brightness(0.4)' : 'brightness(0) opacity(0.45)',
-                  }}
-                />
+              <div
+                key={logo.alt}
+                className={`flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-200 ${logo.dark ? 'bg-[#111827] rounded-xl' : ''}`}
+                style={{ padding: logo.dark ? '10px 20px' : 0 }}
+              >
+                <div style={{ position: 'relative', width: '160px', height: '44px', flexShrink: 0 }}>
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    loading="eager"
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -303,35 +268,33 @@ export default function AboutPage() {
 
       {/* Tools */}
       <section className="py-20 border-b border-smoke">
-        <div className="container-page">
-          <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-4">
-              <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-2">
-                Tools we work with
-              </p>
-              <p className="text-sm text-ash leading-relaxed mt-3">
-                Tool-agnostic. We recommend what fits your stage, stack, and budget — not what we prefer.
-              </p>
-            </div>
-            <div className="lg:col-span-8 space-y-5">
-              {TOOLS.map((cat) => (
-                <div key={cat.label} className="flex flex-wrap items-center gap-x-6 gap-y-2">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ash w-40 shrink-0">
-                    {cat.label}
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {cat.items.map((tool) => (
-                      <span
-                        key={tool}
-                        className="text-sm text-ink px-3 py-1 rounded-full border border-smoke bg-white font-medium"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
+        <div className="container-page grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-2">
+              Tools we work with
+            </p>
+            <p className="text-sm text-ash leading-relaxed mt-3">
+              Tool-agnostic. We recommend what fits your stage, stack, and budget.
+            </p>
+          </div>
+          <div className="lg:col-span-8 space-y-5">
+            {TOOLS.map((cat) => (
+              <div key={cat.label} className="flex flex-wrap items-center gap-x-6 gap-y-2">
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ash w-40 shrink-0">
+                  {cat.label}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((tool) => (
+                    <span
+                      key={tool}
+                      className="text-sm text-ink px-3 py-1 rounded-full border border-smoke bg-white font-medium"
+                    >
+                      {tool}
+                    </span>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -353,8 +316,8 @@ export default function AboutPage() {
             Want to know if we are <span className="text-gradient">the right fit?</span>
           </h2>
           <p className="text-ash text-lg mb-10 max-w-md mx-auto leading-relaxed">
-            30 minutes. We look at your current setup and tell you honestly what is working, what is
-            broken, and whether we can help.
+            30 minutes. We look at your current setup and tell you honestly what is working,
+            what is broken, and whether we can help.
           </p>
           <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
             Book a discovery call <ArrowRight className="w-4 h-4" />
