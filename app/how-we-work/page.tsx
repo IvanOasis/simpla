@@ -76,9 +76,9 @@ export default function HowWeWorkPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(83,144,255,0.16) 0%, transparent 65%),
+            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(123,94,255,0.16) 0%, transparent 65%),
             radial-gradient(ellipse 45% 40% at 85% 30%, rgba(158,112,206,0.10) 0%, transparent 50%),
-            linear-gradient(180deg, #eaf0ff 0%, #f5f0ff 40%, #ffffff 70%)
+            linear-gradient(180deg, #ede8ff 0%, #f5f0ff 40%, #ffffff 70%)
           `,
         }}
       >
@@ -113,9 +113,9 @@ export default function HowWeWorkPage() {
               <span
                 className="inline-flex items-center justify-center w-12 h-12 rounded-2xl font-display font-bold text-brand text-lg mb-5"
                 style={{
-                  background: 'linear-gradient(135deg, #e8f0ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(83,144,255,0.22)',
-                  boxShadow: '0 2px 12px rgba(83,144,255,0.14)',
+                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
+                  border: '1px solid rgba(123,94,255,0.22)',
+                  boxShadow: '0 2px 12px rgba(123,94,255,0.14)',
                 }}
               >
                 {stage.n}
@@ -135,8 +135,8 @@ export default function HowWeWorkPage() {
                 <div
                   className="rounded-xl px-6 py-5 border-l-4 border-brand mt-6"
                   style={{
-                    background: 'linear-gradient(135deg, #f0f5ff 0%, #f7f4ff 100%)',
-                    boxShadow: '0 1px 4px rgba(83,144,255,0.08), 0 4px 16px rgba(83,144,255,0.05)',
+                    background: 'linear-gradient(135deg, #f0ecff 0%, #f7f4ff 100%)',
+                    boxShadow: '0 1px 4px rgba(123,94,255,0.08), 0 4px 16px rgba(123,94,255,0.05)',
                   }}
                 >
                   <p className="text-ink font-display font-medium leading-relaxed">{stage.highlight}</p>
@@ -191,8 +191,8 @@ export default function HowWeWorkPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(83,144,255,0.14) 0%, transparent 65%),
-            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #e8f0ff 100%)
+            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(123,94,255,0.14) 0%, transparent 65%),
+            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #ede8ff 100%)
           `,
         }}
       >

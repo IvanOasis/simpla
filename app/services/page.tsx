@@ -34,9 +34,9 @@ export default function ServicesPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(83,144,255,0.16) 0%, transparent 65%),
+            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(123,94,255,0.16) 0%, transparent 65%),
             radial-gradient(ellipse 45% 40% at 85% 30%, rgba(158,112,206,0.10) 0%, transparent 50%),
-            linear-gradient(180deg, #eaf0ff 0%, #f5f0ff 40%, #ffffff 70%)
+            linear-gradient(180deg, #ede8ff 0%, #f5f0ff 40%, #ffffff 70%)
           `,
         }}
       >
@@ -94,9 +94,9 @@ export default function ServicesPage() {
                   <div
                     className="rounded-xl px-5 py-4 text-sm text-slate leading-relaxed"
                     style={{
-                      background: 'linear-gradient(135deg, #eef4ff 0%, #ede8ff 100%)',
-                      border: '1px solid rgba(83,144,255,0.2)',
-                      boxShadow: '0 1px 4px rgba(83,144,255,0.08)',
+                      background: 'linear-gradient(135deg, #ece8ff 0%, #ede8ff 100%)',
+                      border: '1px solid rgba(123,94,255,0.2)',
+                      boxShadow: '0 1px 4px rgba(123,94,255,0.08)',
                     }}
                   >
                     {s.availabilityNote}
@@ -143,9 +143,9 @@ export default function ServicesPage() {
                 href={BOOKING_URL}
                 className="shrink-0 inline-flex items-center gap-2 font-body font-semibold text-sm px-5 py-3 rounded-lg transition-all duration-200"
                 style={{
-                  background: 'linear-gradient(135deg, #5390FF 0%, #7B68EE 100%)',
+                  background: 'linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%)',
                   color: 'white',
-                  boxShadow: '0 2px 8px rgba(83,144,255,0.35)',
+                  boxShadow: '0 2px 8px rgba(123,94,255,0.35)',
                 }}
               >
                 Get started <ArrowRight className="w-4 h-4" />
@@ -175,8 +175,8 @@ export default function ServicesPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(83,144,255,0.15) 0%, transparent 65%),
-            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #e8f0ff 100%)
+            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(123,94,255,0.15) 0%, transparent 65%),
+            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #ede8ff 100%)
           `,
         }}
       >

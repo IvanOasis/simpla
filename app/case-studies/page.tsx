@@ -78,9 +78,9 @@ export default function CaseStudiesPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(83,144,255,0.16) 0%, transparent 65%),
+            radial-gradient(ellipse 80% 60% at 50% -5%, rgba(123,94,255,0.16) 0%, transparent 65%),
             radial-gradient(ellipse 45% 40% at 85% 30%, rgba(158,112,206,0.10) 0%, transparent 50%),
-            linear-gradient(180deg, #eaf0ff 0%, #f5f0ff 40%, #ffffff 70%)
+            linear-gradient(180deg, #ede8ff 0%, #f5f0ff 40%, #ffffff 70%)
           `,
         }}
       >
@@ -121,8 +121,8 @@ export default function CaseStudiesPage() {
               <span
                 className="inline-block font-mono text-[10px] uppercase tracking-[0.16em] px-3 py-1.5 rounded-full mb-5 text-brand"
                 style={{
-                  background: 'linear-gradient(135deg, #e8f0ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(83,144,255,0.2)',
+                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
+                  border: '1px solid rgba(123,94,255,0.2)',
                 }}
               >
                 Crypto Wallet · B2C · Consumer App
@@ -168,7 +168,7 @@ export default function CaseStudiesPage() {
                 right: '-60px',
                 width: '250px',
                 height: '250px',
-                background: 'radial-gradient(circle, rgba(83,144,255,0.18) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(123,94,255,0.18) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }}
             />
@@ -201,8 +201,8 @@ export default function CaseStudiesPage() {
               <span
                 className="inline-block font-mono text-[10px] uppercase tracking-[0.16em] px-3 py-1.5 rounded-full mb-5 text-brand"
                 style={{
-                  background: 'linear-gradient(135deg, #e8f0ff 0%, #ede8ff 100%)',
-                  border: '1px solid rgba(83,144,255,0.2)',
+                  background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
+                  border: '1px solid rgba(123,94,255,0.2)',
                 }}
               >
                 B2B SaaS · HubSpot and Intercom
@@ -268,8 +268,8 @@ export default function CaseStudiesPage() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(83,144,255,0.14) 0%, transparent 65%),
-            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #e8f0ff 100%)
+            radial-gradient(ellipse 70% 60% at 50% 100%, rgba(123,94,255,0.14) 0%, transparent 65%),
+            linear-gradient(180deg, #ffffff 0%, #f3efff 50%, #ede8ff 100%)
           `,
         }}
       >

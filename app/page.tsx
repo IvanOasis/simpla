@@ -101,9 +101,9 @@ export default function Home() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 20% 0%, rgba(83,144,255,0.14) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 20% 0%, rgba(123,94,255,0.14) 0%, transparent 60%),
             radial-gradient(ellipse 50% 50% at 90% 20%, rgba(158,112,206,0.12) 0%, transparent 55%),
-            linear-gradient(160deg, #eaf0ff 0%, #f4f0ff 40%, #ffffff 72%)
+            linear-gradient(160deg, #ede8ff 0%, #f4f0ff 40%, #ffffff 72%)
           `,
         }}
       >
@@ -202,8 +202,8 @@ export default function Home() {
             <div
               className="rounded-xl px-6 py-5 border-l-4 border-brand"
               style={{
-                background: 'linear-gradient(135deg, #f0f5ff 0%, #f7f4ff 100%)',
-                boxShadow: '0 1px 3px rgba(83,144,255,0.08), 0 4px 16px rgba(83,144,255,0.06)',
+                background: 'linear-gradient(135deg, #f0ecff 0%, #f7f4ff 100%)',
+                boxShadow: '0 1px 3px rgba(123,94,255,0.08), 0 4px 16px rgba(123,94,255,0.06)',
               }}
             >
               <p className="text-ink font-display font-medium leading-relaxed">
@@ -252,8 +252,8 @@ export default function Home() {
                 <span
                   className="inline-flex items-center justify-center w-8 h-8 rounded-full font-mono text-[11px] font-medium text-brand mb-6 shrink-0"
                   style={{
-                    background: 'linear-gradient(135deg, #e8f0ff 0%, #ede8ff 100%)',
-                    border: '1px solid rgba(83,144,255,0.18)',
+                    background: 'linear-gradient(135deg, #ede8ff 0%, #ede8ff 100%)',
+                    border: '1px solid rgba(123,94,255,0.18)',
                   }}
                 >
                   {s.n}
@@ -311,7 +311,7 @@ export default function Home() {
         className="py-24 border-b border-smoke"
         style={{
           background: `
-            radial-gradient(ellipse 60% 80% at 0% 50%, rgba(83,144,255,0.07) 0%, transparent 55%),
+            radial-gradient(ellipse 60% 80% at 0% 50%, rgba(123,94,255,0.07) 0%, transparent 55%),
             linear-gradient(135deg, #f3f7ff 0%, #f8f5ff 50%, #f8f9fd 100%)
           `,
         }}
@@ -371,7 +371,7 @@ export default function Home() {
                     right: '-40px',
                     width: '200px',
                     height: '200px',
-                    background: 'radial-gradient(circle, rgba(83,144,255,0.15) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(123,94,255,0.15) 0%, transparent 70%)',
                     pointerEvents: 'none',
                   }}
                 />
@@ -464,10 +464,10 @@ export default function Home() {
       <section
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 110%, rgba(83,144,255,0.2) 0%, transparent 65%),
+            radial-gradient(ellipse 80% 60% at 50% 110%, rgba(123,94,255,0.2) 0%, transparent 65%),
             radial-gradient(ellipse 50% 40% at 15% 50%, rgba(158,112,206,0.12) 0%, transparent 55%),
-            radial-gradient(ellipse 40% 35% at 85% 30%, rgba(83,144,255,0.1) 0%, transparent 50%),
-            linear-gradient(180deg, #ffffff 0%, #f3efff 45%, #e8efff 100%)
+            radial-gradient(ellipse 40% 35% at 85% 30%, rgba(123,94,255,0.1) 0%, transparent 50%),
+            linear-gradient(180deg, #ffffff 0%, #f3efff 45%, #ede8ff 100%)
           `,
         }}
       >
@@ -481,7 +481,7 @@ export default function Home() {
               transform: 'translateX(-50%)',
               width: '500px',
               height: '200px',
-              background: 'radial-gradient(ellipse, rgba(83,144,255,0.12) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(123,94,255,0.12) 0%, transparent 70%)',
               pointerEvents: 'none',
             }}
           />
