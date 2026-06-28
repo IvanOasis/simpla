@@ -82,9 +82,6 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-[11px] text-ash">
-              {post.date} &middot; {post.readTime} read
-            </span>
             {post.draft && (
               /* DRAFT */
               <span className="font-mono text-[10px] uppercase tracking-wider text-brand border border-brand/30 rounded-full px-2 py-0.5">

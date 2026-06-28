@@ -64,11 +64,6 @@ export default function BlogIndex() {
 
                 {/* Content */}
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="font-mono text-[11px] text-ash">{post.date}</span>
-                    <span className="text-smoke select-none">·</span>
-                    <span className="font-mono text-[11px] text-ash">{post.readTime} read</span>
-                  </div>
                   <h2 className="font-display font-bold text-ink text-lg leading-snug mb-3 group-hover:text-brand transition-colors">
                     {post.title}
                   </h2>
