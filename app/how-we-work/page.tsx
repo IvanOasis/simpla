@@ -77,7 +77,7 @@ export default function HowWeWorkPage() {
               </p>
 
               <div className="rounded-xl border border-smoke bg-snow p-6">
-                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-4">
+                <p className="text-sm font-semibold text-ash mb-4">
                   During the call, we review
                 </p>
                 <ul className="space-y-3">
@@ -135,7 +135,7 @@ export default function HowWeWorkPage() {
               </div>
 
               <div className="rounded-xl border border-smoke bg-white p-6">
-                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-5">
+                <p className="text-sm font-semibold text-ash mb-5">
                   The document covers
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -147,7 +147,7 @@ export default function HowWeWorkPage() {
                     'How we will measure success',
                   ].map((item, i) => (
                     <div key={item} className="flex items-start gap-3">
-                      <span className="font-mono text-[10px] text-brand shrink-0 mt-1 pt-0.5">
+                      <span className="font-mono text-xs text-brand shrink-0 mt-0.5">
                         0{i + 1}
                       </span>
                       <p className="text-sm text-ink leading-relaxed">{item}</p>
@@ -195,7 +195,7 @@ export default function HowWeWorkPage() {
               </div>
 
               <div className="rounded-xl border border-smoke bg-snow p-6">
-                <p className="text-xs font-mono uppercase tracking-[0.14em] text-ash mb-5">
+                <p className="text-sm font-semibold text-ash mb-5">
                   You walk away with
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -235,7 +235,7 @@ export default function HowWeWorkPage() {
             <div className="flex-1 space-y-5">
               {TOOL_CATEGORIES.map((cat) => (
                 <div key={cat.label} className="flex flex-wrap items-center gap-x-6 gap-y-2">
-                  <span className="text-xs font-mono uppercase tracking-[0.14em] text-ash w-44 shrink-0">
+                  <span className="font-mono text-xs uppercase tracking-[0.12em] text-ash w-44 shrink-0">
                     {cat.label}
                   </span>
                   <div className="flex flex-wrap gap-2">

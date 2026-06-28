@@ -127,14 +127,14 @@ export default function CaseStudiesPage() {
 
           {/* What we built */}
           <div className="mb-10">
-            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-6">What we built</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we built</p>
+            <div className="divide-y divide-smoke">
               {CS1_SECTIONS.map((s) => (
-                <div key={s.heading} className="card-sm rounded-2xl p-7">
-                  <h3 className="font-display font-bold text-ink text-base mb-3 leading-snug">
+                <div key={s.heading} className="grid lg:grid-cols-12 gap-4 lg:gap-12 py-7">
+                  <h3 className="lg:col-span-4 font-display font-bold text-ink text-base leading-snug">
                     {s.heading}
                   </h3>
-                  <p className="text-ash text-sm leading-relaxed">{s.body}</p>
+                  <p className="lg:col-span-8 text-ash text-[1rem] leading-relaxed">{s.body}</p>
                 </div>
               ))}
             </div>
@@ -204,14 +204,14 @@ export default function CaseStudiesPage() {
 
           {/* What we built */}
           <div className="mb-10">
-            <p className="text-xs font-mono uppercase tracking-[0.18em] text-ash mb-6">What we built</p>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">What we built</p>
+            <div className="divide-y divide-smoke">
               {CS2_SECTIONS.map((s) => (
-                <div key={s.heading} className="card-sm rounded-2xl p-7">
-                  <h3 className="font-display font-bold text-ink text-base mb-3 leading-snug">
+                <div key={s.heading} className="grid lg:grid-cols-12 gap-4 lg:gap-12 py-7">
+                  <h3 className="lg:col-span-4 font-display font-bold text-ink text-base leading-snug">
                     {s.heading}
                   </h3>
-                  <p className="text-ash text-sm leading-relaxed">{s.body}</p>
+                  <p className="lg:col-span-8 text-ash text-[1rem] leading-relaxed">{s.body}</p>
                 </div>
               ))}
             </div>

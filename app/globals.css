@@ -80,7 +80,7 @@
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-[10px] uppercase tracking-[0.18em] text-brand;
+    @apply font-mono text-xs uppercase tracking-[0.13em] text-brand;
   }
 
   .container-page {

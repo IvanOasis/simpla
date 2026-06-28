@@ -175,7 +175,7 @@ export default function AboutPage() {
           <div className="lg:col-span-8 space-y-5">
             {TOOLS.map((cat) => (
               <div key={cat.label} className="flex flex-wrap items-center gap-x-6 gap-y-2">
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ash w-40 shrink-0">
+                <span className="font-mono text-xs uppercase tracking-[0.12em] text-ash w-44 shrink-0">
                   {cat.label}
                 </span>
                 <div className="flex flex-wrap gap-2">

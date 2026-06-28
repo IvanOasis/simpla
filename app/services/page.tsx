@@ -108,22 +108,20 @@ export default function ServicesPage() {
 
             {/* What we look at / build / do */}
             <div className="mb-12">
-              <div className="flex items-center gap-3 mb-8 pb-4 border-b border-smoke">
-                <span className="text-sm font-semibold text-ink">
-                  {s.slug === 'audit'
-                    ? 'What we look at'
-                    : s.slug === 'implementation'
-                    ? 'What we build'
-                    : 'What we do every month'}
-                </span>
-              </div>
-              <div className="grid md:grid-cols-2 gap-4">
+              <p className="text-sm font-semibold text-ash pb-5 border-b border-smoke">
+                {s.slug === 'audit'
+                  ? 'What we look at'
+                  : s.slug === 'implementation'
+                  ? 'What we build'
+                  : 'What we do every month'}
+              </p>
+              <div className="divide-y divide-smoke">
                 {s.sections.map((section) => (
-                  <div key={section.heading} className="card-sm rounded-2xl p-7">
-                    <h3 className="font-display font-bold text-ink text-base mb-3 leading-snug" style={{ hyphens: 'none', wordBreak: 'keep-all' }}>
+                  <div key={section.heading} className="grid lg:grid-cols-12 gap-4 lg:gap-12 py-7">
+                    <h3 className="lg:col-span-4 font-display font-bold text-ink text-base leading-snug">
                       {section.heading}
                     </h3>
-                    <p className="text-ash text-sm leading-relaxed">{section.body}</p>
+                    <p className="lg:col-span-8 text-ash text-[1rem] leading-relaxed">{section.body}</p>
                   </div>
                 ))}
               </div>
@@ -135,7 +133,7 @@ export default function ServicesPage() {
               className="card-dark rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6"
             >
               <div className="flex-1">
-                <p className="text-xs font-mono uppercase tracking-[0.14em] text-white/40 mb-2">
+                <p className="text-xs font-mono uppercase tracking-[0.13em] text-white/55 mb-2">
                   Deliverable
                 </p>
                 <p className="font-display font-medium leading-relaxed text-white">{s.deliverable}</p>
