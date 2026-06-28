@@ -128,7 +128,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 anim-fade-up anim-delay-2">
-              <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
                 Book a discovery call <ArrowRight className="w-4 h-4" />
               </a>
               <Link
@@ -483,7 +483,7 @@ export default function Home() {
             30 minutes to look at your current setup and tell you honestly what is working, what is
             broken, and what to fix first. No pitch, no proposal until we know it makes sense.
           </p>
-          <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
             Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>

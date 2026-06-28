@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ArrowRight } from 'lucide-react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import WorldMap from '@/components/WorldMap'
 import { BOOKING_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -115,127 +116,26 @@ export default function AboutPage() {
 
       {/* Location */}
       <section className="py-20 border-b border-smoke">
-        <div className="container-page grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-          {/* Map card */}
-          <div
-            className="relative rounded-2xl overflow-hidden w-full"
-            style={{
-              background: 'linear-gradient(135deg, #0f1523 0%, #1a2040 100%)',
-              aspectRatio: '3 / 4',
-              maxHeight: '460px',
-            }}
-          >
-            {/* Grid lines */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage:
-                  'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
-                backgroundSize: '32px 32px',
-              }}
-            />
-
-            {/* SVG: South America outline + location markers */}
-            <svg
-              viewBox="0 0 180 240"
-              preserveAspectRatio="xMidYMid meet"
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <radialGradient id="baGlow" cx="44%" cy="60%" r="18%">
-                  <stop offset="0%" stopColor="#7B5EFF" stopOpacity="0.45" />
-                  <stop offset="100%" stopColor="#7B5EFF" stopOpacity="0" />
-                </radialGradient>
-              </defs>
-
-              {/* South America landmass */}
-              <path
-                d="M 50,8 L 68,4 L 90,8 L 112,18 L 130,35 C 140,50 145,70 145,90 C 145,110 138,128 128,140 L 115,150 L 100,155 L 88,152 L 80,155 L 68,162 L 60,178 L 52,198 L 46,218 L 42,230 L 38,220 L 34,198 L 30,172 L 27,145 L 25,115 L 26,85 L 30,58 L 38,35 L 46,18 Z"
-                fill="rgba(123,94,255,0.12)"
-                stroke="rgba(123,94,255,0.45)"
-                strokeWidth="1.5"
-                strokeLinejoin="round"
-              />
-
-              {/* Buenos Aires glow */}
-              <circle cx="80" cy="155" r="22" fill="url(#baGlow)" />
-
-              {/* Buenos Aires rings */}
-              <circle cx="80" cy="155" r="10" fill="none" stroke="rgba(123,94,255,0.35)" strokeWidth="1" />
-              <circle cx="80" cy="155" r="5"  fill="none" stroke="rgba(123,94,255,0.55)" strokeWidth="1" />
-
-              {/* Buenos Aires dot */}
-              <circle cx="80" cy="155" r="3" fill="#7B5EFF" />
-
-              {/* North America dot */}
-              <circle cx="68" cy="52" r="2" fill="rgba(123,94,255,0.5)" />
-              {/* Europe dot */}
-              <circle cx="158" cy="40" r="2" fill="rgba(123,94,255,0.5)" />
-
-              {/* Connection lines */}
-              <line x1="80" y1="155" x2="68" y2="52"  stroke="rgba(123,94,255,0.18)" strokeWidth="0.8" strokeDasharray="4 3" />
-              <line x1="80" y1="155" x2="158" y2="40" stroke="rgba(123,94,255,0.18)" strokeWidth="0.8" strokeDasharray="4 3" />
-            </svg>
-
-            {/* Coordinates label */}
-            <div style={{ position: 'absolute', top: '1.25rem', left: '1.25rem' }}>
-              <p
-                className="font-mono text-white/30 uppercase"
-                style={{ fontSize: '0.6rem', letterSpacing: '0.12em' }}
-              >
-                34°36&prime;S · 58°22&prime;W
-              </p>
+        <div className="container-page">
+          <div className="grid lg:grid-cols-12 gap-12 mb-10">
+            <div className="lg:col-span-4">
+              <p className="eyebrow mb-2">Where we are</p>
             </div>
-
-            {/* City + country */}
-            <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
-              <p className="font-display font-bold text-white text-xl leading-none">Buenos Aires</p>
-              <p
-                className="font-mono text-white/40 uppercase mt-1"
-                style={{ fontSize: '0.65rem', letterSpacing: '0.14em' }}
+            <div className="lg:col-span-8">
+              <h2
+                className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-4"
+                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
               >
-                Argentina
-              </p>
-            </div>
-
-            {/* Global label */}
-            <div style={{ position: 'absolute', bottom: '1.25rem', right: '1.25rem' }}>
-              <p
-                className="font-mono text-white/25 uppercase text-right"
-                style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}
-              >
-                Americas · Europe
-              </p>
-            </div>
-          </div>
-
-          {/* Copy */}
-          <div>
-            <p className="eyebrow mb-4">Where we are</p>
-            <h2
-              className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-6"
-              style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
-            >
-              Based in LATAM. <span className="text-gradient">Working globally.</span>
-            </h2>
-            <div className="space-y-4 text-ash leading-relaxed text-[1.0625rem]">
-              <p>
+                Based in LATAM. <span className="text-gradient">Working globally.</span>
+              </h2>
+              <p className="text-ash leading-relaxed text-[1.0625rem]">
                 We are based in Buenos Aires and work with companies across North America, Europe,
                 and Latin America. Remote-first since day one: our clients care about outcomes,
                 not time zones.
               </p>
-              <p>
-                Communication is async by default. Delivery is on schedule. Every handoff is
-                documented so your team can continue independently, wherever they are.
-              </p>
             </div>
           </div>
-
+          <WorldMap />
         </div>
       </section>
 
@@ -319,7 +219,7 @@ export default function AboutPage() {
             30 minutes. We look at your current setup and tell you honestly what is working,
             what is broken, and whether we can help.
           </p>
-          <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
             Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>

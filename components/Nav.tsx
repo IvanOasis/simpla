@@ -42,7 +42,7 @@ export default function Nav() {
 
         <div className="hidden lg:block">
           <a
-            href={BOOKING_URL}
+            href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
             className="btn-primary text-sm px-5 py-2.5"
           >
             Book a discovery call <span aria-hidden="true">›</span>
@@ -73,7 +73,7 @@ export default function Nav() {
               </Link>
             ))}
             <a
-              href={BOOKING_URL}
+              href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="btn-primary mt-3 w-full"
             >

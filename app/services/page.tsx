@@ -192,7 +192,7 @@ export default function ServicesPage() {
             Book a free 30-minute discovery call. We&rsquo;ll look at your situation and tell you which
             service makes sense, or tell you honestly if none of them do.
           </p>
-          <a href={BOOKING_URL} className="btn-primary text-base px-8 py-4">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
             Book a discovery call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
