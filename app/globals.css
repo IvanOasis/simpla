@@ -72,6 +72,13 @@
   border-color: rgba(123,94,255,0.28);
 }
 
+/* Hide HubSpot free-plan branding on form and thank-you state */
+.hs-form-boilerplate,
+.hs-richtext.hs-form-boilerplate,
+[class*="hs-form-boilerplate"] {
+  display: none !important;
+}
+
 .card-dark {
   background: linear-gradient(135deg, #7B5EFF 0%, #9E70CE 100%);
   border: 1px solid rgba(255,255,255,0.14);
