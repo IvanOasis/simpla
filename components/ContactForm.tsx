@@ -13,19 +13,20 @@ export default function ContactForm() {
     setStatus('loading')
 
     const form = e.currentTarget
-    const data = {
-      name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
-    }
-
-    const res = await fetch('/api/contact', {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        access_key: 'c2b06cf3-334f-400d-ad29-4dc268d3347e',
+        name: (form.elements.namedItem('name') as HTMLInputElement).value,
+        email: (form.elements.namedItem('email') as HTMLInputElement).value,
+        message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+        subject: 'New message from simpla.agency',
+      }),
     })
 
-    setStatus(res.ok ? 'success' : 'error')
+    const json = await res.json()
+    setStatus(json.success ? 'success' : 'error')
   }
 
   if (status === 'success') {
@@ -88,7 +89,7 @@ export default function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="text-sm text-red-500">Something went wrong. Try emailing us directly at hello@simpla.agency.</p>
+        <p className="text-sm text-red-500">Something went wrong. Try emailing us at hello@simpla.agency.</p>
       )}
 
       <button
