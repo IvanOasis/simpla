@@ -49,7 +49,7 @@ export default function ServicesPage() {
           >
             Three services. <span className="text-gradient">One goal.</span>
           </h1>
-          <p className="text-lg text-ash leading-relaxed max-w-xl">
+          <p className="text-lg text-ash leading-relaxed">
             The right message, for the right user, at the right moment. Based on what they actually
             did in your product.
           </p>

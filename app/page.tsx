@@ -224,13 +224,12 @@ export default function Home() {
           <div className="mb-14">
             <p className="eyebrow mb-3">What we do</p>
             <h2
-              className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em] max-w-xl"
+              className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)' }}
             >
-              Three services{' '}
-              <span className="text-gradient">built around a single idea.</span>
+              Three services <span className="text-gradient">built around a single idea.</span>
             </h2>
-            <p className="text-ash mt-4 max-w-xl leading-relaxed">
+            <p className="text-ash mt-4 leading-relaxed">
               The right message, for the right user, at the right moment, based on what they actually
               did in your product.
             </p>
@@ -275,7 +274,7 @@ export default function Home() {
               className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)' }}
             >
-              What makes us different.
+              What makes us <span className="text-gradient">different.</span>
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
