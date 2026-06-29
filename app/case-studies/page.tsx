@@ -111,7 +111,7 @@ export default function CaseStudiesPage() {
             <div className="grid lg:grid-cols-12 gap-10">
               <h2
                 className="lg:col-span-7 font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
+                style={{ fontSize: 'clamp(1.875rem, 3vw, 2.5rem)' }}
               >
                 Building a lifecycle system from scratch for a well-known Solana trading wallet
               </h2>
@@ -188,7 +188,7 @@ export default function CaseStudiesPage() {
             <div className="grid lg:grid-cols-12 gap-10">
               <h2
                 className="lg:col-span-7 font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
+                style={{ fontSize: 'clamp(1.875rem, 3vw, 2.5rem)' }}
               >
                 Lifecycle implementation for a B2B SaaS with HubSpot and Intercom
               </h2>

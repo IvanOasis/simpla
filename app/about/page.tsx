@@ -120,7 +120,7 @@ export default function AboutPage() {
           <div className="text-center mb-10">
             <h2
               className="font-display font-bold text-ink tracking-[-0.02em] leading-tight mb-4"
-              style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
+              style={{ fontSize: 'clamp(1.875rem, 3vw, 2.5rem)' }}
             >
               Based in LATAM. <span className="text-gradient">Working globally.</span>
             </h2>

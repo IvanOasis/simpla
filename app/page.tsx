@@ -145,7 +145,7 @@ export default function Home() {
       {/* ─── TRUSTED BY ─── */}
       <section className="py-16 border-b border-smoke bg-white">
         <div className="container-page">
-          <p className="text-center text-xs font-mono uppercase tracking-[0.18em] text-ash mb-10">
+          <p className="text-center text-xs font-mono uppercase tracking-[0.13em] text-ash mb-10">
             Trusted by SaaS and digital product teams
           </p>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 items-center">
@@ -275,7 +275,7 @@ export default function Home() {
               className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)' }}
             >
-              Why Simpla
+              What makes us different.
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
@@ -286,7 +286,6 @@ export default function Home() {
                 style={{
                   background: 'linear-gradient(145deg, #ffffff 0%, #f5f8ff 100%)',
                   border: '1px solid rgba(228,231,240,0.8)',
-                  borderLeft: '3px solid #7B5EFF',
                   boxShadow: '0 1px 3px rgba(15,21,35,0.04), 0 6px 20px rgba(15,21,35,0.05)',
                 }}
               >
@@ -303,7 +302,7 @@ export default function Home() {
                   <h3 className="font-display font-bold text-ink text-lg mb-3 leading-snug">
                     {p.title}
                   </h3>
-                  <p className="text-ash text-sm leading-relaxed">{p.body}</p>
+                  <p className="text-ash text-[1rem] leading-relaxed">{p.body}</p>
                 </div>
               </div>
             ))}

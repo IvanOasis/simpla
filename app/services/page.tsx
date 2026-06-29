@@ -79,7 +79,7 @@ export default function ServicesPage() {
                   </span>
                   <h2
                     className="font-display font-bold text-ink tracking-[-0.02em] leading-tight"
-                    style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
+                    style={{ fontSize: 'clamp(1.875rem, 3vw, 2.5rem)' }}
                   >
                     {s.name}
                   </h2>

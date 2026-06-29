@@ -37,7 +37,7 @@ export default function HowWeWorkPage() {
           <p className="eyebrow mb-4">How We Work</p>
           <h1
             className="font-display font-bold text-ink leading-[1.06] tracking-[-0.03em] mb-6"
-            style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
+            style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
           >
             Three stages. <span className="text-gradient">One outcome.</span>
           </h1>
@@ -225,7 +225,10 @@ export default function HowWeWorkPage() {
         <div className="container-page">
           <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
             <div className="lg:w-56 shrink-0">
-              <h2 className="font-display font-bold text-ink tracking-[-0.02em] text-xl mb-2">
+              <h2
+                className="font-display font-bold text-ink tracking-[-0.02em] mb-2"
+                style={{ fontSize: 'clamp(1.875rem, 3vw, 2.5rem)' }}
+              >
                 Tools we work with
               </h2>
               <p className="text-sm text-ash leading-relaxed">
