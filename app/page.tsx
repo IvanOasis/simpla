@@ -78,7 +78,7 @@ const SERVICES_OVERVIEW = [
   {
     n: '03',
     name: 'Marketing Ops',
-    body: "Monthly retainer for clients post-implementation. We analyze your data in PostHog or Mixpanel, run experiments, write new messages as your product evolves, and send you a written report every month. Available to previous Simpla clients only.",
+    body: "Monthly retainer for clients post-implementation. We analyze your data in PostHog or Mixpanel, run experiments, write new messages as your product evolves, and send you a written report every month.",
     href: '/services#optimization',
   },
 ]
