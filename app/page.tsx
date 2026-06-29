@@ -117,8 +117,8 @@ export default function Home() {
               className="font-display font-bold text-ink leading-[1.04] tracking-[-0.03em] mb-7 anim-fade-up"
               style={{ fontSize: 'clamp(2.75rem, 5.5vw, 5rem)' }}
             >
-              Lifecycle systems that turn user behavior{' '}
-              <span className="text-gradient">into business growth.</span>
+              We turn user behavior{' '}
+              <span className="text-gradient">into revenue.</span>
             </h1>
 
             <p className="text-[1.125rem] text-ash leading-relaxed mb-10 max-w-2xl mx-auto anim-fade-up anim-delay-1">
