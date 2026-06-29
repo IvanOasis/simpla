@@ -58,6 +58,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://js.hsforms.net" />
+        <link rel="preconnect" href="https://forms.hsforms.com" />
+        <link rel="dns-prefetch" href="https://js.hsforms.net" />
+        <Script
+          src="https://js.hsforms.net/forms/embed/51672874.js"
+          strategy="afterInteractive"
+        />
         <Script
           id="json-ld-org"
           type="application/ld+json"
