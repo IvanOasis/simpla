@@ -90,7 +90,7 @@ export const services: Service[] = [
   {
     slug: 'optimization',
     number: '03',
-    name: 'Ongoing Optimization',
+    name: 'Marketing Ops',
     eyebrow: 'Monthly retainer, available to previous Simpla clients only',
     summary:
       'Monthly retainer for clients post-implementation. We analyze your data, run experiments, write new messages as your product evolves, and send a written report every month.',

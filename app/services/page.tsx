@@ -10,19 +10,19 @@ import { BOOKING_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Lifecycle Marketing Services | Simpla',
   description:
-    'Lifecycle audit, implementation and ongoing optimization for SaaS and digital product companies. We build the system and write the messages.',
+    'Lifecycle audit, implementation and marketing ops for SaaS and digital product companies. We build the system and write the messages.',
   alternates: { canonical: 'https://simpla.agency/services' },
   openGraph: {
     title: 'Lifecycle Marketing Services | Simpla',
     description:
-      'Lifecycle audit, implementation and ongoing optimization for SaaS and digital product companies. We build the system and write the messages.',
+      'Lifecycle audit, implementation and marketing ops for SaaS and digital product companies. We build the system and write the messages.',
     url: 'https://simpla.agency/services',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Lifecycle Marketing Services | Simpla',
-    description: 'Lifecycle audit, implementation and ongoing optimization for SaaS.',
+    description: 'Lifecycle audit, implementation and marketing ops for SaaS.',
   },
 }
 

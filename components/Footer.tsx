@@ -4,7 +4,7 @@ import Logo from './Logo'
 const SERVICES_LINKS = [
   { href: '/services#audit', label: 'Lifecycle Audit' },
   { href: '/services#implementation', label: 'Lifecycle Implementation' },
-  { href: '/services#optimization', label: 'Ongoing Optimization' },
+  { href: '/services#optimization', label: 'Marketing Ops' },
 ]
 
 const COMPANY_LINKS = [

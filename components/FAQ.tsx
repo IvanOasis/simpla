@@ -27,7 +27,7 @@ const FAQ_ITEMS = [
   {
     question: "What happens after the implementation is done?",
     answer:
-      "You get full documentation and a handoff training session. Your team can run the system independently. Ongoing Optimization is available as a monthly retainer if you want us to keep improving it.",
+      "You get full documentation and a handoff training session. Your team can run the system independently. Marketing Ops is available as a monthly retainer if you want us to keep improving it.",
   },
   {
     question: 'How do you measure results?',
