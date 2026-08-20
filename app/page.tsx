@@ -309,40 +309,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── WORK TEASER ─── */}
-      <section
-        className="py-24 border-b border-smoke"
-        style={{
-          background: `
-            radial-gradient(ellipse 60% 80% at 0% 50%, rgba(123,94,255,0.07) 0%, transparent 55%),
-            linear-gradient(135deg, #f3f7ff 0%, #f8f5ff 50%, #f8f9fd 100%)
-          `,
-        }}
-      >
-        <div className="container-page grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-8">
-            <h2
-              className="font-display font-bold text-ink leading-[1.1] tracking-[-0.02em] mb-4"
-              style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)' }}
-            >
-              Work <span className="text-gradient">we have done</span>
-            </h2>
-            <p className="text-ash leading-relaxed text-[1.0625rem]">
-              We have built lifecycle systems for crypto products, B2B SaaS companies and digital
-              products across different stages and stacks.
-            </p>
-          </div>
-          <div className="lg:col-span-4 lg:text-right">
-            <Link
-              href="/case-studies"
-              className="btn-outline"
-            >
-              See our work <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ─── TESTIMONIALS ─── */}
       <section className="py-24 border-b border-smoke bg-white">
         <div className="container-page">
